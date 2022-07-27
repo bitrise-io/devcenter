@@ -1,0 +1,172 @@
+/* Circled numbers for procedure top level list items: */
+div.procedure{
+  margin-left: 0px;
+}
+/* Targeting ul as well, because for one-step procedures, it becomes a ul */
+ol.procedure, ul.procedure {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-left: 40px;
+}
+.procedure {
+  counter-reset: step-counter;
+}
+.procedure > li {
+  counter-increment: step-counter;
+  margin-bottom: 10px;
+}
+.procedure > li::before {
+    float: left;
+    margin-left: -40px;
+    width: 24px;
+    padding-left: 0px;
+    height: 24px;
+    line-height: 24px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 13px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 700;
+    content: counter(step-counter);
+    font-size: 14px;
+    text-align: center;
+}
+/* Adjust for RTL stepnumbers */
+section[dir=rtl] .procedure > li::before{
+    float: right;
+    margin-left: 10px;
+}
+
+.theme2 .procedure > li::before {
+  background-color: #333;
+}
+.theme1 .procedure > li::before {
+    background-color: #54a1e5;
+}
+
+/* CHECKLISTS */
+/* Remove margins and padding from the list */
+ul.checklist {
+  margin: 0;
+  padding: 0;
+  padding-left: 0px;
+}
+
+/* Style the list items */
+ul.checklist > li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  /*background: #eee;*/
+  font-size: 18px;
+  transition: 0.2s;
+  list-style-type: none;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  
+  
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Background-color on hover */
+ul.checklist li.checked:hover {
+  background-color:#eee;
+}
+
+ul.checklist li.checked, ul.checklist > li:hover {
+  background-color:#eee;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul.checklist li.checked .check-item-content {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.checklist-checkbox-wrapper {
+  /*position: relative;*/
+  display: inline-block;
+}
+
+.listitem{
+    position: relative;
+}
+
+.check-item-content {
+    display: inline-block;
+    margin-left: 2em;
+    width: 85%;
+}
+
+.checklist-checkbox-wrapper label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 28px;
+  left: 16px;
+  position: absolute;
+  top: 12px;
+  width: 28px;
+}
+
+.checklist-checkbox-wrapper label:after {
+  border: 2px solid #ccc;
+  border-top: none;
+  border-right: none;
+  content: "";
+  height: 6px;
+  left: 7px;
+  opacity: 0.4;
+  position: absolute;
+  top: 8px;
+  transform: rotate(-45deg);
+  width: 12px;
+}
+
+.checklist-checkbox-wrapper input[type="checkbox"] {
+  visibility: hidden;
+}
+
+.checklist-checkbox-wrapper input[type="checkbox"]:checked + label {
+  background-color: #fff;
+  border-color: #2ab27b;
+}
+
+.checklist-checkbox-wrapper input[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  border-color: #2ab27b;
+}
+
+.checklist-reset-wrapper {
+    text-align: right;
+    padding: 12px 16px 12px 16px;
+}
+
+.checklist-reset {
+    color: #ccc;
+}

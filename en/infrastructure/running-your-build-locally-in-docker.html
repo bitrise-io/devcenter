@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="search" content="algolia" />
+  <meta name="use.ic" content="no" />
+  <meta name="tocstandalone" content="no" />
+  <link rel="canonical" href="https://devcenter.bitrise.io/en/infrastructure/running-your-build-locally-in-docker.html" /><meta property="og:url" content="https://devcenter.bitrise.io/en/infrastructure/running-your-build-locally-in-docker.html" />
+  <meta name="theme" content="2" />
+  <meta name="search.placeholder" content="Search" />
+  <meta name="search.results" content="Search results" />
+  <meta name="no.search.results" content="No results found" />
+  <title>Running your build locally in Docker - Bitrise Docs</title><meta property="og:title" content="Running your build locally in Docker" /><meta property="og:locale" content="en_US" /><meta property="og:site_name" content="Bitrise Docs" /><meta property="og:image" content="https://devcenter.bitrise.io/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="../../css/docbook.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/font-awesome.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/roboto.font.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2.css?version=20220727" />
+  <link rel="stylesheet" type="text/css" href="../../css/theme2-colors.css?version=20220727" />
+  <link rel="stylesheet" type="text/css" href="../../css/content-theme2.css?version=20220727" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-core-css.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/sm-simple.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-print.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-common.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/html5.algoliasearch.css?version=20220727" />
+  <link rel="stylesheet" type="text/css" href="../../css/style-modern-tables.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/graphical-lists.css" />
+  <link rel="stylesheet" type="text/css" href="../../css/layout-custom-style.css?version=20220727" />
+  <meta name="generator" content="Paligo" />
+  <meta name="description" content="You can run a Bitrise build in Docker on your own machines: you need Docker, the Bitrise CLI, and a Bitrise Docker image." /><meta property="og:description" content="You can run a Bitrise build in Docker on your own machines: you need Docker, the Bitrise CLI, and a Bitrise Docker image." />
+  <link rel="prev" href="using-your-own-docker-image.html#setting-a-custom-docker-image-in-the-workflow-editor" title="Setting a custom Docker image in the Workflow Editor" />
+  <link rel="next" href="running-your-build-locally-in-docker.html#downloading-docker-images-from-quay-io" title="Downloading docker images from quay.io" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+</head>
+<body class="theme2 fixed-toolbar colored-top page-toc current-toc-section-focus" data-spy="scroll" data-target=".section-nav-container" data-offset="100" data-link-prefix="../">
+  <header class="site-header">
+    <nav class="site-header-navbar navbar navbar-fixed-top">
+      <div class="navbar-container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+          <div id="logotype-container" class="pull-left">
+            <a class="navbar-brand" href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src="../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="top-nav-menu sm sm-simple">
+            <li>
+              <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+            </li>
+            <li>
+              <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="site-body">
+    <div class="site-body-container">
+      <div class="site-body-row">
+        <aside class="site-sidebar">
+          <div class="site-sidebar-header">
+            <button type="button" class="navbar-toggle" aria-controls="nav-site-sidebar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="https://www.bitrise.io" target="_blank" rel="noopener"><img id="logotype-pageheader" src=
+            "../../css/image/corporate-logo.svg" alt="Corporate logotype" data-role="logotype" class="logo" /></a>
+          </div>
+          <ul class="toc nav nav-site-sidebar">
+            <li>
+              <a href="../getting-started.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-9a2b4c43-179d-565a-f83c-6c5be7ea8e03" data-legacy-id="UUID-ba2dbb72-ce4f-b763-6e32-f60fc46f54e7" data-permalink="getting-started.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Getting started</a>
+              <ul>
+                <li>
+                  <a href="../getting-started/migrating-to-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-84d717b2-29a0-3c37-bc73-674022db721b" data-legacy-id="UUID-9b9067bc-f8b8-279c-d25a-099cb3c7f3e6" data-permalink="getting-started/migrating-to-bitrise.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date=""><span class="glyphicon"></span> Migrating to Bitrise</a>
+                  <ul>
+                    <li>
+                      <a href="../getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-a94d0cf8-018a-53cb-6206-1da2bcc4fdf1" data-legacy-id="UUID-f1a2a395-0ecd-ca76-444d-367b22c8ad91" data-permalink=
+                      "getting-started/migrating-to-bitrise/migrating-from-jenkins-to-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Migrating from Jenkins to Bitrise</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../getting-started/signing-up-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-545a2ebf-0220-d38a-26d6-a1627636e966" data-legacy-id="UUID-a1e20f66-0c9c-79b7-7936-9585028ae73c" data-permalink="getting-started/signing-up-for-bitrise.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Signing up for Bitrise</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/creating-your-first-workspace.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-workspaces-rel" data-origin-id="UUID-eba05717-4fe7-5ebc-64f9-e689bffff030" data-legacy-id="UUID-c54d4fa8-5398-1969-3724-e3d697d0b18e" data-permalink="getting-started/creating-your-first-workspace.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Creating your first Workspace</a>
+                </li>
+                <li>
+                  <a href="../getting-started/adding-your-first-app.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d0079852-0403-15f4-3828-c0205f0d21ce" data-legacy-id="UUID-c9904774-960e-0e41-1dcc-e17ebb7a9cc6" data-permalink="getting-started/adding-your-first-app.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Adding your first app</a>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-ios-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-ios taxonomy-related-links-taxonomies-ios-rel" data-origin-id="UUID-f71aa52b-0097-a692-60ed-94b0e399d2a1" data-legacy-id=
+                  "UUID-19c1635c-1558-c3e1-f52a-720832ae2aa6" data-permalink="getting-started/getting-started-with-ios-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with iOS apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-android-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-android taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id=
+                  "UUID-9ecfeed4-c9ce-dbec-45f0-6d7af933d514" data-legacy-id="UUID-1ee05462-efa0-7c7f-5923-a209af66031c" data-permalink="getting-started/getting-started-with-android-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with Android apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-react-native-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-68434c3f-aff3-9666-7817-728bf714b1c4" data-legacy-id=
+                  "UUID-890c4302-c957-2869-6808-da5e3e2ecdcb" data-permalink="getting-started/getting-started-with-react-native-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with React Native apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-flutter-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-6eb0b59c-d6d1-1c2f-93ab-3f9141b6213b" data-legacy-id=
+                  "UUID-9e965542-1915-7820-0f4f-540a23bcac5a" data-permalink="getting-started/getting-started-with-flutter-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with Flutter apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-ionic-cordova-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-356bce7f-381d-aa65-4e51-f2d26a4ca4c2" data-legacy-id=
+                  "UUID-4db75d05-2100-84bd-8ee8-896ca1bbb34e" data-permalink="getting-started/getting-started-with-ionic-cordova-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with Ionic/Cordova apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-expo-apps.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-f603ea52-367d-eea0-68c2-5d565c27a16b" data-legacy-id=
+                  "UUID-42ae15b5-fdbc-6ab8-4059-b53ebeaea46f" data-permalink="getting-started/getting-started-with-expo-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Getting started with Expo apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../getting-started/getting-started-with-macos-apps.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-7faa8ea4-9dd7-a931-7760-a0f694a31b90" data-legacy-id="UUID-0e07839a-5728-b1c5-51fb-0b43fe10d8ad" data-permalink="getting-started/getting-started-with-macos-apps.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Getting started with macOS apps</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../infrastructure.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3eab4c5e-529d-6c7d-833c-cb9969befbad" data-legacy-id="UUID-7f30c26d-f7df-1258-bbe9-78d286211d53" data-permalink="infrastructure.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Infrastructure</a>
+              <ul>
+                <li>
+                  <a href="../infrastructure/build-machines.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-03e06c05-1450-1415-7613-b6ed7c04c079" data-legacy-id="UUID-657e72c5-d0f4-9465-786c-6ca6a86b9815" data-permalink="infrastructure/build-machines.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Build machines</a>
+                  <ul>
+                    <li>
+                      <a href="../infrastructure/build-machines/configuring-your-network-to-access-our-build-machines.html" hreflang="en" class="topic-link section" data-origin-id="UUID-983fde2f-6b1c-3599-20b7-156fe731f12b" data-legacy-id="UUID-98b1e567-7397-d24a-fc18-b103ba532db8" data-permalink=
+                      "infrastructure/build-machines/configuring-your-network-to-access-our-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Configuring network access for Bitrise build machines</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-machines/freeing-up-storage-space-on-build-machines.html" hreflang="en" class="topic-link section" data-origin-id="UUID-b07bf5c3-5e94-94ae-07f4-bd4872287215" data-legacy-id="UUID-ef385217-38d7-e50f-d09a-d7d72a4e59f7" data-permalink=
+                      "infrastructure/build-machines/freeing-up-storage-space-on-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Freeing up storage space on build machines</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-machines/build-machine-types.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel taxonomy-related-links-taxonomies-stacks-rel" data-origin-id="UUID-9b699662-b081-1049-24a7-dfee5c6c0f56" data-legacy-id="UUID-fd1e8aa2-5d25-73e4-c0de-8e818b38a17d" data-permalink=
+                      "infrastructure/build-machines/build-machine-types.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Build machine types</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/build-stacks.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks taxonomy-related-links-taxonomies-stacks-rel original-topic original-topic" data-origin-id="UUID-d6a228ed-8c03-64f9-dd96-993adf80523b" data-legacy-id="UUID-312e1cf7-c9ba-7bc4-57f0-f6018e688116" data-permalink=
+                  "infrastructure/build-stacks.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Build stacks</a>
+                  <ul>
+                    <li>
+                      <a href="../infrastructure/build-stacks/stack-update-policy.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks original-topic original-topic" data-origin-id="UUID-295ee35e-1f63-7adc-a05e-35490453f71b" data-legacy-id="UUID-4770071c-3ad4-304a-6dbc-0a1b408bc0e2" data-permalink=
+                      "infrastructure/build-stacks/stack-update-policy.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Stack update policy</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/stack-deprecation-and-removal-policy.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks" data-origin-id="UUID-5bac20c1-ade5-dca6-25f5-f54fc5ce7425" data-legacy-id="UUID-60ac6b6d-5fe5-d9d2-c650-c00f533da10d" data-permalink=
+                      "infrastructure/build-stacks/stack-deprecation-and-removal-policy.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Stack deprecation and removal policy</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/preinstalled-tools-on-bitrise-stacks.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks" data-origin-id="UUID-47c3c221-c9f4-7940-ef48-5ede8f6c626d" data-legacy-id="UUID-5abcfa09-d076-60c8-0a8a-e03c23f8fb55" data-permalink=
+                      "infrastructure/build-stacks/preinstalled-tools-on-bitrise-stacks.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Preinstalled tools on Bitrise stacks</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/apple-silicon-m1-stacks.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks" data-origin-id="UUID-f4661083-25be-2932-12a8-92b6f203e42e" data-legacy-id="UUID-8a45049d-d564-50e0-50e5-39e769640261" data-permalink="infrastructure/build-stacks/apple-silicon-m1-stacks.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">M1 stacks</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/the-android-linux-docker-environment.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-1a40baf9-7721-2b86-6115-0d13327bd3a4" data-legacy-id="UUID-98f81b04-a8ab-2e2e-75ef-7ae6bf17fe40" data-permalink=
+                      "infrastructure/build-stacks/the-android-linux-docker-environment.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">The Android/Linux/Docker environment</a>
+                    </li>
+                    <li>
+                      <a href="../infrastructure/build-stacks/managing-java-versions.html" hreflang="en" class="topic-link section" data-origin-id="UUID-0272d2fc-5d56-7f2c-e4c3-9da55fb22c8d" data-legacy-id="UUID-4cd528eb-a885-784f-bfa4-75a6fcbe97b3" data-permalink="infrastructure/build-stacks/managing-java-versions.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Managing Java versions</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/code-security.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-7abef58e-ec4c-809d-54ac-61a591df4c51" data-legacy-id="UUID-b82b650e-e53e-1e8a-c588-dc37b67ae3e1" data-permalink="infrastructure/code-security.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Code security</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/customizable-enterprise-build-platforms.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d3272c36-f9e9-0749-c1d9-7e40fe0b24bc" data-legacy-id="UUID-08878848-cb84-9df1-2d19-df312fdd6d04" data-permalink="infrastructure/customizable-enterprise-build-platforms.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Customizable enterprise build platforms</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/using-your-own-docker-image.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-0ca8f98b-c25f-4ae9-7d48-1778af3ab9db" data-legacy-id="UUID-e4717876-4224-3632-f360-ebf17d8e5e90" data-permalink="infrastructure/using-your-own-docker-image.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Using your own Docker image</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../infrastructure/running-your-build-locally-in-docker.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-1c50574c-3c92-c29c-d531-19008eecca68" data-legacy-id="UUID-34a13218-f4c4-9696-b69a-3810d89bf8ef" data-permalink="infrastructure/running-your-build-locally-in-docker.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Running your build locally in Docker</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../accounts.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-28ffb8a6-05b5-ddc0-a390-1d3e2d8f26b2" data-legacy-id="UUID-10060414-1163-d2be-0434-5350e8d697a1" data-permalink="accounts.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
+              Accounts</a>
+              <ul>
+                <li>
+                  <a href="../accounts/connecting-to-services.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-6e5ba70c-bdc9-4aaa-1b01-bd4a75f03a83" data-legacy-id="UUID-7b30fea4-0c65-ea17-9f13-310017dd36f8" data-permalink="accounts/connecting-to-services.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Connecting to services</a>
+                  <ul>
+                    <li>
+                      <a href="../accounts/connecting-to-services/the-service-credential-user.html" hreflang="en" class="topic-link section" data-origin-id="UUID-e1ecbda8-8942-27f2-252f-542ce6e071be" data-legacy-id="UUID-adf4f263-fd05-0a77-2494-cfc7f760c897" data-permalink="accounts/connecting-to-services/the-service-credential-user.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">The service credential user</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-your-github-gitlab-bitbucket-account-to-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-90a9b34b-1136-b823-ee94-99af39405c36" data-legacy-id="UUID-73acbb2a-384d-a9ec-d15d-6c0bb5a25970" data-permalink=
+                      "accounts/connecting-to-services/connecting-your-github-gitlab-bitbucket-account-to-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Connecting your GitHub/GitLab/Bitbucket account to Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-self-hosted-gitlab-instances.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-c6504603-1afb-860b-ec65-37071bb15cd6" data-legacy-id="UUID-42b0f670-dea3-836a-4a05-a6cf37ca7b55" data-permalink=
+                      "accounts/connecting-to-services/connecting-self-hosted-gitlab-instances.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Connecting self-hosted GitLab instances</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/apple-services-connection.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-00110e6f-af8c-b0e8-156e-9ef423e3dab3" data-legacy-id=
+                      "UUID-33b7a6d8-d765-56a8-6c46-87e5fba96f83" data-permalink="accounts/connecting-to-services/apple-services-connection.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Apple services connection</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-api-key.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-deploy-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id=
+                      "UUID-9efbac46-99cc-7c73-250b-75a37c32783e" data-legacy-id="UUID-ec02efab-b151-f158-4120-ded409a0704f" data-permalink="accounts/connecting-to-services/connecting-to-an-apple-service-with-api-key.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Connecting to an Apple service with API key</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-apple-id.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-26bcdf25-8daa-9c14-014d-f08ef9bac83f" data-legacy-id=
+                      "UUID-9d7746cf-117c-c0e5-3e83-fb7f753c78fd" data-permalink="accounts/connecting-to-services/connecting-to-an-apple-service-with-apple-id.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Connecting to an Apple service with Apple ID</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/connecting-to-an-apple-service-with-step-inputs.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel original-topic original-topic" data-origin-id="UUID-0a53901c-7750-76e6-d4b6-c37b5b35ed17" data-legacy-id="UUID-50c5709a-dc82-305e-1806-83f446075516"
+                      data-permalink="accounts/connecting-to-services/connecting-to-an-apple-service-with-step-inputs.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Connecting to an Apple Service with Step inputs</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/connecting-to-services/steps-requiring-apple-authentication.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-deploy-rel original-topic original-topic" data-origin-id="UUID-55861ef6-a689-7493-a090-16ee69f73ae5" data-legacy-id=
+                      "UUID-1cb6ad34-6723-9215-cd4a-428eb2267d28" data-permalink="accounts/connecting-to-services/steps-requiring-apple-authentication.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Steps requiring Apple authentication</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../accounts/saml-sso-in-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-bca7875d-ba86-a5f9-a246-738204f83644" data-legacy-id="UUID-0c735250-ae6c-84a1-e00e-30ec068493f4" data-permalink="accounts/saml-sso-in-bitrise.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> SAML SSO in Bitrise</a>
+                  <ul>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-google-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-c4d5bf0b-e976-489a-8186-cfa441aae510" data-legacy-id="UUID-e952706d-347d-7d67-30fc-4f8b41121a73" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-google-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Google SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-ad-fs-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-557b0daa-88db-9538-918b-611d6434d59d" data-legacy-id="UUID-e9924931-8dfa-3c50-5d35-b289dd34612f" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-ad-fs-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up AD FS SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-azure-ad-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-216ae74a-9185-9547-8ca7-f77c3006b873" data-legacy-id="UUID-ee747bce-dc35-dffc-fe50-3b7253f19419" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-azure-ad-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Azure AD SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-auth0-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-4b441cb7-8dd2-3589-705b-e23a800fd5e0" data-legacy-id="UUID-073f5008-8717-f256-e1b9-9ca79cf9dc39" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-auth0-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Auth0 SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-idaptive-saml-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-267a6d28-abf3-d722-b848-52ebc983c83a" data-legacy-id="UUID-3b0ca8cc-8749-2cdc-7c43-b314cffc9b7f" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-idaptive-saml-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Idaptive SAML SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-okta-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-e773a082-c1cf-dd22-4d98-0fe6ffd63c5f" data-legacy-id="UUID-646a304b-0651-c197-425e-b4d3c0a04c8f" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-okta-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Okta SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-ping-identity-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3ff033de-eab6-30d7-cf01-6016fb4e0c87" data-legacy-id="UUID-d87403ae-48a8-e2a1-3d07-e8427a5fa9ee" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-ping-identity-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up Ping Identity SSO for Bitrise</a>
+                    </li>
+                    <li>
+                      <a href="../accounts/saml-sso-in-bitrise/setting-up-onelogin-sso-for-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-92d5aa9a-09f2-05a4-c093-c7b0939b81ec" data-legacy-id="UUID-2147b512-8605-c973-ba55-170b30ac9515" data-permalink=
+                      "accounts/saml-sso-in-bitrise/setting-up-onelogin-sso-for-bitrise.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting up OneLogin SSO for Bitrise</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../accounts/editing-your-profile-settings.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-workspaces-rel" data-origin-id="UUID-5e0f29c7-1f97-6817-4b49-3d35767db39f" data-legacy-id="UUID-a0ea8cf6-db90-250c-a35e-f7e9a3c9adaf" data-permalink="accounts/editing-your-profile-settings.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">Editing your profile settings</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/resetting-your-password.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d192d1df-da9e-ff21-8a58-4c2b4e55fa7d" data-legacy-id="UUID-d1170f5a-86b9-8d46-a5f8-b362671e62c7" data-permalink="accounts/resetting-your-password.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Resetting your password</a>
+                </li>
+                <li>
+                  <a href="../accounts/two-factor-authentication.html" hreflang="en" class="topic-link section" data-origin-id="UUID-866a4f96-4583-8512-7fe7-f30e35d773bb" data-legacy-id="UUID-e0140fbf-cbf6-e155-d169-62eb247dfc19" data-permalink="accounts/two-factor-authentication.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=
+                  "">Two-factor authentication</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/personal-access-tokens.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-api-rel" data-origin-id="UUID-700aac93-033a-c35c-aa92-50c6508c19fa" data-legacy-id="UUID-1d13cbe0-9c39-4588-1cd2-e80d2e61350c" data-permalink="accounts/personal-access-tokens.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Personal access tokens</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../accounts/deleting-your-bitrise-account.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-7fc688db-e815-db86-5b75-3db0b85f3555" data-legacy-id="UUID-f9d14256-bdcd-cb82-ca20-ad2d8db79c2f" data-permalink="accounts/deleting-your-bitrise-account.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Deleting your Bitrise account</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../workspaces.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-workspaces-rel original-topic original-topic" data-origin-id="UUID-45bb61c5-c7f2-5871-ec0a-71f12394ef81" data-legacy-id="UUID-da6dd792-28d3-355b-3e62-d14e1df88f1c" data-permalink="workspaces.html" data-topic-level="1" data-relative-prefix=""
+              data-publication-date=""><span class="glyphicon"></span> Workspaces</a>
+              <ul>
+                <li>
+                  <a href="../workspaces/creating-workspaces.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-94274f32-1936-7a28-bd8d-ed56c00189c3" data-legacy-id="UUID-5f1d5b2e-dba6-e4a2-b021-0c606bf79d62" data-permalink="workspaces/creating-workspaces.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Creating Workspaces</a>
+                </li>
+                <li>
+                  <a href="../workspaces/workspace-billing-and-invoicing.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-afa1dd04-2a80-3357-82ae-618a85e2f235" data-legacy-id="UUID-ad9fce4e-e747-f6fc-adb7-217042969efe" data-permalink="workspaces/workspace-billing-and-invoicing.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Workspace billing and invoicing</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../workspaces/adding-other-users-to-workspaces.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-accounts-rel original-topic original-topic" data-origin-id="UUID-7a68f566-8e93-124c-439b-3f5c996d5fa7" data-legacy-id="UUID-d7d490da-a69a-d0f6-cb9f-9d71fa87e2bb" data-permalink=
+                  "workspaces/adding-other-users-to-workspaces.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Adding other users to Workspaces</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../workspaces/changing-the-owners-of-a-workspace.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-accounts-rel original-topic original-topic" data-origin-id="UUID-8ba812cb-8961-904d-7213-e05edffa575b" data-legacy-id="UUID-add07d66-0583-d53c-25be-81ffb9c2a371" data-permalink=
+                  "workspaces/changing-the-owners-of-a-workspace.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Managing the owners of a Workspace</a>
+                </li>
+                <li>
+                  <a href="../workspaces/workspace-faq.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-df9b3cdd-9336-287d-9030-6923df408c72" data-legacy-id="UUID-10223b8c-d323-c763-6e7e-8194e0c33a98" data-permalink="workspaces/workspace-faq.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Workspace FAQ</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../apps.html" hreflang="en" class="topic-link section" data-origin-id="UUID-675eafcc-4ca9-1439-43d8-fa2abbec5513" data-legacy-id="UUID-dd2a8f8b-309e-2c28-d24e-b0a3eba4089f" data-permalink="apps.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Apps</a>
+              <ul>
+                <li>
+                  <a href="../apps/webhooks.html" hreflang="en" class="topic-link section taxonomy-configuration-apps taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-5331ef8b-5840-9105-7763-81ca7b8525ac" data-legacy-id="UUID-248f4202-aeaa-df85-ea3b-6e942113291b" data-permalink="apps/webhooks.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Webhooks</a>
+                  <ul>
+                    <li>
+                      <a href="../apps/webhooks/adding-incoming-webhooks.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-a6eaea8e-c52c-28b3-540a-fd7678810798" data-legacy-id="UUID-4fcb3d20-c59c-b103-66f6-0189ab4ea872" data-permalink="apps/webhooks/adding-incoming-webhooks.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding incoming webhooks</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-github-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-f5f767f9-79c8-facf-eba8-4af37624924d" data-legacy-id="UUID-8d70d7b3-5483-8c27-0d17-214fd2a5696d" data-permalink="apps/webhooks/adding-a-github-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a GitHub webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-gitlab-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-c10c83c9-4b2b-3772-e6bb-bbe94f3e80e2" data-legacy-id="UUID-02a75d6a-cdcb-a29e-a764-8b1de80841a1" data-permalink="apps/webhooks/adding-a-gitlab-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Gitlab webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-bitbucket-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-8412e45f-b884-53e6-1c00-92650404a3c3" data-legacy-id="UUID-ede112b6-8609-4889-c265-bd35706e6011" data-permalink="apps/webhooks/adding-a-bitbucket-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Bitbucket webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-gogs-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-cb59d5d0-c554-e4ae-715c-14c9ff93b6b7" data-legacy-id="UUID-39497431-d7b5-d416-ede2-0a2418458bed" data-permalink="apps/webhooks/adding-a-gogs-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Gogs webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-slack-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5001d127-3897-d7d0-f03a-a7a6bd5423a9" data-legacy-id="UUID-d16b5a8f-6e37-f47b-6c8d-4501aa896602" data-permalink="apps/webhooks/adding-a-slack-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Slack webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-visual-studio-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3837c77e-8098-a2a2-1872-e3dd8155642b" data-legacy-id="UUID-5c117d09-df29-55f7-3e2f-e21103f53fdb" data-permalink="apps/webhooks/adding-a-visual-studio-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Visual Studio webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-an-assembla-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-965b0228-485f-608b-de15-e68b9e7b5faf" data-legacy-id="UUID-22b5e7bb-233d-a3e8-783d-2936e28d0035" data-permalink="apps/webhooks/adding-an-assembla-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding an Assembla webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-a-deveo-webhook.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-f2850b49-0240-fa76-ac7c-c7126b940dd1" data-legacy-id="UUID-7b978561-02a0-78e3-7a48-05c16220c28d" data-permalink="apps/webhooks/adding-a-deveo-webhook.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding a Deveo webhook</a>
+                    </li>
+                    <li>
+                      <a href="../apps/webhooks/adding-outgoing-webhooks.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5c2b9338-918a-6e37-0bcf-c810acc60be6" data-legacy-id="UUID-b1f23513-7cba-b20b-550d-277ca13ac32d" data-permalink="apps/webhooks/adding-outgoing-webhooks.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Adding outgoing webhooks</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../apps/configuring-the-repository-url-and-the-default-branch.html" hreflang="en" class="topic-link section" data-origin-id="UUID-b5902706-bb7c-f6d0-fee4-eff975bfccdc" data-legacy-id="UUID-a20822cb-314c-4407-6ff5-870e3b70a62c" data-permalink="apps/configuring-the-repository-url-and-the-default-branch.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Configuring the repository URL and default branch</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/configuring-ssh-keys.html" hreflang="en" class="topic-link section taxonomy-configuration-apps" data-origin-id="UUID-579f7434-bcb0-3877-212f-df8bbec96b7c" data-legacy-id="UUID-477b75d3-5728-36e4-e48e-5484b40f8c40" data-permalink="apps/configuring-ssh-keys.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Configuring SSH keys</a>
+                </li>
+                <li>
+                  <a href="../apps/adding-team-members-to-an-app.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-d8d1b16d-0e6a-e08a-9949-af3b762614e4" data-legacy-id="UUID-2d67867f-e120-bacb-7c79-f1db292af049" data-permalink="apps/adding-team-members-to-an-app.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">Adding team members to an app</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/user-roles-on-app-teams.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f2d36e34-20b0-22b7-8214-d75ca87322f6" data-legacy-id="UUID-1bd1363c-b921-320c-a34f-601147be01cd" data-permalink="apps/user-roles-on-app-teams.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">User roles on app teams</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/changing-the-owner-of-an-app.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-423552f8-7b5f-370e-2deb-03438f0c0303" data-legacy-id="UUID-c1830836-6a1b-d502-fe66-b1ce689bdc57" data-permalink="apps/changing-the-owner-of-an-app.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Changing the owner of an app</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/enabling-the-bitrise-support-user-for-your-app.html" hreflang="en" class="topic-link section taxonomy-actions-troubleshooting taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-9f206309-7bea-860b-558c-97e4d7bb6c09" data-legacy-id="UUID-602ef5c8-641b-1c7d-7c6c-99934fddd540" data-permalink=
+                  "apps/enabling-the-bitrise-support-user-for-your-app.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Enabling the Bitrise Support Access for your app</a>
+                </li>
+                <li>
+                  <a href="../apps/apps-with-submodules-or-private-repo-dependencies.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-e9d90a45-3743-5c70-5890-451857d008cf" data-legacy-id="UUID-31d4342c-27d2-74b5-3132-b7f0b4e2eaac" data-permalink=
+                  "apps/apps-with-submodules-or-private-repo-dependencies.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Apps with submodules or private repo dependencies</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../apps/public-apps.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-d8ff76d0-d66b-4191-ef1e-fcf0b4f14e5e" data-legacy-id="UUID-d0c5e88d-9b78-113a-cd21-47ff87c98792" data-permalink="apps/public-apps.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Public apps</a>
+                </li>
+                <li>
+                  <a href="../apps/creating-white-label-app-versions.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-906f96f4-8f0d-4716-43a5-6c1a10d1ed85" data-legacy-id="UUID-56ee7172-ef31-676b-9dfa-20a9a01b5d65" data-permalink="apps/creating-white-label-app-versions.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Creating white label app versions</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../steps-and-workflows.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-45f92eab-49aa-a0d2-6472-a2da060aee88" data-legacy-id="UUID-d4babe74-0174-93d4-3247-194da5073883" data-permalink=
+              "steps-and-workflows.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Steps and Workflows</a>
+              <ul>
+                <li>
+                  <a href="../steps-and-workflows/introduction-to-steps.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-4e72c2ab-b8a3-ad41-b32d-5e0c08db7a88" data-legacy-id=
+                  "UUID-e49ab216-b55d-0243-0ea1-6da610e8fd08" data-permalink="steps-and-workflows/introduction-to-steps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Steps</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/adding-steps-to-a-workflow.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-520f8b46-3247-b5e0-3138-b3033ab69d92" data-legacy-id="UUID-6c4bcc2e-683a-2a4f-8e80-25f7430aac2f" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/adding-steps-to-a-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Adding Steps to a Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/step-versions.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-f59797e7-f966-7727-3853-82bb40bba77f" data-legacy-id="UUID-8eb3d8a8-6d72-e2d8-1950-1908e6475656" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/step-versions.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step versioning</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/step-inputs.html" hreflang="en" class="topic-link section taxonomy-configuration-steps taxonomy-related-links-taxonomies-bitrise-yml-rel" data-origin-id="UUID-b0690127-a271-a392-b3e5-7e71daf207ba" data-legacy-id="UUID-402031a2-c547-0cfd-6f4f-ad509a09b313" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/step-inputs.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step inputs</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/skipping-steps.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-4f3c1c76-3d54-7e79-f543-525de22e6941" data-legacy-id="UUID-780cdf64-e416-ac4b-d589-71c9f628a958" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/skipping-steps.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Skipping Steps</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/enabling-or-disabling-a-step-conditionally.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-2984dd3d-3e7e-7e53-2987-32fbfc5f0050" data-legacy-id="UUID-efb905e5-7a4d-9c19-80d9-213bd0d3a80a" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/enabling-or-disabling-a-step-conditionally.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Enabling or disabling a Step conditionally</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-steps/setting-a-time-limit-for-steps.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-72c8d204-5d1c-6039-fb7f-2151c6e65c69" data-legacy-id="UUID-1008a236-83ae-9740-685b-535db113cb60" data-permalink=
+                      "steps-and-workflows/introduction-to-steps/setting-a-time-limit-for-steps.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting a time limit for Steps</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/developing-your-own-bitrise-step.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-431581d4-f756-3167-7a10-13f70cd4dba4" data-legacy-id="UUID-19e4390c-ae3c-5d2c-2cce-80aed6acd7bf" data-permalink="steps-and-workflows/developing-your-own-bitrise-step.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Developing your own Bitrise Step</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/developing-a-new-step.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-e67f6a64-56f0-20f4-4150-02ff566db8b7" data-legacy-id="UUID-bde734ed-ab81-6d56-4099-03e2f1f0aeac" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/developing-a-new-step.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Developing a new Step</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/sharing-steps-with-all-bitrise-users.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-68dd8146-6228-fa08-2f24-906f7c849313" data-legacy-id="UUID-3a777ba0-793b-f54c-9d76-1b8b2ab9e526" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/sharing-steps-with-all-bitrise-users.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Sharing Steps with all Bitrise users</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/verified-steps.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-c66d6d34-8fb3-b9cb-38fb-aec1b0c97479" data-legacy-id="UUID-1f0b23cc-0e72-bde6-6f4e-587e83cba4a8" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/verified-steps.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Verified Steps</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/developing-your-own-bitrise-step/creating-your-own-bitrise-project-scanner.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-a34926b3-4944-74d2-3cd3-46a8df5881d8" data-legacy-id="UUID-ea834094-5aae-cc21-684e-6dfeffcb787d" data-permalink=
+                      "steps-and-workflows/developing-your-own-bitrise-step/creating-your-own-bitrise-project-scanner.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Creating your own Bitrise project scanner</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/introduction-to-workflows.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-builds-rel original-topic original-topic" data-origin-id="UUID-31bf6c77-1059-252e-fb0b-32941af36dd0" data-legacy-id="UUID-bc1fab84-f407-68e5-fa17-a784831d7007"
+                  data-permalink="steps-and-workflows/introduction-to-workflows.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Workflows</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-workflows/default-workflows.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-builds-rel original-topic original-topic" data-origin-id="UUID-ecad7fc7-429f-3659-a7fe-6eaeb453ac51" data-legacy-id="UUID-910f4654-1330-39c9-fa21-79b41cb2fbda" data-permalink=
+                      "steps-and-workflows/introduction-to-workflows/default-workflows.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Default Workflows</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-workflows/creating-a-workflow.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-65dc1d06-fcfe-b8f0-a78a-53b92d6f4a00" data-legacy-id="UUID-12da8fa4-1230-9623-8e3f-3e363e5e727a" data-permalink=
+                      "steps-and-workflows/introduction-to-workflows/creating-a-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Creating a Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-workflows/managing-workflows.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-b7677a8d-d8a3-a494-924c-2296184f7023" data-legacy-id="UUID-d0a02dbb-4a34-5ff2-5292-ac0f55bb66c7" data-permalink=
+                      "steps-and-workflows/introduction-to-workflows/managing-workflows.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Managing Workflows</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/introduction-to-workflows/copying-workflows-from-one-app-to-another.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3a2d360d-92eb-add6-2cae-e6f3c0298d2b" data-legacy-id="UUID-64c2cf60-ef2c-7a32-6cf0-188c4c9a04ee" data-permalink=
+                      "steps-and-workflows/introduction-to-workflows/copying-workflows-from-one-app-to-another.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Copying Workflows from one app to another</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/workflow-recipes-for-android-apps.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel" data-origin-id="UUID-27c020f9-d798-5865-6ed8-2ee30ee4fcc8" data-legacy-id="UUID-44e4634f-d103-fc7a-121a-d5181c5c8343" data-permalink=
+                  "steps-and-workflows/workflow-recipes-for-android-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Workflow recipes for Android apps</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-visual-studio-app-center.html" hreflang="en" class="topic-link section" data-origin-id="UUID-883079d0-f3f4-3f6e-6455-00d2d2f2f4eb" data-legacy-id="UUID-0a3744bb-21f9-fcaa-8da3-248ba9a2f617" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-visual-studio-app-center.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Deploy to Visual Studio App Center</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-firebase-app-distribution.html" hreflang="en" class="topic-link section" data-origin-id="UUID-fcb0a2fa-917f-5fd3-7935-8b4f30ac75b6" data-legacy-id="UUID-959bcf6f-c379-a406-ca42-f5b68d641e66" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-firebase-app-distribution.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Deploy to Firebase App Distribution</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-google-play--internal,-alpha,-beta,-production-.html" hreflang="en" class="topic-link section" data-origin-id="UUID-d69b4448-289e-2ec5-002d-b3b613a4039a" data-legacy-id="UUID-9d49b2fc-9efc-3a1a-7b8a-fa64d7bbf457" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-google-play--internal,-alpha,-beta,-production-.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Deploy to Google Play (Internal, Alpha, Beta, Production)</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-bitrise-io.html" hreflang="en" class="topic-link section" data-origin-id="UUID-7adddc5d-d948-3100-436d-eda84c34e1ca" data-legacy-id="UUID-4b8497f5-c208-b068-cba6-8a58e1f24bc8" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--deploy-to-bitrise-io.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Deploy to Bitrise.io</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--example-ci-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-f5c5ffd2-f978-8b6f-478f-15c52c6583f7" data-legacy-id="UUID-7e23f3d6-0cbc-adcb-0386-d1888fecc77e" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--example-ci-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Example CI Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--example-nightly-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-9b4c2d3e-7686-2764-2303-6152472a5c16" data-legacy-id="UUID-9170d511-436b-31fd-2b51-2aad2c885209" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--example-nightly-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Example nightly Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--example-pull-request-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-1f77aec6-24f0-1d21-ca93-164af078c2f8" data-legacy-id="UUID-4b6a4e13-f574-12a0-cb55-c80d71ad15fa" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--example-pull-request-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Example pull request Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--run-instrumentation-tests-on-virtual-devices.html" hreflang="en" class="topic-link section" data-origin-id="UUID-46fda509-d40f-3f0e-d36f-01df4956564f" data-legacy-id="UUID-fdc51957-b261-27e1-81fe-fb143779458f" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--run-instrumentation-tests-on-virtual-devices.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Run instrumentation tests on virtual devices</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--example-release-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-4d8164cb-e18d-cf23-7a0a-29b2dada6726" data-legacy-id="UUID-3ed4a3e0-c485-ffb5-e823-9f2e64f99280" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--example-release-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Example release Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--run-lint.html" hreflang="en" class="topic-link section" data-origin-id="UUID-a1ec8025-b9e3-5c06-0733-73b8a2a41952" data-legacy-id="UUID-06762519-5778-7272-8b6c-f78846b61ca4" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--run-lint.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Run Lint</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/turn-on-gradle-build-profiling.html" hreflang="en" class="topic-link section" data-origin-id="UUID-dcdf1008-3782-4b10-a562-4b5904de7707" data-legacy-id="UUID-7ab4118b-fe11-d555-ea8f-4959c2836fcf" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/turn-on-gradle-build-profiling.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Turn on Gradle build profiling</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--run-unit-tests.html" hreflang="en" class="topic-link section" data-origin-id="UUID-4b6f0e68-d994-d1c2-eab1-ed3d03d47471" data-legacy-id="UUID-3c579a2c-91a0-7efa-c83b-09b56c542082" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--run-unit-tests.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Run unit tests</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-android-apps/-android--run-tests-using-the-emulator.html" hreflang="en" class="topic-link section" data-origin-id="UUID-b9726bc6-ffb8-937a-83b4-a54e23c670ff" data-legacy-id="UUID-c05dd4df-4709-1022-bc30-a421bb6357b7" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-android-apps/-android--run-tests-using-the-emulator.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Android) Run tests using the emulator</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/workflow-recipes-for-ios-apps.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel" data-origin-id="UUID-095c2977-2548-824e-c84f-7ad9f6314704" data-legacy-id="UUID-ec5faa90-23eb-8899-b36a-f2af2a22bd54" data-permalink=
+                  "steps-and-workflows/workflow-recipes-for-ios-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Workflow recipes for iOS apps</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-visual-studio-app-center.html" hreflang="en" class="topic-link section" data-origin-id="UUID-849db348-c6d4-9727-bd80-5b8f52987986" data-legacy-id="UUID-b413e321-d24e-56b5-0b49-9cedba975126" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-visual-studio-app-center.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Deploy to Visual Studio App Center</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--cache-cocoapods-dependencies.html" hreflang="en" class="topic-link section" data-origin-id="UUID-8c6c9c3f-95c1-0b70-256e-506edb1747f9" data-legacy-id="UUID-05b58448-d712-2e61-71ff-bcfa9741b73e" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--cache-cocoapods-dependencies.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Cache CocoaPods dependencies</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-app-store-connect---testflight.html" hreflang="en" class="topic-link section" data-origin-id="UUID-cfe6088b-c76d-28c8-d2b0-ef0dc9490265" data-legacy-id="UUID-f7ea2c6d-1189-2da4-511b-b9c801510656" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-app-store-connect---testflight.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Deploy to App Store Connect / TestFlight</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-ci-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-9830623e-bcb5-ef43-b930-bad41bf386e2" data-legacy-id="UUID-e1ff45fc-964e-a6c1-4e24-53eb0380d386" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-ci-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Example CI Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-bitrise-io.html" hreflang="en" class="topic-link section" data-origin-id="UUID-11ee0331-b9cb-c4c1-802a-e5a07a52188a" data-legacy-id="UUID-62ef8753-58c8-61de-92dd-4a7984aea81c" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-bitrise-io.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Deploy to bitrise.io</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-pull-request-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-64059077-f4a0-04f9-e61a-05a4a1452639" data-legacy-id="UUID-331c082e-8e00-7b8a-3fe9-85dc2e591568" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-pull-request-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Example pull request Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-firebase-app-distribution.html" hreflang="en" class="topic-link section" data-origin-id="UUID-e16efd58-2da0-11d8-3b87-77783e890018" data-legacy-id="UUID-8797f754-510c-e2d9-6264-8ff3ac71755e" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--deploy-to-firebase-app-distribution.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Deploy to Firebase App Distribution</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-nightly-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-67a95acd-479c-4963-f735-171278a6661d" data-legacy-id="UUID-fd5efbea-bd27-0c65-c6e0-587ccf7ec010" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-nightly-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Example nightly Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--run-tests-on-a-physical-device.html" hreflang="en" class="topic-link section" data-origin-id="UUID-f6c7f2b2-fd7e-6151-b499-9a675b7640cf" data-legacy-id="UUID-5d1a0796-2f6c-cce0-da34-4c1b8b0c56e8" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--run-tests-on-a-physical-device.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Run tests on a physical device</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--run-tests-on-a-simulator.html" hreflang="en" class="topic-link section" data-origin-id="UUID-244f401e-8aca-53f4-10da-104e1c016e48" data-legacy-id="UUID-0da81ecf-bd0e-a8b5-459d-978bfba50fc7" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--run-tests-on-a-simulator.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Run tests on a simulator</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--install-cocoapods-dependencies.html" hreflang="en" class="topic-link section" data-origin-id="UUID-96bff69d-7454-e504-5495-f09358ad5c6c" data-legacy-id="UUID-4ff5663b-43a9-8a10-45b0-606c865973f1" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--install-cocoapods-dependencies.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Install CocoaPods dependencies</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--install-carthage-dependencies.html" hreflang="en" class="topic-link section" data-origin-id="UUID-098a0349-83bf-4c3b-65af-0066202208da" data-legacy-id="UUID-3f80e917-f8f6-a75e-21e7-d7b3d6e45514" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--install-carthage-dependencies.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Install Carthage dependencies</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-release-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-9a3fd7b3-f005-e28e-2bd3-04a1cdca291b" data-legacy-id="UUID-80bc1d46-44cc-c14f-d353-e26ad9d04db1" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-ios-apps/-ios--example-release-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS) Example release Workflow</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel" data-origin-id="UUID-f4ed0e7e-27f7-4eb8-c2f5-81133289dd74" data-legacy-id="UUID-bd816f59-9a0a-0a0a-7b38-9a38ca866ccc" data-permalink=
+                  "steps-and-workflows/workflow-recipes-for-cross-platform-apps.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Workflow recipes for cross-platform apps</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--cache-dependencies--node_modules-.html" hreflang="en" class="topic-link section" data-origin-id="UUID-839de6c8-8bb2-1f2e-2462-3ed5a0429131" data-legacy-id="UUID-52459b20-f020-59cc-582d-47addabe15f4" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--cache-dependencies--node_modules-.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(React Native) Cache dependencies (node_modules)</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--expo--build-using-turtle-cli.html" hreflang="en" class="topic-link section" data-origin-id="UUID-b7cb73aa-01c7-a15c-b821-d3bd9461c203" data-legacy-id="UUID-c8b65940-6499-3a90-f941-77051fb90ae9" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--expo--build-using-turtle-cli.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(React Native) Expo: Build using Turtle CLI</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--run-tests.html" hreflang="en" class="topic-link section" data-origin-id="UUID-c7c24cd9-fb88-6ae2-68cc-207c7836d90f" data-legacy-id="UUID-25bdd052-97a6-f48d-76ac-e69518f18300" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--run-tests.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(React Native) Run tests</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--install-dependencies.html" hreflang="en" class="topic-link section" data-origin-id="UUID-666f2fdc-82af-24f4-c30a-b1ecefa9123c" data-legacy-id="UUID-9ab45570-f84c-31ad-520e-ed18a617555e" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-react-native--install-dependencies.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(React Native) Install dependencies</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--run-tests.html" hreflang="en" class="topic-link section" data-origin-id="UUID-79e5d24a-2395-cedd-0ae7-4cf87e937abb" data-legacy-id="UUID-4da65bc1-a943-df91-563f-80ea3611df2f" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--run-tests.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Flutter) Run tests</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--install-flutter-sdk.html" hreflang="en" class="topic-link section" data-origin-id="UUID-3620f76a-bd7a-c9c4-a5d0-eb2df497aa8d" data-legacy-id="UUID-f7fbeeed-0beb-b862-69b6-1561d77e0d35" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--install-flutter-sdk.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Flutter) Install Flutter SDK</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--run-dart-analyzer.html" hreflang="en" class="topic-link section" data-origin-id="UUID-1308579a-034d-c7e5-088c-fc5521ff93cb" data-legacy-id="UUID-16aa2345-0f32-95db-1948-25242e5b39ad" data-permalink=
+                      "steps-and-workflows/workflow-recipes-for-cross-platform-apps/-flutter--run-dart-analyzer.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(Flutter) Run Dart Analyzer</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../steps-and-workflows/generic-workflow-recipes.html" hreflang="en" class="topic-link section" data-origin-id="UUID-d56a5129-1646-2ed7-42db-09794018edd5" data-legacy-id="UUID-7a564da7-e804-140e-de7e-353c9a047054" data-permalink="steps-and-workflows/generic-workflow-recipes.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Generic Workflow recipes</a>
+                  <ul>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/-ios-android--send-build-status-to-slack.html" hreflang="en" class="topic-link section" data-origin-id="UUID-31b2afbb-35f8-65ac-c20c-f06ee06daf07" data-legacy-id="UUID-f2377e6e-08a7-27c0-6a9d-6925180f1a39" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/-ios-android--send-build-status-to-slack.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS/Android) Send build status to Slack</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/cloning-a-git-repository.html" hreflang="en" class="topic-link section" data-origin-id="UUID-4468473d-9be4-fae2-493c-102000ad652b" data-legacy-id="UUID-e3d0f8ae-377e-e704-a565-cc6a87bc7391" data-permalink="steps-and-workflows/generic-workflow-recipes/cloning-a-git-repository.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Cloning a Git repository</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/shallow-clone-a-git-repository.html" hreflang="en" class="topic-link section" data-origin-id="UUID-873d8d4d-ea32-62b8-e273-b498f80af700" data-legacy-id="UUID-ae580d09-b83a-4ac3-cdbd-6a646263c20e" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/shallow-clone-a-git-repository.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Shallow clone a Git repository</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/example-workflow--create-gitflow-release-branch.html" hreflang="en" class="topic-link section" data-origin-id="UUID-1fd25694-6391-f4ad-ecde-4fec65b34f4c" data-legacy-id="UUID-99b2327a-cce8-367b-d019-235af3191398" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/example-workflow--create-gitflow-release-branch.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Example Gitflow release branch Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/-ios-android--send-qr-code-to-slack.html" hreflang="en" class="topic-link section" data-origin-id="UUID-616b377c-852b-e6ef-fb76-d527c331fc9d" data-legacy-id="UUID-646265c4-1d5f-10c5-2348-6951427624df" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/-ios-android--send-qr-code-to-slack.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">(iOS/Android) Send QR code to Slack</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/start--parallel--builds-from-the-workflow.html" hreflang="en" class="topic-link section" data-origin-id="UUID-374e7111-7853-4108-94a1-d0697d303d56" data-legacy-id="UUID-d1428e58-7488-2ead-3f36-fc786f7319a5" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/start--parallel--builds-from-the-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Start builds from a parent Workflow</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/make-caching-efficient-for-pull-request-builds.html" hreflang="en" class="topic-link section" data-origin-id="UUID-d76e8a50-f26c-478c-423b-a593ce642d73" data-legacy-id="UUID-c7691539-1145-9472-ef9d-4f9eac518768" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/make-caching-efficient-for-pull-request-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Optimizing cache efficiency for pull request builds</a>
+                    </li>
+                    <li>
+                      <a href="../steps-and-workflows/generic-workflow-recipes/github-pull-request--send-the-build-qr-code.html" hreflang="en" class="topic-link section" data-origin-id="UUID-c70cffa4-0c74-182d-11fd-bff1a2fd5040" data-legacy-id="UUID-7ba9aa48-1123-0f1b-26e6-3046e3d21c38" data-permalink=
+                      "steps-and-workflows/generic-workflow-recipes/github-pull-request--send-the-build-qr-code.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">GitHub pull request: send the build QR code</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../builds.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d1227f29-9b5f-0237-ec0d-cf81c662d61e" data-legacy-id="UUID-0f130c27-ad82-ff42-a001-6b38d922476f" data-permalink="builds.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span>
+              Builds and Pipelines</a>
+              <ul>
+                <li>
+                  <a href="../builds/build-pipelines.html" hreflang="en" class="topic-link section" data-origin-id="UUID-f89e7a41-bc16-bc09-73f1-eaec61cb92d0" data-legacy-id="UUID-a5af2e6d-1358-9ad6-16c0-0fa00ff2b98d" data-permalink="builds/build-pipelines.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class=
+                  "glyphicon"></span> Build Pipelines [BETA]</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/build-pipelines/configuring-a-bitrise-pipeline.html" hreflang="en" class="topic-link section" data-origin-id="UUID-89b2d7ad-8336-028d-e0af-557a53137c63" data-legacy-id="UUID-2d779391-64d7-1504-b533-2bb03cb84749" data-permalink="builds/build-pipelines/configuring-a-bitrise-pipeline.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Configuring a Bitrise Pipeline</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/running-a-pipeline.html" hreflang="en" class="topic-link section" data-origin-id="UUID-40a9f04b-9e6d-0de6-f509-f8786cd8bde4" data-legacy-id="UUID-da90f14a-6add-ccb8-6224-58ce6a73161f" data-permalink="builds/build-pipelines/running-a-pipeline.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Running a Pipeline</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/checking-your-pipelines.html" hreflang="en" class="topic-link section" data-origin-id="UUID-341aaf6c-ca1b-85df-4d26-27917255357c" data-legacy-id="UUID-0c8bdf0b-0ca3-ad7b-45d1-1aa6ba927a2a" data-permalink="builds/build-pipelines/checking-your-pipelines.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Checking your Pipelines</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/rebuild-a-failed-pipeline.html" hreflang="en" class="topic-link section" data-origin-id="UUID-985f987e-db51-3fff-857f-6feba2655cee" data-legacy-id="UUID-6f4619cd-ad81-554e-f4d0-2ea63c89f61b" data-permalink="builds/build-pipelines/rebuild-a-failed-pipeline.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Rebuilding a failed Pipeline</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/build-pipelines-faq.html" hreflang="en" class="topic-link section" data-origin-id="UUID-04de4d23-cf96-5050-3191-fdfc28a85678" data-legacy-id="UUID-6c4c945d-58ea-c186-9c6c-2eac7ab6ff18" data-permalink="builds/build-pipelines/build-pipelines-faq.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Pipeline Management FAQ</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/known-issues-and-limitations-of-the-pipelines-beta.html" hreflang="en" class="topic-link section" data-origin-id="UUID-986ca902-28fc-6329-b3ee-f1a4ab1bda03" data-legacy-id="UUID-a6eb1336-4554-4132-4354-b1a9f97144c7" data-permalink=
+                      "builds/build-pipelines/known-issues-and-limitations-of-the-pipelines-beta.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Known issues and limitations of the Pipelines beta</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/currently-supported-use-cases-for-the-android-platform.html" hreflang="en" class="topic-link section" data-origin-id="UUID-8af92bbc-dc34-7fef-9806-a609d55789d6" data-legacy-id="UUID-6fad393d-cca1-7a0b-fb41-153e3cd72445" data-permalink=
+                      "builds/build-pipelines/currently-supported-use-cases-for-the-android-platform.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Currently supported use cases for the Android platform</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-pipelines/currently-supported-use-cases-for-the-ios-platform.html" hreflang="en" class="topic-link section" data-origin-id="UUID-98530d7a-4624-2dbf-073e-d13e727ac889" data-legacy-id="UUID-8f0291f8-85e7-18ab-c169-7696e26056d5" data-permalink=
+                      "builds/build-pipelines/currently-supported-use-cases-for-the-ios-platform.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Currently supported use cases for the iOS platform</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/configuring-build-settings.html" hreflang="en" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-9664acae-1c6a-b44e-2fb6-8d2815834003" data-legacy-id="UUID-3b2060df-1350-eb76-98ca-d54288272689" data-permalink="builds/configuring-build-settings.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Configuring build settings</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/configuring-build-settings/setting-the-stack-for-your-builds.html" hreflang="en" class="topic-link section taxonomy-configuration-stacks taxonomy-related-links-taxonomies-stacks-rel" data-origin-id="UUID-8c7a43db-c7da-ed14-f6d3-5f5f28685b31" data-legacy-id="UUID-8add719e-be31-79a0-c38c-83f3f80e553b" data-permalink=
+                      "builds/configuring-build-settings/setting-the-stack-for-your-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting the stack for your builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/managing-an-app-s-bitrise-yml-file.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-fa61c122-0d5b-a9c2-1894-19c46053c2d3" data-legacy-id=
+                      "UUID-162a6e44-340e-720b-f934-9066f2d049bb" data-permalink="builds/configuring-build-settings/managing-an-app-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Managing an app's bitrise.yml file</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/editing-an-app-s-bitrise-yml-file.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml" data-origin-id="UUID-27994b5b-7eef-8e27-211c-3b8d5944ec64" data-legacy-id="UUID-b143bd44-8dd2-5150-9b34-b0f7c425cf50" data-permalink=
+                      "builds/configuring-build-settings/editing-an-app-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Editing the app's bitrise.yml file</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/accessing-a-build-s-bitrise-yml-file.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml" data-origin-id="UUID-ef139639-ec20-2648-6864-745661a48f54" data-legacy-id="UUID-0d36ae47-0c69-ae38-580e-0be4270615d9" data-permalink=
+                      "builds/configuring-build-settings/accessing-a-build-s-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Accessing a build's bitrise.yml file</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/selective-builds.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-7ea21aeb-894c-2fbf-740c-855f7c44468f" data-legacy-id="UUID-463dbb1f-ea7d-6cb2-39ea-5cef8f1cc551" data-permalink=
+                      "builds/configuring-build-settings/selective-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Selective builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/rolling-builds.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-b37ee7d4-5345-d0eb-8a90-28a14a7147a0" data-legacy-id="UUID-053831d5-e75f-f2b3-ff34-64415e4496c4" data-permalink=
+                      "builds/configuring-build-settings/rolling-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Rolling builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/configuring-email-notifications.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-a99f035b-3782-57a3-f1cd-6b5fa90a7119" data-legacy-id="UUID-9c6bb39b-7420-fc75-be92-a74a73380c06" data-permalink=
+                      "builds/configuring-build-settings/configuring-email-notifications.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Configuring email notifications</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/configuring-slack-integration.html" hreflang="en" class="topic-link section" data-origin-id="UUID-0b9ffab0-7e83-f821-f700-05800f3e04f4" data-legacy-id="UUID-1fc52417-ef2b-591d-4483-fe5737d1fc2e" data-permalink="builds/configuring-build-settings/configuring-slack-integration.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Configuring Slack integration</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/setting-your-git-credentials-on-build-machines.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-24466c62-468b-f760-5cba-57f411ef244b" data-legacy-id="UUID-13df7c4f-514b-bc57-5dfd-0aabcf524f17" data-permalink=
+                      "builds/configuring-build-settings/setting-your-git-credentials-on-build-machines.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Setting your Git credentials on build machines</a>
+                    </li>
+                    <li>
+                      <a href="../builds/configuring-build-settings/reporting-the-build-status-to-your-git-hosting-provider.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-89a809e8-c5a5-931a-0cd0-2fad85a2e3d3" data-legacy-id="UUID-a8940fc6-f44f-3e23-7143-6e867f401e2b" data-permalink=
+                      "builds/configuring-build-settings/reporting-the-build-status-to-your-git-hosting-provider.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Reporting the build status to your Git hosting provider</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/starting-builds.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-8e0ac4ce-7b16-a294-9ab2-4a313fbb1beb" data-legacy-id="UUID-7a5babee-e4ce-3cd1-a9d3-d6a584076e28" data-permalink="builds/starting-builds.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Starting builds</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/starting-builds/starting-builds-manually.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-15b65886-09d5-4911-92c5-737b131485e4" data-legacy-id="UUID-14db9d3c-937f-3575-9881-32c68b4b5c65" data-permalink=
+                      "builds/starting-builds/starting-builds-manually.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Starting builds manually</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/triggering-builds-automatically.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-trigger-rel" data-origin-id="UUID-552bb6f5-13fb-66cc-3fd9-fcb9e55f08ad" data-legacy-id="UUID-06923acf-f63d-2a1f-f6fb-5f1fd1a050a4" data-permalink=
+                      "builds/starting-builds/triggering-builds-automatically.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Triggering builds automatically</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/scheduling-builds.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-befcf35c-25d4-5439-7bb3-f259ab4e9c8e" data-legacy-id="UUID-6418e051-49d4-e466-88a7-dd1cdfa081ca" data-permalink="builds/starting-builds/scheduling-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Scheduling builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/approving-pull-request-builds.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-f6704323-3520-bed6-b9d7-76e2941c8339" data-legacy-id="UUID-e60a6674-7b2c-1472-ebbe-69cd6acb09f6" data-permalink="builds/starting-builds/approving-pull-request-builds.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Approving pull request builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/using-the-trigger-map-to-trigger-builds.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5132c5a7-c6f6-02f2-9e2c-352a6f85cf5e" data-legacy-id="UUID-bfc6dff0-5cba-ce7e-9d78-86bf4789e430" data-permalink=
+                      "builds/starting-builds/using-the-trigger-map-to-trigger-builds.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Using the Trigger Map to trigger builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/starting-parallel-builds-with-a-single-trigger.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-trigger-rel original-topic original-topic" data-origin-id="UUID-0471dd25-5a86-78e4-ba04-30b3a15d213a" data-legacy-id=
+                      "UUID-0b1c49ab-c0a0-d9ee-aefb-753f6eb64877" data-permalink="builds/starting-builds/starting-parallel-builds-with-a-single-trigger.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Starting parallel builds with a single trigger</a>
+                    </li>
+                    <li>
+                      <a href="../builds/starting-builds/skipping-a-given-commit-or-pull-request.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-1e25a28b-a398-ac68-258b-d551610aceff" data-legacy-id="UUID-11454234-4d3d-9d4e-c3e3-7b152ba41bc6" data-permalink=
+                      "builds/starting-builds/skipping-a-given-commit-or-pull-request.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Skipping a given commit or pull request</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/caching.html" hreflang="en" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-d6b033d3-46c5-ccdb-ad09-0e32eecc58d1" data-legacy-id="UUID-cb391959-16f9-34a6-f25e-c212ab029a22" data-permalink="builds/caching.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Caching</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/caching/using-caching-in-your-builds.html" hreflang="en" class="topic-link section" data-origin-id="UUID-bd7ea83f-5029-5c9d-a1b8-49e0fee1ae58" data-legacy-id="UUID-159ec88a-cca1-9be6-b62d-9c7aae08008b" data-permalink="builds/caching/using-caching-in-your-builds.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Using caching in your builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-cocoapods.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-e63c69a5-3212-850e-e163-75d79a4b428c" data-legacy-id="UUID-deb6ce8a-8332-93e7-2667-fbd1f33f2511" data-permalink="builds/caching/caching-cocoapods.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Caching Cocoapods</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-gradle.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-02d4b8d8-d505-fa9d-3894-f9c987bc5f65" data-legacy-id="UUID-bb248b31-7a4f-cd75-656e-6b0b1a277e71" data-permalink="builds/caching/caching-gradle.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Caching Gradle</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-maven.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3a7cc027-74dc-7275-40a7-183b14b1a933" data-legacy-id="UUID-22b3d079-610a-beca-3be1-a3a202a6e1d2" data-permalink="builds/caching/caching-maven.html" data-topic-level="3" data-relative-prefix="../../"
+                      data-publication-date="">Caching Maven</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-ruby-gems.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-8b9f4f15-0700-166a-bb13-74c14a2fd862" data-legacy-id="UUID-485cce15-2bee-a3a7-1990-b09fd4cfc03c" data-permalink="builds/caching/caching-ruby-gems.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Caching Ruby Gems</a>
+                    </li>
+                    <li>
+                      <a href="../builds/caching/caching-homebrew-installers.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-67134aea-b72d-eb67-6268-b71ae501455f" data-legacy-id="UUID-8b77b885-77d9-7c06-21d1-acf3fe60a206" data-permalink="builds/caching/caching-homebrew-installers.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Caching Homebrew installers</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/managing-build-files.html" hreflang="en" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-349c1927-26cf-9a2f-bf23-21a934aa45c2" data-legacy-id="UUID-f2bd6af3-988a-4a09-1aea-232482fdd9ca" data-permalink="builds/managing-build-files.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Managing build files</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/managing-build-files/uploading-files-for-your-builds.html" hreflang="en" class="topic-link section" data-origin-id="UUID-6b0e6ac6-9657-fd31-16cc-7ae85af61551" data-legacy-id="UUID-58c978da-5697-54b2-6656-bf8c92f19199" data-permalink="builds/managing-build-files/uploading-files-for-your-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Uploading files for your builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/using-files-in-your-builds.html" hreflang="en" class="topic-link section" data-origin-id="UUID-aa7247c0-e9ba-c44f-8e9a-2a9a2df6df86" data-legacy-id="UUID-e980fbbb-9dfa-bfa9-525b-ecded2eddc46" data-permalink="builds/managing-build-files/using-files-in-your-builds.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Using files in your builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/using-encrypted-files-in-your-builds.html" hreflang="en" class="topic-link section" data-origin-id="UUID-946a4987-2a3c-9576-2acb-50f457ff0703" data-legacy-id="UUID-29f2a9e8-90cb-e1b0-2c0e-83385a0f9e30" data-permalink="builds/managing-build-files/using-encrypted-files-in-your-builds.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Using encrypted files in your builds</a>
+                    </li>
+                    <li>
+                      <a href="../builds/managing-build-files/build-artifacts-online.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-9acbfd32-8157-4ce9-2fe4-67bdf8ef3507" data-legacy-id="UUID-943d6cfb-c906-d834-8046-3246b2bab582" data-permalink="builds/managing-build-files/build-artifacts-online.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Build artifacts online</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../builds/environment-variables.html" hreflang="en" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-9ff79df6-9953-1bf5-76a5-852420b21ed4" data-legacy-id="UUID-9e1b5aee-d60f-441c-d75c-fc15814c2988" data-permalink="builds/environment-variables.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Environment Variables</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/secrets.html" hreflang="en" class="topic-link section taxonomy-configuration-env-vars taxonomy-related-links-taxonomies-bitrise-yml-rel" data-origin-id="UUID-e6946697-1571-f957-a619-8973cd5cf399" data-legacy-id="UUID-61932413-6328-dfe6-b5f5-610ab2556ce2" data-permalink="builds/secrets.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Secrets</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/build-statuses.html" hreflang="en" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-1c01835f-ecc2-1079-16e8-7660fe017a91" data-legacy-id="UUID-071a5c49-837a-d7ed-e0bf-5989c6d309e3" data-permalink="builds/build-statuses.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Build
+                  statuses</a>
+                </li>
+                <li>
+                  <a href="../builds/installing-tools-during-a-build.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-stacks original-topic original-topic" data-origin-id="UUID-aec439b6-736b-333f-6dc0-4cdc46b621e2" data-legacy-id="UUID-b0a55b5f-81b0-8ae7-8900-aea4c94ccb54" data-permalink=
+                  "builds/installing-tools-during-a-build.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Installing tools during a build</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/connecting-to-a-vpn-during-a-build.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-builds-rel original-topic original-topic" data-origin-id="UUID-21a2136d-0e93-1e81-6bd8-c39085d5a543" data-legacy-id="UUID-22f77fd6-d80c-b9b5-049d-128651fc6ac4" data-permalink=
+                  "builds/connecting-to-a-vpn-during-a-build.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Connecting to a VPN during a build</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/finding-a-specific-build.html" hreflang="en" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-95336313-9e6d-d72e-1a4a-7fe9076f0948" data-legacy-id="UUID-2ca76374-67ac-f310-9efc-916708670a91" data-permalink="builds/finding-a-specific-build.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Finding a specific build</a>
+                </li>
+                <li>
+                  <a href="../builds/build-numbering-and-app-versioning.html" hreflang="en" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-a7dc4565-2965-aae9-c388-af8889ffe1a3" data-legacy-id="UUID-9dab82c8-74b8-8912-944a-014aa4a2d58c" data-permalink="builds/build-numbering-and-app-versioning.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Build numbering and app versioning</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../builds/build-data-and-troubleshooting.html" hreflang="en" class="topic-link section taxonomy-actions-builds" data-origin-id="UUID-66c5bce9-ccd5-ebc0-2716-f22a20df3dc0" data-legacy-id="UUID-873efeb4-c257-e462-2dee-5673fb302fbf" data-permalink="builds/build-data-and-troubleshooting.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date=""><span class="glyphicon"></span> Build data and troubleshooting</a>
+                  <ul>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/build-logs.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-8e2ac26a-22c2-ce48-bc28-c9188fcbef7b" data-legacy-id="UUID-ef0d34e9-df1b-58fa-a19c-51a608ed9eec" data-permalink=
+                      "builds/build-data-and-troubleshooting/build-logs.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Build logs</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/remote-access.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-c330b88b-5906-b45d-74fb-2e68d19e9d0b" data-legacy-id="UUID-ef4aab78-d42f-effa-116b-a2c3878abd27" data-permalink=
+                      "builds/build-data-and-troubleshooting/remote-access.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Remote access</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/debugging-your-build-on-your-own-machine.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-96d78e2c-40c2-1d53-05ae-658018113300" data-legacy-id="UUID-92eaad46-609a-a5a5-dae2-c290ad6ebd16" data-permalink=
+                      "builds/build-data-and-troubleshooting/debugging-your-build-on-your-own-machine.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Debugging your build on your own machine</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/bitrise-checks-on-github.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-c2aca2c7-4d07-1b83-aacf-697303551f2d" data-legacy-id="UUID-34ed9662-c93a-cdfe-fdfb-d7ef82da6bc4"
+                      data-permalink="builds/build-data-and-troubleshooting/bitrise-checks-on-github.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Bitrise Checks on GitHub</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/monitoring-your-builds-with-meercode.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5066f347-fd45-5f13-7a8c-ddf058ac7922" data-legacy-id="UUID-5f3c4cd9-71f1-e46b-deb3-1311862a5837" data-permalink=
+                      "builds/build-data-and-troubleshooting/monitoring-your-builds-with-meercode.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Monitoring your builds with Meercode</a>
+                    </li>
+                    <li>
+                      <a href="../builds/build-data-and-troubleshooting/checking-build-details.html" hreflang="en" class="topic-link section" data-origin-id="UUID-9d0a949a-11e6-ee4a-d326-18c656e130a5" data-legacy-id="UUID-aeaa57a9-02fd-adef-89c0-95e7c76f8a28" data-permalink="builds/build-data-and-troubleshooting/checking-build-details.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Checking build details</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../code-signing.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-related-links-taxonomies-code-signing-rel original-topic original-topic" data-origin-id="UUID-258c2c25-158e-51b1-0b6e-f739cbd5eb0f" data-legacy-id="UUID-f726801e-3495-e587-a213-7294d85e39cb" data-permalink="code-signing.html"
+              data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Code signing</a>
+              <ul>
+                <li>
+                  <a href="../code-signing/android-code-signing.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id="UUID-0ea7b738-1527-6a4d-687a-b3552b3fa0e2" data-legacy-id="UUID-474baabc-711f-55f8-3b37-837bdac01c8f"
+                  data-permalink="code-signing/android-code-signing.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Android code signing</a>
+                  <ul>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-using-the-android-sign-step.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android" data-origin-id="UUID-d00c628e-d72b-57d8-f8e6-c0b25e0053bb" data-legacy-id="UUID-52707ea4-64ad-aa87-e0d4-c8569bd519a5" data-permalink=
+                      "code-signing/android-code-signing/android-code-signing-using-the-android-sign-step.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Android code signing using the Android Sign Step</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-with-android-studio.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-97a3dc89-365c-a4cc-ceb2-a33701d413ad" data-legacy-id="UUID-8c590be8-41ad-129e-86fd-259cc2ef3e53"
+                      data-permalink="code-signing/android-code-signing/android-code-signing-with-android-studio.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Android code signing with Android Studio</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/android-code-signing-in-gradle.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-a26fc278-b856-fd5b-b678-feee463f248e" data-legacy-id="UUID-c69ca0db-02d0-a770-e3be-9c6a471b2248"
+                      data-permalink="code-signing/android-code-signing/android-code-signing-in-gradle.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Android code signing in Gradle</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/android-code-signing/downloading-a-keystore-file.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing original-topic original-topic" data-origin-id="UUID-441b0774-edef-b033-7a01-c7f77b043c58" data-legacy-id="UUID-29c4cd7d-a8dd-e271-09e2-105b47d4f646" data-permalink=
+                      "code-signing/android-code-signing/downloading-a-keystore-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Downloading a keystore file</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../code-signing/ios-code-signing.html" hreflang="en" class="topic-link section taxonomy-platform-ios taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-95beece4-a703-8f4d-5793-ee34f765cb76" data-legacy-id="UUID-d36ce185-2cd0-000d-06d0-724ff68af5fb" data-permalink=
+                  "code-signing/ios-code-signing.html" data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> iOS code signing</a>
+                  <ul>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/collecting-and-exporting-code-signing-files-with-codesigndoc.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-972cfe0e-c096-da27-7f07-e2b8bf426847" data-legacy-id="UUID-b0bb1c8c-5ed9-0d4c-a812-4521e1e5e365" data-permalink=
+                      "code-signing/ios-code-signing/collecting-and-exporting-code-signing-files-with-codesigndoc.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Collecting and exporting code signing files with codesigndoc</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-5b2a76ce-6ef6-8e63-fba1-3dbb51a06921" data-legacy-id=
+                      "UUID-b3ccb26c-e693-c87d-3bbb-c80ed6e9620d" data-permalink="code-signing/ios-code-signing/managing-ios-code-signing-files---automatic-provisioning.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOS code signing with automatic provisioning</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/managing-ios-code-signing-files---manual-provisioning.html" hreflang="en" class="topic-link section taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-3c74d4ea-423e-cb76-1c1a-aa2f44737a94" data-legacy-id="UUID-f285233a-ceb7-e79b-cf49-a4633a2bac26" data-permalink=
+                      "code-signing/ios-code-signing/managing-ios-code-signing-files---manual-provisioning.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOS code signing with manual provisioning</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/creating-a-signed-ipa-for-xcode-projects.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-39fbc767-f894-36b9-67c4-77255dcf2fed" data-legacy-id=
+                      "UUID-75a05aff-7687-7e6e-23c4-d7b867798f5b" data-permalink="code-signing/ios-code-signing/creating-a-signed-ipa-for-xcode-projects.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Creating a signed IPA for Xcode projects</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/signing-an-ipa-with-multiple-code-signing-identities.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying original-topic original-topic" data-origin-id="UUID-d3c66ba4-3ae2-a1e2-3a05-15adce30e2fc" data-legacy-id=
+                      "UUID-1d4f851c-156c-c625-0b70-8ea6c73aba5a" data-permalink="code-signing/ios-code-signing/signing-an-ipa-with-multiple-code-signing-identities.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Signing an IPA with multiple code signing identities</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/ios-code-signing-for-ionic-and-cordova-projects.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-6ae15f90-c4f1-e899-dcf5-f25bf374bfa5" data-legacy-id=
+                      "UUID-6bd3c0a4-be9f-524e-a527-0d901ba2fee9" data-permalink="code-signing/ios-code-signing/ios-code-signing-for-ionic-and-cordova-projects.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">iOS code signing for Ionic and Cordova projects</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/protecting-your-code-signing-files.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-04c7cf5c-55ff-8552-6009-a76c5af7d334" data-legacy-id="UUID-7938a135-a086-dc7b-213a-fc2a082b3c60" data-permalink=
+                      "code-signing/ios-code-signing/protecting-your-code-signing-files.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Protecting your code signing files</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/generating-ios-code-signing-files.html" hreflang="en" class="topic-link section taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-5da9aa01-42ef-7197-5586-68cac312c5ec" data-legacy-id="UUID-e1a1bf3c-3b1b-ce04-a8ad-81aba1b06904" data-permalink=
+                      "code-signing/ios-code-signing/generating-ios-code-signing-files.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Generating iOS code signing files</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/exporting-ios-code-signing-files-without-codesigndoc.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-04ee983e-4340-c63d-ed02-43de23cae41d" data-legacy-id="UUID-d94478a6-0e45-37b0-35ef-e1e5e4e6dbeb" data-permalink=
+                      "code-signing/ios-code-signing/exporting-ios-code-signing-files-without-codesigndoc.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Exporting iOS code signing files manually</a>
+                    </li>
+                    <li>
+                      <a href="../code-signing/ios-code-signing/troubleshooting-ios-code-signing.html" hreflang="en" class="topic-link section taxonomy-actions-code-signing taxonomy-actions-deploying taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-03a0d092-2594-d8cf-c2f2-1dc5fab0d47b" data-legacy-id=
+                      "UUID-5170a6a2-46af-4767-84bf-fb7bd3f0cdbc" data-permalink="code-signing/ios-code-signing/troubleshooting-ios-code-signing.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Troubleshooting iOS code signing</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../testing.html" hreflang="en" class="topic-link section taxonomy-actions-testing original-topic original-topic" data-origin-id="UUID-16c1dbdf-cbd3-6f01-1d2b-91d812c8ab4f" data-legacy-id="UUID-1050ded8-6ea2-c69c-2f86-fe19a1f32df6" data-permalink="testing.html" data-topic-level="1" data-relative-prefix="" data-publication-date=
+              ""><span class="glyphicon"></span> Testing</a>
+              <ul>
+                <li>
+                  <a href="../testing/test-reports.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-actions-troubleshooting taxonomy-platform-android taxonomy-platform-cross-platform taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-42d03dc2-a21c-1daf-e851-a6c46adcde01" data-legacy-id=
+                  "UUID-23e122bc-41cd-fee5-7a24-e72b59503484" data-permalink="testing/test-reports.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Test Reports</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/exporting-to-test-reports-from-any-step.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-19746872-1371-1bf6-acf1-12d7663fae86" data-legacy-id="UUID-6a29fea7-ab01-01f6-252b-22bd962a8aa7" data-permalink=
+                  "testing/exporting-to-test-reports-from-any-step.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Exporting to Test Reports from any Step</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/running-xcode-tests.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-43229fb9-7af4-8829-c020-91c6fcdb768f" data-legacy-id="UUID-7e25ef4d-c72e-c389-acaa-88677328e973" data-permalink="testing/running-xcode-tests.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Running Xcode tests</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/installing-an-ipa-file-from-the-public-install-page.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-03a475d5-58a6-b62f-5d0f-8f92454f5491" data-legacy-id="UUID-b97e4c19-2e6a-79c3-618d-ebf4c5ab2b14" data-permalink=
+                  "testing/installing-an-ipa-file-from-the-public-install-page.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Installing an ipa file from the public install page</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/registering-a-test-device.html" hreflang="en" class="topic-link section taxonomy-actions-testing original-topic original-topic" data-origin-id="UUID-4048bab6-2101-fc89-888f-14aefee6e7ef" data-legacy-id="UUID-d09298de-9395-6bce-d417-89bbc96290fa" data-permalink="testing/registering-a-test-device.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Registering a test device</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/device-testing-for-ios.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-ios original-topic original-topic" data-origin-id="UUID-a7dd930d-ded0-fb68-9c16-6556dad515c4" data-legacy-id="UUID-f4179a26-1ed4-717b-bd7a-cd897450b377" data-permalink="testing/device-testing-for-ios.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Device testing for iOS</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/android-unit-tests.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-766b3bd1-5c47-4d03-91e7-d30eac2eae8a" data-legacy-id="UUID-74a1e9d8-8e12-2ef0-c035-88033afb4d89" data-permalink="testing/android-unit-tests.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Android unit tests</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/device-testing-for-android.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-android original-topic original-topic" data-origin-id="UUID-0900864b-58e4-f571-50a0-377a2624b836" data-legacy-id="UUID-48173269-ac2f-a467-640b-99fb997e5c6a" data-permalink=
+                  "testing/device-testing-for-android.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Device testing for Android</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../testing/running-tests-in-the-visual-studio-app-center.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-294acb61-4f0c-baf1-9cb6-9a1c93dd9b27" data-legacy-id="UUID-7ee7bd8d-b5cb-8545-5e67-55237820e9f6" data-permalink="testing/running-tests-in-the-visual-studio-app-center.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Running tests in the Visual Studio App Center</a>
+                </li>
+                <li>
+                  <a href="../testing/running-detox-tests-on-bitrise.html" hreflang="en" class="topic-link section taxonomy-actions-testing taxonomy-platform-cross-platform original-topic original-topic" data-origin-id="UUID-aa43cb68-94fb-86be-470b-93c9eae82bc1" data-legacy-id="UUID-75f389f7-4f06-e719-1539-e1fa20f6a5b0" data-permalink=
+                  "testing/running-detox-tests-on-bitrise.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Running Detox tests on Bitrise</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../deploying.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5b1d4326-81f8-90a8-18bc-83bef25a8536" data-legacy-id="UUID-c37e7e5a-ec91-7264-8654-db4643771ba4" data-permalink="deploying.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Deploying</a>
+              <ul>
+                <li>
+                  <a href="../deploying/android-deployment.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-android-rel original-topic original-topic" data-origin-id="UUID-ae57c4fd-3338-1749-3423-301d5554584f" data-legacy-id="UUID-23ceae1b-1528-ab36-db0a-f8496a2806eb" data-permalink="deploying/android-deployment.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> Android deployment</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/android-deployment/deploying-android-apps-to-bitrise-and-google-play.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-5fce7c55-2d78-10fa-6980-7c8fbcdf1248" data-legacy-id="UUID-d5217e49-ec62-ca98-64b9-6ca7fa283799" data-permalink=
+                      "deploying/android-deployment/deploying-android-apps-to-bitrise-and-google-play.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying Android apps to Bitrise and Google Play</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/deploying-apps-to-huawei-appgallery.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-c4522aa2-80a6-36ca-f716-bf398931d09f" data-legacy-id="UUID-595ed037-9b50-9676-c4bd-8f42200619e2" data-permalink=
+                      "deploying/android-deployment/deploying-apps-to-huawei-appgallery.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying apps to Huawei AppGallery</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d856df0e-2c91-4328-af8d-c4cef99def94" data-legacy-id="UUID-30d567ce-12a8-87db-271a-b2823624f13c" data-permalink=
+                      "deploying/android-deployment/generate-and-deploy-multiple-flavor-apks-in-a-single-workflow.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Generate and deploy multiple flavor APKs in a single workflow</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/generating-and-deploying-android-app-bundles.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-bba05c8f-bc65-1e68-6d73-8d701a3ef7dc" data-legacy-id="UUID-daaf2f46-a4dd-2895-2f23-b1da44cce183" data-permalink=
+                      "deploying/android-deployment/generating-and-deploying-android-app-bundles.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Generating and deploying Android app bundles</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/android-deployment/exporting-a-universal-apk-from-an-aab.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-b2a83029-ee24-4016-f978-5b4531ce186a" data-legacy-id="UUID-f2fde620-ebaa-bb38-039a-adc8916818fa" data-permalink=
+                      "deploying/android-deployment/exporting-a-universal-apk-from-an-aab.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Exporting a universal APK from an AAB</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/ios-deployment.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-f34cbdba-ea23-f773-be03-cf7e28638977" data-legacy-id="UUID-4b35ec31-4574-caad-19d1-42bc625d5e78" data-permalink="deploying/ios-deployment.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date=""><span class="glyphicon"></span> iOS deployment</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-to-bitrise-io.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-b1b5b411-2188-cc3e-5857-6749bc2e12f7" data-legacy-id="UUID-390316a2-5029-5007-f081-eff288c0c0f6" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-to-bitrise-io.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying an iOS app to Bitrise.io</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-for-external-testing.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-0c413c05-b60a-9eb0-9e06-8fbcdd6c9cc3" data-legacy-id="UUID-db34e0a9-53cd-0fba-7c0f-316715eb8086" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-for-external-testing.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying an iOS app for external testing</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-to-app-store-connect.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-da669359-c4bb-5049-ab4a-ad56926dab44" data-legacy-id=
+                      "UUID-302df510-d0ea-c62b-5069-02eebd5c9272" data-permalink="deploying/ios-deployment/deploying-an-ios-app-to-app-store-connect.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying an iOS app to App Store Connect</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/ios-deployment/deploying-an-ios-app-for-simulators.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-b8b67f37-232b-a487-cd68-9401862fdb2e" data-legacy-id="UUID-1bfef8bc-f675-2ea8-9b7b-865afbc61f80" data-permalink=
+                      "deploying/ios-deployment/deploying-an-ios-app-for-simulators.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Deploying an iOS app for simulators</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/bitrise-ota-app-deployment.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-c70dfca0-8ace-c801-8535-5d3dc1d972f6" data-legacy-id="UUID-f19457ce-8164-bc71-2137-7fd994e69edf" data-permalink="deploying/bitrise-ota-app-deployment.html" data-topic-level="2" data-relative-prefix=
+                  "../" data-publication-date="">Bitrise OTA app deployment</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-with-ship.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-3c9287e4-770b-f853-30dd-a1cd1849416c" data-legacy-id="UUID-3fd86123-186c-7ff6-66ba-3ac9199b542f" data-permalink="deploying/deploying-with-ship.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Deploying with Ship</a>
+                  <ul>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/getting-started-with-ship.html" hreflang="en" class="topic-link section" data-origin-id="UUID-22775316-af19-31b1-bf64-2a4ad579bed5" data-legacy-id="UUID-41ce3912-3860-89de-c3d9-c93f3893e76c" data-permalink="deploying/deploying-with-ship/getting-started-with-ship.html" data-topic-level="3"
+                      data-relative-prefix="../../" data-publication-date="">Getting started with Ship</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/configuring-an-app-for-publishing-with-ship.html" hreflang="en" class="topic-link section" data-origin-id="UUID-9d206adc-1e0c-f2b7-76d8-d53636d99b8f" data-legacy-id="UUID-3b6a3b93-7b6d-b1b4-500c-ee336e649036" data-permalink=
+                      "deploying/deploying-with-ship/configuring-an-app-for-publishing-with-ship.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Configuring an app for publishing with Ship</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/installing-an-app-on-a-test-device-with-ship.html" hreflang="en" class="topic-link section" data-origin-id="UUID-f8f70801-5a37-b1ba-f3c4-a57e7b7357de" data-legacy-id="UUID-d90d264d-2df6-a7e8-84c1-9ebcb7fc776c" data-permalink=
+                      "deploying/deploying-with-ship/installing-an-app-on-a-test-device-with-ship.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Installing an app on a test device with Ship</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/publishing-an-app-to-a-store-with-ship.html" hreflang="en" class="topic-link section" data-origin-id="UUID-f6c01f12-dcb7-5a3a-e005-ff893d474de9" data-legacy-id="UUID-32002270-02dd-7f53-3d46-cb809b624327" data-permalink="deploying/deploying-with-ship/publishing-an-app-to-a-store-with-ship.html"
+                      data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Publishing an app to a store with Ship</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/using-ship-for-apps-built-with-cross-platform-frameworks.html" hreflang="en" class="topic-link section" data-origin-id="UUID-75d18344-1afc-0efa-1e3c-8463345c0c9d" data-legacy-id="UUID-2d66c61d-d927-38d8-c5a0-75b00998764e" data-permalink=
+                      "deploying/deploying-with-ship/using-ship-for-apps-built-with-cross-platform-frameworks.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Using Ship for apps built with cross-platform frameworks</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/app-details-in-ship.html" hreflang="en" class="topic-link section" data-origin-id="UUID-5f83d763-3d84-0626-3ffe-b72ae661208b" data-legacy-id="UUID-958b2b3e-0d5a-3368-c0c3-4d46071696eb" data-permalink="deploying/deploying-with-ship/app-details-in-ship.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">App details in Ship</a>
+                    </li>
+                    <li>
+                      <a href="../deploying/deploying-with-ship/ship-notifications.html" hreflang="en" class="topic-link section" data-origin-id="UUID-42427c87-4755-3022-2521-3dd00c0b3dc5" data-legacy-id="UUID-6aff0063-fc6e-4330-d1d5-5ddb1c529585" data-permalink="deploying/deploying-with-ship/ship-notifications.html" data-topic-level="3" data-relative-prefix=
+                      "../../" data-publication-date="">Ship notifications</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-apps-to-applivery.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-1adbe843-e24b-907d-480c-cf2cf5f17fba" data-legacy-id="UUID-5dd58ac5-f4fe-4e17-4a05-6363f26bc0ae" data-permalink="deploying/deploying-apps-to-applivery.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Deploying apps to Applivery</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-apps-to-deploygate-from-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-066787b9-e3c2-8826-acde-b0a0d5d794b9" data-legacy-id="UUID-632764fb-7d84-992f-d4e2-b53a55fb8c12" data-permalink="deploying/deploying-apps-to-deploygate-from-bitrise.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Deploying apps to DeployGate from Bitrise</a>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-your-app-to-appaloosa.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-fc974e4a-6215-4464-82b9-e499900c5791" data-legacy-id="UUID-db10f62a-8b57-0b1e-665c-1a9d1879fdfc" data-permalink="deploying/deploying-your-app-to-appaloosa.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Deploying your app to Appaloosa</a>
+                </li>
+                <li>
+                  <a href="../deploying/deploying-to-testfairy-with-bitrise.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-7f8d8f2a-0c96-b2a2-d22a-848d2f58488a" data-legacy-id="UUID-a28a90a4-c515-24d4-d322-673814515a30" data-permalink="deploying/deploying-to-testfairy-with-bitrise.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Deploying to TestFairy with Bitrise</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../build-insights.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-actions-troubleshooting original-topic original-topic" data-origin-id="UUID-e0616761-9cb7-7321-e585-c89c5747026d" data-legacy-id="UUID-9bd3a8e4-236f-f47c-95dd-bc27a511a16f" data-permalink="build-insights.html" data-topic-level="1"
+              data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> Build Insights</a>
+              <ul>
+                <li>
+                  <a href="../build-insights/getting-started-with-insights.html" hreflang="en" class="topic-link section" data-origin-id="UUID-b08cc96c-32cb-f704-788c-bbfd1fe854b9" data-legacy-id="UUID-e3ff43e7-45e2-03e0-cf75-47a506baa5e2" data-permalink="build-insights/getting-started-with-insights.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Getting started with Insights</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../build-insights/available-metrics-in-insights.html" hreflang="en" class="topic-link section" data-origin-id="UUID-882de749-0081-e73f-b327-a8aa4f7dca44" data-legacy-id="UUID-8c83a6e5-986c-3c57-7b56-65ed069996c6" data-permalink="build-insights/available-metrics-in-insights.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Available metrics in Insights</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../build-insights/test-stats-in-build-insights.html" hreflang="en" class="topic-link section" data-origin-id="UUID-1a12ee14-e155-58fb-9808-99d117a5e7de" data-legacy-id="UUID-d6b6eb3a-a842-bb5c-e12f-e31ddc113ea7" data-permalink="build-insights/test-stats-in-build-insights.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Test stats in Build Insights</a>
+                  <ul></ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../bitrise-cli.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-27017f65-ad72-12cd-02b8-7d543d112a63" data-legacy-id="UUID-e9345ec7-292e-a6e2-e70e-2d876908aec8" data-permalink="bitrise-cli.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class=
+              "glyphicon"></span> Bitrise CLI</a>
+              <ul>
+                <li>
+                  <a href="../bitrise-cli/installing-and-updating-the-bitrise-cli.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-d610eedd-c45f-e1a2-8071-2968f86a4af8" data-legacy-id="UUID-7646c9ae-7085-91b7-723d-34f7442c0aaa" data-permalink="bitrise-cli/installing-and-updating-the-bitrise-cli.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Installing and updating the Bitrise CLI</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/adding-a-new-app-from-a-cli.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f900869d-cbec-8aa0-6f35-25fec828d88f" data-legacy-id="UUID-1079bc04-ec61-f882-c3a8-faca2105b38f" data-permalink="bitrise-cli/adding-a-new-app-from-a-cli.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Adding a new app from a CLI</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/initializing-a-bitrise-project-locally.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-13ec887e-137f-b3eb-2dc4-f22944dd1d01" data-legacy-id="UUID-151fcbbc-c9fb-6803-e4a0-34df36e6301a" data-permalink=
+                  "bitrise-cli/initializing-a-bitrise-project-locally.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Initializing a Bitrise project locally</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/installing-and-upgrading-the-offline-workflow-editor.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-0fc16f0c-c014-d02a-e3cf-8c660d7c542b" data-legacy-id="UUID-048848eb-eb79-a5a9-a5d8-22f4b5766e1a" data-permalink=
+                  "bitrise-cli/installing-and-upgrading-the-offline-workflow-editor.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Installing and upgrading the offline Workflow Editor</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/running-your-first-local-build-with-the-cli.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-bitrise-yml original-topic original-topic" data-origin-id="UUID-c4e3dad2-d242-d8c7-fdce-e87b02b0339b" data-legacy-id="UUID-70b77658-138c-afa4-5e97-c33dc8122ae3" data-permalink=
+                  "bitrise-cli/running-your-first-local-build-with-the-cli.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Running your first local build with the CLI</a>
+                </li>
+                <li>
+                  <a href="../bitrise-cli/managing-secrets-locally.html" hreflang="en" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-ac254cae-50e4-fbb0-9dd0-7a4e66a780e3" data-legacy-id="UUID-2d28d165-eb76-78a8-2290-adab1fc4ae69" data-permalink="bitrise-cli/managing-secrets-locally.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Managing Secrets locally</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../api.html" hreflang="en" class="topic-link section" data-origin-id="UUID-cb55b806-0981-0f42-eeff-5e2683d7829a" data-legacy-id="UUID-e907f989-b825-9411-9398-e10036885ddb" data-permalink="api.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> API</a>
+              <ul>
+                <li>
+                  <a href="../api/authenticating-with-the-bitrise-api.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-accounts-rel taxonomy-related-links-taxonomies-api-rel original-topic original-topic" data-origin-id="UUID-b33dbf25-c5e4-11c8-f20c-a619a4616911" data-legacy-id="UUID-37d98545-a334-a3e0-ea1d-676c05cf4f9b"
+                  data-permalink="api/authenticating-with-the-bitrise-api.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Authenticating with the Bitrise API</a>
+                </li>
+                <li>
+                  <a href="../api/pagination-of-api-calls.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-4d7629da-3db4-6b4d-3ce7-053eb3cb7a46" data-legacy-id="UUID-bacb6520-d6a4-c7fc-51bd-b2f985824545" data-permalink="api/pagination-of-api-calls.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Pagination of API calls</a>
+                </li>
+                <li>
+                  <a href="../api/adding-and-managing-apps.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-f589566f-87a7-bde7-d6b0-676cd3bbf33f" data-legacy-id="UUID-7f6e234a-f7d5-04b9-ebd9-3b4bbafedd05" data-permalink="api/adding-and-managing-apps.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Adding and managing apps</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/triggering-and-aborting-builds.html" hreflang="en" class="topic-link section taxonomy-actions-builds original-topic original-topic" data-origin-id="UUID-7f0fe70c-83aa-8955-4153-192fa5308866" data-legacy-id="UUID-8101784e-bfc1-88ac-7fe1-f90ecaa3c339" data-permalink="api/triggering-and-aborting-builds.html" data-topic-level="2"
+                  data-relative-prefix="../" data-publication-date="">Triggering and aborting builds</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/incoming-and-outgoing-webhooks.html" hreflang="en" class="topic-link section taxonomy-configuration-apps original-topic original-topic" data-origin-id="UUID-40445e57-5661-4a26-710b-bfafeb921453" data-legacy-id="UUID-062ec1ad-a9f9-0a19-f4d0-50b01fb6468e" data-permalink="api/incoming-and-outgoing-webhooks.html" data-topic-level=
+                  "2" data-relative-prefix="../" data-publication-date="">Incoming and outgoing webhooks</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-ios-code-signing-files.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-code-signing-rel taxonomy-related-links-taxonomies-ios-rel original-topic original-topic" data-origin-id="UUID-dce4d841-fb55-0714-cb04-a4b91884b4d1" data-legacy-id="UUID-9ceef8b2-5917-b9d8-5fe2-510b0c8c49ec"
+                  data-permalink="api/managing-ios-code-signing-files.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Managing iOS code signing files</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-files-in-generic-file-storage.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-555289d2-cdf2-0a32-114d-626663437bd1" data-legacy-id="UUID-1dcd8575-d195-377d-0e4f-157443b0e93c" data-permalink=
+                  "api/managing-files-in-generic-file-storage.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Managing files in Generic File Storage</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/managing-build-artifacts.html" hreflang="en" class="topic-link section taxonomy-actions-builds taxonomy-related-links-taxonomies-builds-rel original-topic original-topic" data-origin-id="UUID-80a5c036-577b-12c1-1929-9f32be653983" data-legacy-id="UUID-301c547a-e269-1494-43be-cc6e326c3636" data-permalink=
+                  "api/managing-build-artifacts.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Managing build artifacts</a>
+                  <ul></ul>
+                </li>
+                <li>
+                  <a href="../api/api-reference.html" hreflang="en" class="topic-link section swagger-topic swagger-topic" data-origin-id="UUID-3208c6b4-0ebf-fb66-853b-34dc4f4590e1" data-legacy-id="UUID-6651274d-fb0d-cd13-6eae-1aa5b64e3cba" data-permalink="api/api-reference.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">API
+                  reference</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="../references.html" hreflang="en" class="topic-link section" data-origin-id="UUID-e512a445-f4b3-b030-d8ea-4ac0e2b045f6" data-legacy-id="UUID-65ffd971-f2df-01e9-40b3-fe591c681b49" data-permalink="references.html" data-topic-level="1" data-relative-prefix="" data-publication-date=""><span class="glyphicon"></span> References</a>
+              <ul>
+                <li>
+                  <a href="../references/basics-of-bitrise-yml.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-e2b5d350-3596-52e2-e43b-bbbc8c13e4d7" data-legacy-id="UUID-2cda69d1-a002-7b51-e372-0f9fdfb56702" data-permalink=
+                  "references/basics-of-bitrise-yml.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Basics of bitrise.yml</a>
+                </li>
+                <li>
+                  <a href="../references/customizing-bitrise-yml.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-2e4ed86d-f923-7a38-1158-b021f4c1c44d" data-legacy-id="UUID-b66dcf4e-390d-6e39-435d-7aa3b63057bb" data-permalink=
+                  "references/customizing-bitrise-yml.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Customizing the bitrise.yml config</a>
+                </li>
+                <li>
+                  <a href="../references/workflows-reference.html" hreflang="en" class="topic-link section taxonomy-related-links-taxonomies-bitrise-yml-rel original-topic original-topic" data-origin-id="UUID-4c05eb0d-ec75-1f61-34b2-71e39a7d7c97" data-legacy-id="UUID-a6fcc659-cdca-a8ab-99b7-72c2f55ee624" data-permalink="references/workflows-reference.html"
+                  data-topic-level="2" data-relative-prefix="../" data-publication-date="">Workflow reference</a>
+                </li>
+                <li>
+                  <a href="../references/steps-reference.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-0ec53551-c5ec-c23a-0bfc-06d3402e2b9e" data-legacy-id="UUID-c5229546-0af7-44b6-f3b4-828065b04f57" data-permalink="references/steps-reference.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date=""><span class="glyphicon"></span> Steps reference</a>
+                  <ul>
+                    <li>
+                      <a href="../references/steps-reference/step-reference-id-format.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps" data-origin-id="UUID-5145156c-cbf0-fea5-bc5f-74b144587a22" data-legacy-id="UUID-bbc2f5b5-1077-ec64-2006-8a60990df870" data-permalink=
+                      "references/steps-reference/step-reference-id-format.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step reference/ID format</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-data-in-the-bitrise-yml-file.html" hreflang="en" class="topic-link section taxonomy-configuration-bitrise-yml taxonomy-configuration-steps" data-origin-id="UUID-f403d515-c887-5c34-6fbc-5ec2d34c84c1" data-legacy-id="UUID-79e8efe7-af2a-be81-ac18-4f7e5bb904d9" data-permalink=
+                      "references/steps-reference/step-data-in-the-bitrise-yml-file.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step data in the bitrise.yml file</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-properties-reference.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-b47c2d93-6f1c-2883-2f4c-3f7b74e67870" data-legacy-id="UUID-2dd3fba3-31bf-e1c2-b5a7-366837170082" data-permalink=
+                      "references/steps-reference/step-properties-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step properties</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-inputs-reference.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-adadfd2d-d409-915c-2a14-a23845d8f930" data-legacy-id="UUID-4e634a4d-3415-960e-a65c-3fe481664149" data-permalink=
+                      "references/steps-reference/step-inputs-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step inputs reference</a>
+                    </li>
+                    <li>
+                      <a href="../references/steps-reference/step-outputs-reference.html" hreflang="en" class="topic-link section taxonomy-configuration-steps original-topic original-topic" data-origin-id="UUID-60e62e69-617d-3d17-40cb-7db191191c11" data-legacy-id="UUID-a5d0555f-842b-f43b-6aff-e4368b57d933" data-permalink=
+                      "references/steps-reference/step-outputs-reference.html" data-topic-level="3" data-relative-prefix="../../" data-publication-date="">Step outputs reference</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="../references/available-environment-variables.html" hreflang="en" class="topic-link section taxonomy-configuration-env-vars original-topic original-topic" data-origin-id="UUID-06a76a7c-35cb-ddb5-1c8f-b5eacfcea5ae" data-legacy-id="UUID-61fec685-5924-fa38-d35f-72b7c421738a" data-permalink=
+                  "references/available-environment-variables.html" data-topic-level="2" data-relative-prefix="../" data-publication-date="">Available environment variables</a>
+                </li>
+                <li>
+                  <a href="../references/bitrise-tools.html" hreflang="en" class="topic-link section original-topic original-topic" data-origin-id="UUID-dbe33c5c-925b-fbc2-2a2b-e917954c4f4a" data-legacy-id="UUID-61452e0b-d5a1-25e0-9ea8-8e71d494219a" data-permalink="references/bitrise-tools.html" data-topic-level="2" data-relative-prefix="../"
+                  data-publication-date="">Bitrise tools</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </aside>
+        <div class="site-content">
+          <div class="toolbar top-nav-on">
+            <div class="toolbar-tools">
+              <div id="navbar" class="navbar-collapse collapse">
+                <ul class="top-nav-menu sm sm-simple">
+                  <li>
+                    <a href="https://support.bitrise.io/hc/en-us?utm_source=devcenter&amp;utm_medium=top_cta" class="external-top-nav-link" target="_blank">Go to Support</a>
+                  </li>
+                  <li>
+                    <a href="https://www.bitrise.io/contact?utm_source=website&amp;utm_medium=devcenter&amp;utm_campaign=contact" class="external-top-nav-link" target="_blank">Book a demo</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tool-print">
+                <i class="fa fa-print" aria-hidden="true">print</i>
+              </div>
+              <div class="tool-search">
+                <i class="fa fa-search" aria-hidden="true"></i>
+                <form class="tool-search-form" autocomplete="off">
+                  <input type="text" class="form-control search-field" placeholder="Search" id="aa-search-input" />
+                </form>
+              </div><button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".site-sidebar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+            </div>
+          </div>
+          <main>
+            <div id="top-pager">
+              <ul class="pager">
+                <li class="previous">
+                  <a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="using-your-own-docker-image.html#setting-a-custom-docker-image-in-the-workflow-editor">Prev</a>
+                </li>
+                <li class="next">
+                  <a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="running-your-build-locally-in-docker.html#downloading-docker-images-from-quay-io">Next</a>
+                </li>
+              </ul>
+            </div>
+            <article class="topic content-container" id="content-wrapper">
+              <div id="topic-content" class="topic-content">
+                <div class="breadcrumb-container">
+                  <ul class="breadcrumb">
+                    <li class="breadcrumb-link">
+                      <a href="/">Home</a>
+                    </li>
+                    <li class="breadcrumb-link">
+                      <a href="../infrastructure.html">Infrastructure</a>
+                    </li>
+                    <li class="breadcrumb-node">Running your build locally in Docker</li>
+                  </ul>
+                </div>
+                <section xml:lang="en" lang="en" dir="ltr" class="section original-topic original-topic" data-origin-id="UUID-1c50574c-3c92-c29c-d531-19008eecca68" data-legacy-id="UUID-34a13218-f4c4-9696-b69a-3810d89bf8ef" data-permalink="infrastructure/running-your-build-locally-in-docker.html" data-topic-level="2" data-relative-prefix="../"
+                data-publication-date="" id="running-your-build-locally-in-docker">
+                  <div class="titlepage">
+                    <div>
+                      <div class="title">
+                        <h1 class="title" style="clear: both">Running your build locally in Docker</h1>
+                      </div>
+                      <div>
+                        <div class="abstract">
+                          <div class="abstract-title">
+                            Abstract
+                          </div>
+                          <p>You can run a Bitrise build in Docker on your own machines: you need Docker, the Bitrise CLI, and a Bitrise Docker image.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <p>To be able to run your Linux stack builds locally, you’ll need <a class="link" href="https://www.docker.com/" target="_blank" rel="noopener">docker</a>:</p>
+                  <div class="itemizedlist">
+                    <ul class="itemizedlist" style="list-style-type: disc;">
+                      <li class="listitem">
+                        <p>For Linux, just follow the <a class="link" href="https://docs.docker.com/engine/installation/linux/" target="_blank" rel="noopener">official install instructions</a>.</p>
+                      </li>
+                      <li class="listitem">
+                        <p>For Mac, you can use Docker for Mac, which is the easiest way to get started.</p>
+                      </li>
+                    </ul>
+                  </div>
+                  <p>In this guide, we’ll use <a class="link" href="https://github.com/bitrise-samples/sample-apps-android-sdk22" target="_blank" rel="noopener">this Bitrise Android sample project</a>.</p>
+                  <div dir="ltr" class="caution">
+                    <h3 class="title">Large images ahead</h3>
+                    <p>The official Bitrise Docker images are quite large because they include a wide variety of preinstalled tools. You’ll need at least 20-25 GB FREE DISC SPACE!</p>
+                  </div>
+                  <p>If you’re not familiar with the <a class="link" href="https://www.bitrise.io/cli" target="_blank" rel="noopener">Bitrise CLI</a>, you should try that first. You don’t have to master the CLI, if you know what <code class="code">bitrise run WORKFLOW</code> does, that should be enough for this tutorial.</p>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-34a13218-f4c4-9696-b69a-3810d89bf8ef_UUID-b984657e-3245-cf1b-bf25-c376e57357e0" data-publication-date="" id="downloading-docker-images-from-quay-io">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Downloading docker images from quay.io</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="procedure">
+                      <ol class="procedure" type="1">
+                        <li class="step">
+                          <p>Install <a class="link" href="https://www.docker.com/" target="_blank" rel="noopener">docker</a>.</p>
+                        </li>
+                        <li class="step">
+                          <p>Make sure you have your <code class="code">bitrise.yml</code> in your repository.</p>
+                          <p>You don’t have to commit it, but the file must exist in your repository’s root directory.</p>
+                        </li>
+                        <li class="step">
+                          <p><code class="code">cd</code> into your repository’s directory on your Mac/Linux.</p>
+                        </li>
+                        <li class="step">
+                          <p>Pull the image from its registry:</p>
+                          <pre class="programlisting">docker pull quay.io/bitriseio/android:latest
+</pre>
+                        </li>
+                        <li class="step">
+                          <p>Run the following command:</p>
+                          <pre class="programlisting">docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW`       </pre>
+                          <p>If you want to just jump into the container and experiment inside, you can replace <code class="code">--rm quay.io/bitriseio/android:latest bitrise run WORKFLOW</code> with <code class="code">-it quay.io/bitriseio/android:latest bash</code> to start an interactive bash shell inside the container. For example:</p>
+                          <pre class="programlisting">docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash
+</pre>
+                          <p>In general, if your project is an Android project but you don’t use Android NDK, to preserve precious disk space, you should use the <a class="link" href="https://quay.io/repository/bitriseio/android" target="_blank" rel="noopener">quay.io/bitriseio/android</a> docker image. You can find other official Bitrise docker
+                          images on our <a class="link" href="https://quay.io/organization/bitriseio" target="_blank" rel="noopener">Quay page</a>. In this example, we’re using the <code class="code">quay.io/bitriseio/android</code> one.</p>
+                        </li>
+                        <li class="step">
+                          <p>Download docker images from the <a class="link" href="https://quay.io/organization/bitriseio" target="_blank" rel="noopener">Quay</a>:</p>
+                          <pre class="programlisting">docker pull quay.io/bitriseio/android:latest`
+</pre>
+                          <p>Be aware that this can take quite a bit of time, as this image is over 10 GB. If the download fails or hangs, you can restart it any time by running the same command again.</p>
+                        </li>
+                        <li class="step">
+                          <p>Download your Bitrise build configuration (<code class="code">bitrise.yml</code>) to the root directory of your repository.</p>
+                          <p>You can download your project’s <code class="code">bitrise.yml</code> from the <span class="bold bold"><strong>bitrise.yml</strong></span> tab of your Workflow Editor on <a class="link" href="https://www.bitrise.io" target="_blank" rel="noopener">bitrise.io</a>.</p>
+                        </li>
+                        <li class="step">
+                          <p>In your Terminal / Command Line go to (<code class="code">cd</code>) the root directory of your repository. Check if your <code class="code">bitrise.yml</code> is at this location.</p>
+                        </li>
+                      </ol>
+                    </div>
+                    <p>If you try to reproduce an issue, you should <code class="code">git clone</code> your repository into a NEW DIRECTORY, so that the directory will only contain the files which are committed into the repository! It’s a frequent reproducibility issue that you try to run the commands in your normal working directory, where you
+                    most likely have files which are not committed into your repository, for example, files which are in <code class="code">.gitignore</code>.</p>
+                  </section>
+                  <section xml:lang="en" lang="en" dir="ltr" class="section" data-origin-id="" data-legacy-id="UUID-34a13218-f4c4-9696-b69a-3810d89bf8ef_UUID-f60dcdb5-3d89-b814-5c7a-96927f7d403a" data-publication-date="" id="running-the-build">
+                    <div class="titlepage">
+                      <div>
+                        <div class="title">
+                          <h2 class="title" style="clear: both">Running the build</h2>
+                        </div>
+                      </div>
+                    </div>
+                    <p>Run your build with the following command:</p>
+                    <pre class="programlisting">docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" --rm quay.io/bitriseio/android:latest bitrise run WORKFLOW</pre>
+                    <div class="itemizedlist">
+                      <ul class="itemizedlist" style="list-style-type: disc;">
+                        <li class="listitem">
+                          <p><code class="code">--rm quay.io/bitriseio/android:latest bitrise run WORKFLOW</code></p>
+                          <p>with <code class="code">-it quay.io/bitriseio/android:latest bash</code> to start an interactive bash shell inside the container.</p>
+                          <p>For example:</p>
+                          <pre class="programlisting">docker run --privileged --env CI=false --volume "$(pwd):/bitrise/src" --volume "/var/run/docker.sock:/var/run/docker.sock" -it quay.io/bitriseio/android:latest bash`.       </pre>
+                          <p>This command will share the current directory (the directory of your repository) as a shared volume with the docker container, and will make it available inside the container at the path <code class="code">/bitrise/src</code>.</p>
+                          <p>After this, you can run <code class="code">bitrise run WORKFLOW</code>, which will run the workflow inside the container. To exit from the container, just run <code class="code">exit</code>.</p>
+                        </li>
+                        <li class="listitem">
+                          <p>Don’t forget to replace <code class="code">WORKFLOW</code> with the actual ID of your workflow in your <code class="code">bitrise.yml</code>, with something like <code class="code">primary</code>!</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="itemizedlist">
+                      <ul class="itemizedlist" style="list-style-type: disc;">
+                        <li class="listitem">
+                          <p>The <code class="code">--env CI=false</code> flag sets the environment variable <code class="code">CI</code> to <code class="code">false</code> - this will make Bitrise CLI skip certain steps that only make sense to run in a CI environment. For example, our <code class="code">Git Clone</code> Step - you already have
+                          your code, so there’s no need to git clone it again inside the docker container (that’s why we shared the code directory as a <code class="code">--volume</code>).</p>
+                        </li>
+                        <li class="listitem">
+                          <p>The <code class="code">--rm</code> flag tells docker to discard the container after the <code class="code">docker run</code> command finishes. This means that if you run the command again, the only thing which will persist between the <code class="code">docker run ..</code> commands are the files stored at the shared
+                          <code class="code">--volume</code> (in your repository’s directory). Every other file that is generated into a temp or any other location will be discarded / won’t be kept.</p>
+                          <p>If you want to debug the container after a failed build, feel free to remove the <code class="code">--rm</code> flag, and check out a Docker tutorial about how you can connect to an existing docker container. Please note that simply running the command again will not use the same container, but will create a new
+                          one!</p>
+                        </li>
+                        <li class="listitem">
+                          <p>The <code class="code">--privileged</code> flag allows access control of the host from the docker container, so you should never use this flag unless you trust the docker image you will use! This flag is required for allowing VPNs to work (to change network configs of the host), for example.</p>
+                        </li>
+                        <li class="listitem">
+                          <p>The <code class="code">--volume "/var/run/docker.sock:/var/run/docker.sock"</code> flag exposes the docker socket from the host for the container - this is required if you want to run other docker containers from within the container, or if you want to run any <code class="code">docker</code> command during your build
+                          / inside the container.</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </section>
+                </section>
+                <div class="footer-content">
+                  <div class="section-toc section-toc-after">
+                    <div class="section-toc-title">
+                      In this section<span class="section-toc-title-delimiter">:</span>
+                    </div>
+                  </div>
+                  <div class="glossary-definitions"></div>
+                </div>
+                <footer></footer>
+              </div>
+            </article>
+            <aside class="section-nav-container">
+              <ul class="section-nav nav">
+                <li>
+                  <a href="#running-your-build-locally-in-docker">Running your build locally in Docker</a>
+                </li>
+                <li>
+                  <a href="#downloading-docker-images-from-quay-io">Downloading docker images from quay.io</a>
+                </li>
+                <li>
+                  <a href="#running-the-build">Running the build</a>
+                </li>
+              </ul>
+            </aside>
+            <article id="search-result-wrapper">
+              <div class="search-container" style="display: none;">
+                <h2>Search results</h2>
+                <ul class="searchresults"></ul>
+                <p class="noresults">No results found</p>
+              </div>
+            </article>
+            <div class="feedback-panel">
+              <div class="voting-title">
+                Was this helpful?
+              </div>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <button id="feedback-yes-btn" class="btn toggle-yes">Yes</button><button id="feedback-no-btn" class="btn">No</button>
+              </div>
+              <div id="email-feedback" class="toggle-feedback">
+                <p><a href=
+                "https://support.bitrise.io/hc/en-us/requests/new?ticket_form_id=4407829788061" target="_blank">
+                <i aria-hidden="true" class="fa fa-pencil-square-o feedbackicon voting-feedbackicon"></i>Would you like to provide feedback? Just click here to suggest edits.</a></p>
+              </div>
+            </div>
+          </main>
+          <div id="bottom-pager">
+            <ul class="pager">
+              <li class="previous">
+                <a accesskey="p" id="header-navigation-prev" class="pull-left prev visible-lg visible-md" href="using-your-own-docker-image.html#setting-a-custom-docker-image-in-the-workflow-editor">Prev</a>
+              </li>
+              <li class="next">
+                <a accesskey="n" id="header-navigation-next" class="pull-right next visible-lg visible-md" href="running-your-build-locally-in-docker.html#downloading-docker-images-from-quay-io">Next</a>
+              </li>
+            </ul>
+          </div>
+          <footer class="site-footer">
+            <div class="inner">
+              <div class="copyright">
+                © 2022
+              </div>
+              <div class="publication-date">
+                <span class="publication-date-text">Publication date</span><span class="pubdate-delimiter">:</span> <span class="formatted-date"></span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  //<![CDATA[
+  var theme = '2';
+
+                        
+                        var versionsfile = '';
+
+
+                        var indexDict = new Array();
+                        var store = {};
+                        var portalLanguage = 'en';
+                        var enterKey = 'select';
+                        
+                        
+                                var fuse_threshold = 0.3;
+                        
+                                        var local_csh = false;
+                                
+                                        var anchoroption = false;
+                                        var instantsearch_minlength = 1;
+                                                
+                        var useanchorlinks = false;
+                        
+                                useanchorlinks = true;
+                                
+                                var clicktocopy = 'Click to copy link';
+                                var linkcopied =  'Copied!';
+  //]]>
+  </script>
+  <script src="../../js/jquery-3/jquery-3.4.1.min.js" type="text/javascript"></script>
+  <script src="../../js/jquery-migrate-3.0.1.min.js" type="text/javascript"></script>
+  <script src="../../js/materialize.min.js" type="text/javascript"></script>
+  <script src="../../js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="../../js/purl.js" type="text/javascript"></script>
+  <script src="../../js/jquery.smartmenus.js" type="text/javascript"></script>
+  <script src="../../js/html5-2-mp-common.js?version=20220727" type="text/javascript"></script>
+  <script src="../../js/html5-2.js?version=20220727" type="text/javascript"></script>
+  <script src="../../js/checklist.js" type="text/javascript"></script>
+  <script src="../../js/clipboard.min.js" type="text/javascript"></script>
+  <script src="../../js/anchorlinks.js" type="text/javascript"></script>
+  <script src="../../js/html5.algoliasearch.js?version=20220727" type="text/javascript"></script>
+  <script src="../../js/csh.js" type="text/javascript"></script>
+  <script src="../../js/layout-custom-script.js?version=20220727" type="text/javascript"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML" async="async"></script>
+  <script type="text/javascript">
+  //<![CDATA[
+
+                                $(document).ready(function () {
+                                $(".mediaobject img").addClass('materialboxed');
+                                //Exclude images with links
+                                $(".mediaobject a img").removeClass('materialboxed');
+                                if (!document.documentMode) {
+                                $('.materialboxed').materialbox();
+                                }});
+  //]]>
+  </script>
+  <script type="text/javascript">
+  //<![CDATA[
+  var publication_id = 'en-UUID-7395f1f7-ccf0-589c-1269-55efc35b445b';
+  var algolia_application_id = 'HI1538U2K4';
+  var algolia_search_only_api_key = 'e1a727481ac4f75db3e93c7763f02c8a';
+  //]]>
+  </script>
+  <script src="https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/autocomplete.js/0/autocomplete.jquery.min.js"></script>
+</body>
+</html>

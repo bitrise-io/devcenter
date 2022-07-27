@@ -1,0 +1,55 @@
+/* WCAG requirements */
+
+/* Higher contrasts */
+
+html body {
+    color: #333;
+    background-color: white;
+}
+
+.warning, .note, .important, .caution, .tip {
+	color: #000;
+}
+
+.nav-site-sidebar li a {
+	color: #000;
+	background-color: white;
+}
+
+.nav-site-sidebar ul a {
+	color: #000;
+	background-color: white;
+	font-size: 0.93em
+}
+
+.search-field {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.portal-header .search-field {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.search-field::placeholder {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+ul.breadcrumb, html>body .topic-content .breadcrumb {
+	color: #000;
+}
+
+input[type='text']:focus,
+input[type='search']:focus {
+	outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.pager li > a,
+.pager li > span {
+	color: #1976d2;
+}
+
+/* Styling to compensate WCAG-changes */
+.category-more-toc {
+	cursor: pointer;
+	font-weight: bold;
+}

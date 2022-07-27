@@ -1,0 +1,45 @@
+/* Primary color for links, buttons, portal header, titles  */
+a,.text-primary,.btn-primary .badge,.btn-link,.pagination>li>a,.pagination>li>span,.nav-site-sidebar .active>a,.portal-single-publication .publication-icon i,.portal-single-publication .publication-icon .fa,.publication-contents a:hover,.publication-contents h4 a,.titlepage h1.title,.titlepage h2.title,.titlepage h3.title {
+    color: #7e57c2;
+}
+
+.bg-primary,.btn-primary,.publications-condensed .portal-single-publication a,.toolbar,.tool-search-form .search-field,.pager li>a:hover,.pager li>span:hover,.colored-top .site-sidebar-header {
+    background-color: #7e57c2
+}
+
+.btn-primary,.nav .open>a,.nav .open>a:hover,.nav .open>a:focus,.colored-top .site-sidebar-header {
+    border-color: #7e57c2;
+}
+
+/* Hover primary color */
+a:hover,a:focus,a.text-primary:hover,a.text-primary:focus,.btn-link:hover,.btn-link:focus,.pagination>li>a:hover,.pagination>li>span:hover,.pagination>li>a:focus,.pagination>li>span:focus {
+    color: #593696;
+}
+
+a.bg-primary:hover,a.bg-primary:focus,.btn-primary:hover,.btn-primary:active:hover,.btn-primary.active:hover,.open>.dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open>.dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open>.dropdown-toggle.btn-primary.focus,.portal-header .portal-search button:hover {
+    background-color: #593696;    
+}
+
+.nav-site-sidebar li a:focus{
+    background-color: transparent;
+}
+
+.btn-primary:hover,.btn-primary:active:hover,.btn-primary.active:hover,.open>.dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open>.dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open>.dropdown-toggle.btn-primary.focus {
+    border-color: #593696;    
+}
+
+/* Secondary color - For portal search button, publication count */
+.portal-header .portal-search button {
+    background-color:#7e57c2;    
+}
+
+.publication-contents h4 span {
+    background-color: transparent;  
+}
+
+
+/* Other colors */
+.portal-footer {
+    background: #4d2c91;
+    color: #b085f5;
+}

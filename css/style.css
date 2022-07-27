@@ -1,0 +1,829 @@
+/*
+ * Main CSS stylesheet for service and maintenance documentation
+ */
+body {
+	background-color: rgb(230,230,230);
+	font-family: 'lato', 'Arial Unicode MS', Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333;
+}
+body, html {
+	height: 100%;
+}
+h1 {
+	font-size: 200%;
+}
+h2 {
+	font-size: 165%
+}
+h3 {
+	font-size: 125%;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-family: inherit;
+}
+h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-weight: 700;
+}
+
+.section-toc-title{
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 125%;
+    margin-bottom: 10px;
+}
+
+div.footer-content{
+    margin-top: 40px;
+}
+
+.footer-content ul.section-toc a{
+    color: #54a1e5;
+}
+
+h4, h5, h6, .h4, .h5, .h6 {
+    font-size: 100%;
+}
+
+.procedure-title {
+    font-weight: 700;
+}
+
+/*img{
+    max-width: 100%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}*/
+
+table {
+    border-color: #ccc;
+}
+
+table th {
+	text-align: left;
+	padding: 5px;
+}
+
+table td {
+	text-align: left;
+	vertical-align: top;
+	padding: 10px;
+	font-size: 0.9em;
+}
+
+/*td.tableheader{
+    font-weight: bold;
+    font-size: inherit;
+}
+
+td.leftcol, th.leftcol{
+    text-align: left;
+}
+
+td.rightcol, th.rightcol{
+    text-align: right;
+}
+
+td.centercol, th.centercol{
+    text-align: center;
+}
+
+td.justifycol, th.justifycol{
+    text-align: justify;
+}*/
+
+body.paligo-preview .variable-content {
+	background-color: rgb(211,226,248);
+	color:rgb(36,75,101);
+}
+
+/*Fix bad line breaks in code, where words would make in the middle*/
+pre{
+    word-break: keep-all;
+}
+
+a:link, a:visited {
+	/*
+	color: #09c;
+	color: rgb(204, 28, 59);
+	*/
+	color: #54a1e5;
+}
+#page {
+	max-width: 1220px;
+	margin: 0 auto;
+	box-shadow: 0 0 10px 2px hsla(0,0%,0%,.25);
+	outline:1px solid rgb(140,140,140);
+	background-color: #fff;
+	min-height: 98%;
+	height: auto;
+}
+#header .container {
+	padding-left: 25px;
+	padding-right: 25px;
+}
+#logotype-pageheader {
+	margin: 15px 0;
+	max-width: 150px;
+	max-height:60px;
+
+	-moz-transition:width 1s, height 1s, -moz-transform 1s;
+    -webkit-transition:width 1s, height 1s, -webkit-transform 1s;
+    -o-transition:width 1s, height 1s, -o-transform 1s;
+    transition:width 1s, height 1s, transform 1s;
+}
+#page-tools {
+	padding-top: 15px;
+}
+#page-tools li {
+	display: inline-block;
+	text-align: center;
+	font-weight: bold;
+	font-size: 100%;
+	margin-left: 2em;
+}
+#page-tools a {
+	color: #aaa;
+	text-decoration: none;
+}
+#page-tools .glyphicon {
+	font-size: 135%;
+	margin-top: 2px;
+}
+#page-tools a span {
+	display: block;
+	margin: 0 auto;
+}
+#page-tools .tool-label {
+	padding: .25em .5em;
+	font-weight: normal;
+}
+#page-tools .tool-label.active,
+#page-tools .tool-label:hover {
+	border-radius: 4px;
+	background-color: white;
+}
+#publication-title {
+	/* font */
+	font-size: 125%;
+	color: #fff;
+	line-height: 2;
+	text-align: center;
+
+	/* background */
+	border-bottom: 1px solid rgb(110,110,120);
+	border-top: 0px solid rgb(110,110,120);
+	background-color: #54a1e5;
+
+	/* dimension */
+	margin: 0;
+	padding: 0 10px;
+
+	/*text-shadow: 0 0 4px hsla(0,0%,0%,.75);*/
+}
+#subheader {
+	background-color: #f3f3f2;
+	background-image: url(../css/image/subheader-bg.png);
+	background-position: left bottom;
+	background-repeat: repeat-x;
+	border-bottom: 1px solid rgb(158,155,157);
+	width: 100%;
+	z-index: 10;
+}
+#subheader .toc-title,
+#main-content .toc-container {
+	border-right: 1px solid rgb(180,180,180);
+}
+#main-content .toc-container {
+	border-bottom: 1px solid rgb(180,180,180);
+	padding-bottom: 6px;
+}
+#main-content .titlepage {
+	clear: both;
+	padding-top: 10px;
+}
+#main-content .titlepage .subtitle em {
+	font-style: normal;
+	color: #999;
+}
+#main-content .titlepage h1.title {
+    font-size: 3em;
+    font-weight: normal;
+    color: #54a1e5;
+}
+
+#subheader h2 {
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+}
+#subheader .breadcrumb {
+	padding: 0;
+	margin-bottom: 0;
+	background-color: transparent;
+	font-size: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	max-width: 100%;
+}
+#subheader .breadcrumb li {
+	padding: 0;
+}
+#subheader .breadcrumb li:first-child .glyphicon {
+	margin-right: 5px;
+}
+#subheader .breadcrumb li + li {
+	padding-left: 25px;
+	margin-left: 0px;
+	background-image: url(../css/image/breadcrumb-seperator.png);
+	background-repeat: no-repeat;
+	background-position: -125px center;
+	padding-right: 2px;
+}
+#subheader .breadcrumb li + li:before {
+	display: none;
+}
+#subheader .breadcrumb a:link,
+#subheader .breadcrumb a:visited {
+	color: rgb(94,94,94);
+}
+#subheader h2, #subheader .breadcrumb {
+	line-height: 30px;
+}
+#subheader .mobile-nav-toggle .glyphicon {
+	margin-right: .45em;
+}
+#main-content {
+	background-color: #fff;
+}
+
+/* TOC */
+#toc-wrapper {
+	/*display: none;*/
+}
+.toc-container {
+	background-color: #eee;
+	padding: .5em 6px 0 6px;
+}
+.toc-container ul {
+	padding: 0;
+	list-style-type: none;
+}
+.toc-container li ul {
+	padding-left: 1em;
+}
+/* first level toc entries */
+ul.toc {
+	margin-bottom: 0;
+}
+ul.toc > li {
+	border-top: 1px solid rgb(230,230,230);
+	padding: 2px 0 1px 0;
+}
+ul.toc > li:first-child{
+	border:none;
+}
+ul.toc .topic-link {
+	display: block;
+	padding: 4px 4px 4px 1.5em;
+	border-radius: 3px;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #fff;
+}
+.toc .topic-link + ul {
+	display: none;
+}
+
+/*
+ * Active state for toc lines
+ */
+ul.toc .topic-link:hover,
+ul.toc .topic-link.active {
+	background-color: #54a1e5;
+	color: #fff;
+	text-shadow: none;
+}
+ul.toc a {
+	text-decoration: none;
+	color:grey;
+}
+ul.toc li {
+	margin: 1px 0;
+}
+ul.toc .glyphicon {
+	cursor: pointer;
+	float: left;
+	margin: .35em auto auto -1.5em;
+}
+
+/*
+ * Hover state for toc lines
+ */
+ul.toc .glyphicon {
+	font-size: 75%;
+	color: rgb(150,150,150);
+}
+ul.toc a:hover .glyphicon, ul.toc a.active .glyphicon {
+	color: #fff;
+}
+/* content */
+.breadcrumb-container,
+.content-container {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.content-container {
+	padding-top: 1em;
+	padding-bottom: 20px;
+}
+.content-container .next .glyphicon,
+.content-container .prev .glyphicon {
+	color: rgb(94,94,94);
+}
+.content-container .next + h1,
+.content-container .prev + h1,
+.content-container .next + h2,
+.content-container .prev + h2,
+.content-container .next + h3,
+.content-container .prev + h3 {
+	padding-top: 1em;
+	clear: both;
+}
+.content-container .next .glyphicon {
+	margin-left: .5em;
+}
+.content-container .prev .glyphicon {
+	margin-right: .5em;
+}
+
+/*
+ * Video containers
+ */
+/*.video-container .content {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+    margin-bottom: 1em;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
+
+/* Moved to style-common */
+/*.videoobject {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.videoobject iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
+
+.content-container img {
+	margin-bottom: 1em;
+	max-width: 100%;
+}
+
+/* ASN: Special for callout icons */
+.content-container .calloutlist img, .content-container .co img {
+	width: 1em;
+	margin-top: 0.2em;
+}
+
+.content-container .co img {
+	margin-bottom: 0.5em;
+}
+
+.content-container .calloutlist img {
+	margin-left: 25px;
+}
+
+/* ASN: If not using images for callouts, make sure the color of the callout number is not changed by the highlight plugin */
+.co span{
+    color:#54a1e5!important;
+}   
+
+
+.co .fa-stack .text-primary span, .calloutlist .fa-stack .text-primary {
+    color: #fff!important;
+}
+
+strong.fa-stack-1x.text-primary {
+    color: #fff!important;
+}
+
+.co .fa-3x, .calloutlist .fa-3x{
+   font-size: 0.8em; 
+}
+
+a.co {
+    font-size: 0.9em;
+}
+
+a.co span.unicode-callout {
+    font-size: 1.8em!important;
+    line-height: 1em;
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+a.co, .calloutlist a{
+    text-decoration: none;
+} 
+
+/*Variation on this: https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle*/
+a.co:focus{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    margin-right: -20px;
+    border: 2px solid #666;
+    border: 2px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    color: #666;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+}
+
+.calloutlist span.unicode-callout {
+    font-size: 1.3em;
+    line-height: 1em;
+    margin-left: 25px;
+}
+
+span.plain-text-callout:before {
+    content: '(';
+}
+
+span.plain-text-callout:after {
+    content: ')';
+}
+
+/*Too  much space before the parenthesis if not reducing by negative margin*/
+.co span.plain-text-callout {
+    margin-left: -0.1em;
+}
+
+.calloutlist span.plain-text-callout {
+    margin-left: 25px;
+}
+
+
+
+/*Remove borders for calloutlist, and adjust padding:*/
+.calloutlist td:first-child {
+    border: none!important;
+    /*padding: 0px 25px!important;*/
+    padding: 0px!important;
+}
+
+.calloutlist td:first-child a {
+    /*margin-left: 25px;*/
+}
+
+.calloutlist td {
+    border: none!important;
+    padding: 0px 20px!important;
+}
+
+
+/*.translation-missing {
+	background-color: #F5D7D6;
+	color: #666;
+}*/
+.warning, .note, .important, .caution, .tip {
+	/*ASN*/
+	/*padding: .25em 20px 1em 60px;*/
+	    padding:0px;
+            /*background-color: #d3e7f8;
+            background-image: none;*/
+
+	background-color: #eee;
+
+	/*background-image: url(../css/image/warning.png);
+	background-position: 20px 20px;
+	background-repeat: no-repeat;
+	color: #444;*/
+	margin-bottom: 1em;
+}
+
+
+.warning h3, .note h3, .important h3, .caution h3, .tip h3{
+    margin-top:0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 10px 30px 10px 30px;
+    background-color: #888;
+    color:#ffffff;
+}
+
+.note, .tip {
+    background-image: none;
+}
+
+.note h3:before, .tip h3:before, .important h3:before, .warning h3:before, .caution h3:before{    
+    font-family: FontAwesome;
+    margin-right: 15px;
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.note h3:before, .important h3:before{
+    content: "\f06a";
+}
+
+.warning h3:before, .caution h3:before{
+    content: "\f071";
+}
+
+.tip h3:before{
+    content: "\f0eb";    
+}
+
+.warning > *, .note > *, .important > *, .caution > *, .tip > *{    
+    margin-left: 45px;
+    -webkit-margin-before: 0em;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    padding-right: 40px
+}
+
+div.caption{
+	font-style: italic;
+	color: #888
+}
+
+/*ASN: End custom notes, etc*/
+
+.panel-title a:link, .panel-title a:visited {
+	color: inherit;
+}
+/**
+ * Mediaobject containers
+ */
+.mediaobject table:not([width]) {
+  width: 100%;
+}
+
+.mediaobject table td {
+    padding-right: 50px;
+    text-align: left;
+    vertical-align: top;
+	padding: 10px;
+	font-size: 0.9em;
+	border-top: none!important;
+}
+
+#search-container {
+	clear: both;
+	padding-top: 10px;
+}
+/*.inlinemediaobject {
+  display: inline-block;
+	height: 1.5em;
+	vertical-align: -0.275em;
+}
+
+.simplelist .inlinemediaobject {
+  display: initial;
+  margin-right: 6px;
+}
+
+.inlinemediaobject img:not([height]):not([width]) {
+	height: 100%;
+	width: auto;
+}*/
+/*span.linktextprovider {
+	display: none;
+}*/
+/*.simplelist > *::after {
+  content: ", ";
+}
+.simplelist .inlinemediaobject::after {
+  content: "";
+}
+.simplelist > *:last-child::after {
+  content: "";
+}*/
+
+/*ASN: For accordions (collapsible panels):*/
+/*.panel-group{
+    margin-bottom: 1em;
+}
+
+ .panel-default >.panel-heading{
+     background-image:none;
+     padding: 5px 15px;
+     border-bottom: none;
+ }
+ 
+  #main-content .panel-default >.panel-heading > .titlepage{
+     padding-top: 0px;
+ }
+ .panel-heading h1, .panel-heading h2, .panel-heading h3{
+     margin-top: 10px;
+     margin-bottom: 5px;
+ }
+ 
+ /\*ASN: Important to set :not(div) here, otherwise we get two of these, since the actual title is wrapped in a div.title too*\/
+ .panel-heading :not(div).title:before, .panel-heading .sidebar-title:before{
+      content: "\f0da";
+    /\*f067 for plus sign instead of chevron*\/
+    color: #999;
+    font-family: FontAwesome;
+    font-size: 1em;
+    font-weight: 100;
+    margin-right: 10px;
+    vertical-align: 0%;
+    font-style: normal;
+ }
+
+ .panel-heading.active :not(div).title:before, .panel-heading.active .sidebar-title:before{
+     content: "\f0d7";
+ }
+
+ .panel-heading .titlepage a, .panel-heading .titlepage a:hover, .panel-heading .titlepage a:active, .panel-heading .titlepage a:focus{
+     text-decoration: none!important;
+ }
+
+ .panel-body{
+     padding: 15px 30px;
+ }
+
+ .panel{
+    margin-top: 1.5em;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    /\*border: 0.5px solid #ccc;*\/
+ }*/
+
+ /*.accordion-inner { border-top: 0 none; }*/
+
+/* .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+ .flex-item {
+    /\*width: 200px;*\/
+    margin: 10px;
+}*/
+
+p.searchresultsnippet, p.search-result-url, .search-result-breadcrumbs{
+    color:#bbb;
+}
+
+.searchresultitem a:hover{
+    text-decoration: none;
+}
+
+.searchresultitem{
+    list-style-type: none;
+}
+
+
+ul.searchresults .search-highlight {
+    background-color: transparent;
+    padding: 0px;
+    font-weight: bold;
+    font-style: italic;
+    color: inherit;
+}
+
+/*.keycap-graphical {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+}
+
+.keycap-graphical strong {
+    font-weight: normal;
+}*/
+
+/*Modern CSS table styles (moved to style-modern-tables.css)*/
+/*.frame-void{
+    border: none;
+}
+
+.frame-box{
+    border: 1px solid #ccc;
+}
+
+.frame-above{
+    border-top: 1px solid #ccc;
+}
+
+.frame-below{
+    border-bottom: 1px solid #ccc;
+}
+
+.frame-hsides{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.frame-vsides{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.frame-lhs{
+    border-left: 1px solid #ccc;
+}
+
+.frame-rhs{
+    border-right: 1px solid #ccc;
+}
+
+.rules-all td,
+.rules-all th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.rules-cols td,
+.rules-cols th{
+    border-left: 1px solid #ddd;
+    padding: 8px;
+}
+
+.rules-rows td,
+.rules-rows th{
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+}
+
+.rules-none td,
+.rules-none th{
+    border: none;
+    padding: 8px;
+}
+
+.rules-groups thead,
+.rules-groups tbody,
+.rules-groups tfoot{
+    border-bottom: 1px solid #ddd;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #fff;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #eee;
+}*/
+
+
+/* Countering the class put on the div around an informaltable by the tabstyle class.value mode in html5.xsl > custom.classes.xsl */
+/*div.informaltable{
+    border: none;
+}
+
+div#disqus_thread {
+    margin-top: 150px;
+}
+
+span.translation-changed{
+    background-color: #cfe8fc;
+    color: #1976D2;
+}*/
+
