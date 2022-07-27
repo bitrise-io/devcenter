@@ -1,0 +1,908 @@
+/*
+ * Common stylesheet for all html5 transformations. Anything in here must be valid for all output formats
+ */
+ /* Start element styles from base stylesheet*/
+ /********************************/
+/* start of styles in block.xsl */
+
+.formalpara-title {
+  font-weight: bold;
+}
+
+div.blockquote-title {
+  font-weight: bold;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msgmain-title {
+  font-weight: bold;
+}
+
+span.msgsub-title {
+  font-weight: bold;
+}
+
+span.msgrel-title {
+  font-weight: bold;
+}
+
+div.msglevel, div.msgorig, div.msgaud {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msglevel-title, span.msgorig-title, span.msgaud-title {
+  font-weight: bold;
+}
+
+div.msgexplan {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+span.msgexplan-title {
+  font-weight: bold;
+}
+
+/* end of styles in block.xsl */
+
+/********************************/
+/* start of styles in formal.xsl */
+
+div.figure-title {
+  font-weight: bold;
+}
+
+/*Help Center has separate:
+ * div.example-title {
+  font-weight: bold;
+}*/
+
+div.equation-title {
+  font-weight: bold;
+}
+
+div.table-title {
+  font-weight: bold;
+}
+
+div.sidebar-title {
+  font-weight: bold;
+}
+
+
+/* end of styles in formal.xsl */
+/********************************/
+
+
+span.guilabel {
+  font-weight: bold;
+}
+/* End element styles from base stylesheet */
+
+span.linktextprovider{
+    display: none !important;
+}
+
+.revhistory table{
+    border-style: none !important;
+    border-bottom: 1px solid #ccc !important;
+    border-top: 1px solid #ccc !important;
+}
+.revhistory th,
+.revhistory td{
+    padding: 0.5em;
+}
+.revhistory th{
+    border-bottom: 1px solid #ccc;
+}
+
+div.table-responsive{
+    border: none !important;
+}
+
+.table-responsive{
+    border-radius: 0px !important;
+}
+
+button.btn.btn-default{
+    background-image: none;
+    text-shadow: none;
+}
+
+.btn-primary,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default{
+    color: #fff;
+    background-color: #222;
+    border-color: #222;
+    text-shadow: none;
+}
+
+code.code{
+    white-space: pre-line;
+    word-break: normal;
+}
+
+.cmdsynopsis {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace; /* this and the rest is from HC theme1|2|3|3b.css */
+    border-radius: 4px;
+    padding: 0px; /* was 2px 4px on .command, but renders an extra blank line here, which is visible if body has background. */
+    font-size: 0.8em; /* from content-theme2.css */
+}
+.cmdsynopsis .command {
+    font-size: 1.0em; /* resetting to make same size as args */
+    border-radius: 0px;
+    padding: 0px 0px; /* removing, so it does not stick from the line if body has background */
+}
+
+/* Moved common css for Help Center style update */
+
+/* Countering the class put on the div around an informaltable by the tabstyle class.value mode in html5.xsl > custom.classes.xsl */
+div.informaltable{
+    border: none;
+}
+
+div#disqus_thread {
+    margin-top: 150px;
+}
+
+span.translation-changed{
+    background-color: #cfe8fc;
+    color: #1976D2;
+}
+
+/* Moved from all legacy: */
+
+.keycap-graphical {
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.1em 0.5em;
+    margin: 0 0.2em;
+    box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2), 0 0 0 2px #fff inset;
+    background-color: #f7f7f7;
+}
+
+.keycap-graphical strong {
+    font-weight: normal;
+}
+
+ .flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+ .flex-item {
+    /*width: 200px;*/
+    margin: 10px;
+}
+
+/* For accordions (collapsible panels):*/
+.panel-group{
+    margin-bottom: 1em;
+}
+
+ .panel-default >.panel-heading{
+     background-image:none;
+     padding: 5px 15px;
+     border-bottom: none;
+ }
+ 
+  #main-content .panel-default >.panel-heading > .titlepage{
+     padding-top: 0px;
+ }
+ .panel-heading h1, .panel-heading h2, .panel-heading h3{
+     margin-top: 10px;
+     margin-bottom: 5px;
+ }
+ 
+ /*ASN: Important to set :not(div) here, otherwise we get two of these, since the actual title is wrapped in a div.title too*/
+ .panel-heading :not(div).title:before, .panel-heading .sidebar-title:before{
+      content: "\f0da";
+    /*f067 for plus sign instead of chevron*/
+    color: #999;
+    font-family: FontAwesome;
+    font-size: 1em;
+    font-weight: 100;
+    margin-right: 10px;
+    vertical-align: 0%;
+    font-style: normal;
+    display: inline-block;
+    width: 15px;
+ }
+
+ .panel-heading.active :not(div).title:before, .panel-heading.active .sidebar-title:before{
+     content: "\f0d7";
+ }
+
+ .panel-heading .titlepage a, .panel-heading .titlepage a:hover, .panel-heading .titlepage a:active, .panel-heading .titlepage a:focus{
+     text-decoration: none!important;
+ }
+
+ .panel-body{
+     padding: 15px 30px;
+ }
+
+ .panel{
+    margin-top: 1.5em;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 0px;
+    /*border: 0.5px solid #ccc;*/
+ }
+
+.accordion-inner { border-top: 0 none; }
+
+.simplelist > *::after {
+  content: ", ";
+}
+.simplelist .inlinemediaobject::after {
+  content: "";
+}
+.simplelist > *:last-child::after {
+  content: "";
+}
+
+
+.simplelist .inlinemediaobject {
+  display: initial;
+  margin-right: 6px;
+}
+
+.inlinemediaobject {
+  display: inline-block;
+	height: 1.5em;
+	vertical-align: -0.275em;
+}
+
+.inlinemediaobject img:not([height]):not([width]) {
+	height: 100%;
+	width: auto;
+}
+
+.translation-missing {
+	background-color: #F5D7D6;
+	color: #666;
+}
+
+/* ASN: CODE CALLOUTS */
+.calloutlist img, .co img {
+	width: 1em;
+	/*margin-top: 0.2em;*/
+}
+
+.co img {
+	/*margin-bottom: 0.5em;*/
+}
+
+.calloutlist img {
+	margin-left: 25px;
+}
+
+/* ASN: If not using images for callouts, make sure the color of the callout number is not changed by the highlight plugin */
+.co span{
+    color:#54a1e5!important;
+}   
+
+.co .fa-stack .text-primary span, .calloutlist .fa-stack .text-primary {
+    color: #fff!important;
+}
+
+strong.fa-stack-1x.text-primary {
+    color: #fff!important;
+}
+
+.co .fa-3x, .calloutlist .fa-3x{
+   /*font-size: 0.8em; */
+   font-size: 1em;
+   color: #54a1e5;
+}
+
+a.co {
+    font-size: 0.9em;
+}
+
+a.co span.unicode-callout {
+    font-size: 1.8em!important;
+    line-height: 1em;
+}
+
+
+a.co, .calloutlist a{
+    text-decoration: none;
+} 
+
+/*Variation on this: https://stackoverflow.com/questions/4861224/how-to-use-css-to-surround-a-number-with-a-circle*/
+a.co:focus{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    margin-right: -20px;
+    border: 2px solid #666;
+    border: 2px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    color: #666;
+    text-align: center;
+    text-decoration: none;
+    outline:none;
+}
+
+
+
+.calloutlist span.unicode-callout {
+    font-size: 1.3em;
+    line-height: 1em;
+    margin-left: 25px;
+}
+
+span.plain-text-callout:before {
+    content: '(';
+}
+
+span.plain-text-callout:after {
+    content: ')';
+}
+
+/*Too  much space before the parenthesis if not reducing by negative margin*/
+.co span.plain-text-callout {
+    margin-left: -0.1em;
+}
+
+.calloutlist span.plain-text-callout {
+    margin-left: 25px;
+}
+
+
+
+/*Remove borders for calloutlist, and adjust padding:*/
+.calloutlist td:first-child {
+    border: none!important;
+    /*padding: 0px 25px!important;*/
+    padding: 0px!important;
+}
+
+.calloutlist td:first-child a {
+    /*margin-left: 25px;*/
+}
+
+.calloutlist td {
+    border: none!important;
+    padding: 0px 20px!important;
+}
+/* END CALLOUTS */
+
+pre, code.code{
+    border: none;
+    word-break: normal;
+    white-space: pre-wrap;
+}
+
+code.code{
+    white-space: pre-line;
+}
+
+td.tableheader{
+    font-weight: bold;
+    font-size: inherit;
+}
+
+td.leftcol, th.leftcol{
+    text-align: left;
+}
+
+td.rightcol, th.rightcol{
+    text-align: right;
+}
+
+td.centercol, th.centercol{
+    text-align: center;
+}
+
+td.justifycol, th.justifycol{
+    text-align: justify;
+}
+
+img{
+    max-width: 100%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.strikethrough {
+	text-decoration: line-through;
+}
+
+
+.emphasis{
+    font-style: italic;
+}
+
+.glossary .titlepage{
+    display: none;
+}
+
+/* Hide the collection of definitions on topic pages */
+#topic-content .glossary-definitions {
+  display: none;
+}
+
+/* glossterm popovers */
+.popover-title{
+    background-color: #fff;
+}
+
+.videoobject {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+    margin-top: 2em;
+}
+
+.videoobject iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* For Wistia javascript embed */
+.video-container.wistia{
+    max-width: 620px;
+}
+
+.video-container.wistia .videoobject {
+    padding-top: 0px;
+    overflow: visible;
+    padding-bottom: 58.25%;
+}
+
+.model-embed-wrapper {
+    width: 100%;
+    height: 480px;
+}
+
+.model-embed-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*.wistia_embed{
+    height: 349px;
+    width: 620px;
+}*/
+
+/* ===============
+    Lightbox
+   ===============*/
+.materialboxed {
+  display: block;
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
+  position: relative;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  -webkit-backface-visibility: hidden;
+}
+
+.materialboxed:hover:not(.active) {
+  opacity: .8;
+}
+
+.materialboxed.active {
+  cursor: -webkit-zoom-out;
+  cursor: zoom-out;
+}
+
+#materialbox-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #292929;
+  z-index: 1000;
+  will-change: opacity;
+}
+
+.materialbox-caption {
+  position: fixed;
+  display: none;
+  color: #fff;
+  line-height: 50px;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0% 15%;
+  height: 50px;
+  z-index: 1000;
+  -webkit-font-smoothing: antialiased;
+}
+/* ===============
+    Lightbox end
+   ===============*/
+   
+.mediaobject.img-thumbnail img{
+    width: auto;
+    height: auto;
+    max-width: 200px;
+    max-height: 200px;
+    display: table;
+}
+
+/* If a user wants to set thumbnails for all images in LE, but exclude some with class img-thumbnail-reset on mediaobject */
+.img-thumbnail.img-thumbnail-reset{
+    border:none;
+}
+
+.mediaobject.img-thumbnail.img-thumbnail-reset img{
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+}
+
+/* Anchor links for copying url to internal sections */
+.header-link{
+    font-size: 0.8em;
+    margin-left: 10px;
+    opacity: 0;
+
+    \-webkit-transition: opacity 0.2s ease-in-out 0.1s;
+    \-moz-transition: opacity 0.2s ease-in-out 0.1s;
+    \-ms-transition: opacity 0.2s ease-in-out 0.1s;
+}
+
+h1:hover .header-link,
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link,
+.example-title:hover .header-link,
+.procedure-title:hover .header-link,
+.figure-title:hover .header-link{
+    opacity: 1;
+}
+
+/* Centering images by css. Set in custom.classes */
+.image-center > *, 
+.image-center > .material-placeholder > * {
+    margin: 0 auto;
+}
+
+/* Right-aligned image */
+.image-right > *, 
+.image-right > .material-placeholder > * {
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.image-viewport td{
+    vertical-align: middle;
+}
+
+.image-viewport img{
+    margin: auto;
+}
+
+.section-toc .topic-link {
+    padding: 0px;
+}
+
+.section-toc-before{
+    padding-bottom: 1em;
+}
+
+.section-toc-title-delimiter{
+    display: none;
+}
+
+iframe.gdoc, iframe.onedrive, iframe.external {
+    display: block;
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+}
+
+iframe.external {
+    border:none;
+}
+
+/* If using the option to output formal element labels separately, the default is not to display them for procedure and sidebar */
+.procedure .formal-label, .sidebar .formal-label{
+    display: none;
+}
+
+/* Countering effect of upgrade to Bootstrap 3.3.7 (min version now) */
+.pull-right>.dropdown-menu {
+    right: initial;
+}
+
+.accordion-icon{
+    /* Only displayed if using bootstrap 4, set in special css for this */
+    display:none;
+}
+
+/* Sub procedures are treated like substeps */
+ol.procedure ol.procedure,
+ul.procedure ul.procedure{
+    list-style-type: lower-alpha !important;
+}
+
+ol.procedure ol.procedure ol.procedure,
+ul.procedure ul.procedure ul.procedure{
+    list-style-type: lower-roman !important;
+}
+
+ol.procedure ol.procedure > li::before,
+ul.procedure ul.procedure > li::before{
+    display: none;
+}
+
+/* Countering the stop sign (not-allowed) cursor for disabled buttons */
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    cursor: auto;
+}
+
+/* Additional class added for backward compatibility. */
+.tool-print.print-icon {
+    float: right;
+    display: block;
+    padding: 10px;
+}
+
+/* The above styling not for theme2, but all others */
+.theme2 .tool-print.print-icon {
+    float: none;
+    display: inline-block;
+    padding: 0px;
+}
+
+.tool-print.print-icon a {
+    cursor: pointer;
+}
+
+.theme2 .tool-print.print-icon a {
+    color: #fff;
+}
+
+.tool-print.print-icon .fa-print:before {
+    margin-right: 0.5em;
+}
+
+.tool-print.print-icon .print-text {
+    margin-left: 0.5em;
+    display: none;
+}
+
+.date-modified, .publication-date {
+    float: left;
+    margin-right: 30px;
+}
+
+.publication-date {
+    display: none;
+}
+
+/* Collapsible menu */
+.theme2.colored-top .nav-site-sidebar {
+    width: 100%;
+    background-color: #fafafa;
+    transition: 0.1s ease;
+}
+
+@media (min-width: 768px){
+    .collapsible-sidebar-nav .collapse-sidebar-nav .site-sidebar .nav-site-sidebar {
+        display: block;
+        margin-left: -300px;
+        transition: 0.5s ease;
+    }
+    
+    .collapsible-sidebar-nav .collapse-sidebar-nav .site-sidebar .nav-site-sidebar *{
+        opacity: 0;
+        transition: 1s ease;
+    }
+    
+    .collapsible-sidebar-nav .collapse-sidebar-nav .site-content {
+        margin-left: 0;
+        width: 100%;
+        transition: 0.75s ease;
+    }
+    
+    .collapsible-sidebar-nav .collapse-sidebar-nav .toolbar .breadcrumb-container {
+        display: none;
+    }
+    
+    
+    .theme1.collapsible-sidebar-nav .site-sidebar-header .navbar-toggle {
+        padding-bottom: 20px;
+    }
+    
+}
+
+@media (min-width: 1200px)
+{
+    .collapsible-sidebar-nav .site-content {
+        margin-left: 16.66666667%;
+        transition: 0.1s ease;
+    }
+    
+}
+
+.collapsible-sidebar-nav .collapse-sidebar-nav .site-sidebar > .site-sidebar-search,
+.collapsible-sidebar-nav .collapse-sidebar-nav .site-sidebar > .nav-site-sidebar{
+    display: none;
+}
+/* End Collapsible menu */
+
+/* Animated gif posters:
+ * Don't lighten the image on hover when using an animated gif with a poster for hovering to start */
+div.animated-gif .materialboxed:hover:not(.active) {
+    opacity: 1 !important;
+}
+
+div.animated-gif .gif {
+    display: none;
+}
+
+div.animated-gif .poster {
+position: relative;
+}
+
+div.animated-gif:hover .gif {
+    display: block;
+}
+
+div.animated-gif:hover .poster {
+    display: none;
+}
+
+.gif-icon {
+    width: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    display: block;
+    padding: 10px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* End Animated gif posters:*/
+
+/*Swagger embed:*/
+.swagger-ui .information-container pre{
+    padding: 3px;
+    background-color: inherit;
+}
+
+.swagger-ui .info .title small {
+    top: 5px!important;
+}
+
+.swagger-ui .wrapper {
+     padding: 0px 0px!important; 
+}
+
+.swagger-ui .scheme-container {
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    padding: 0px 0px!important;
+}
+
+.swagger-ui .info {
+    margin-top: 0px!important; 
+}
+
+/*Reset to the same as default in Paligo:*/
+.swagger-ui .info code {
+    color: #c7254e!important;
+}
+
+/* For when selecting valign (which is not supported in HTML5) in the editor */
+td.td.align-baseline {
+    vertical-align: baseline !important;
+}
+td.td.align-top {
+    vertical-align: top !important;
+}
+td.td.align-middle {
+    vertical-align: middle !important;
+}
+td.td.align-bottom {
+    vertical-align: bottom !important;
+}
+td.td.align-text-top {
+    vertical-align: text-top !important;
+}
+td.td.align-text-bottom {
+    vertical-align: text-bottom !important;
+}
+
+/* Making sure the feedback panel works on mobile */
+#bottom-pager {
+  clear: both;
+}
+
+div.feedback-panel .btn {
+   float: none;
+}
+
+/**
+ * Modal
+ */
+.modal-fullscreen {
+    padding: 3% 5% !important;
+}
+
+.modal-fullscreen .container {
+    max-width: 100%;
+}
+
+.modal-fullscreen .modal-dialog {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.modal-fullscreen .modal-content {
+    height: auto;
+    min-height: 100%;
+    border: 0 none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.modal-fullscreen button.close {
+    font-size: 26px;
+    top: 3px;
+    right: 15px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.modal-fullscreen .modal-header {
+    border-bottom: 0;
+    background-color: #1976d2;
+    display: block !important;
+    padding: 10px 0;
+}
+
+.modal-fullscreen button.close:hover {
+    background-color: transparent;
+    opacity: 1;
+}
+
+.modal .ais-SearchBox .ais-SearchBox-input {
+    width: 100%;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.modal .ais-SearchBox-submit {
+    position: absolute;
+    right: 10px;
+}
