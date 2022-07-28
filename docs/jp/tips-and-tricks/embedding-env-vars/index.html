@@ -1,0 +1,61 @@
+
+
+<html lang="en-US">
+<head>
+<title>
+Using Env Vars in the value of an Env Var
+</title>
+</head>
+<body>
+<main>
+<p>Element for importing</p>
+<p>Using Env Vars in the value of an Env Var</p>
+<p><a href="/builds/env-vars-secret-env-vars/">Environment Variables</a> normally contain a single value. However, it is possible to set up an Env Var that includes other Env Vars as values. You can also use values that are normally treated as Env Vars: that is, values including the <code class="language-plaintext highlighter-rouge">$</code> character.</p>
+
+<p>Setting up an embedded Env Var</p>
+
+<p>You can, at any time, use another Environment Variable in the value of an Env Var - embedding the Env Var, so to speak.  For example, the value of an Env Var called $BITRISE_IDENTITIES can be a list containing a username, a password, and an API key. The password and the API key would be set as Env Vars:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>username: bitrise_user 
+password: $BITRISE_PASSWORD 
+api_key: $BITRISE_API_KEY
+</code></pre></div></div>
+
+<p>You also need to make sure that the key of the Env Var and the keys of any variables it contains are replaced with their values in the input. This whole process is quite simple:</p>
+
+<ol>
+  <li>Open your app on <a href="http://bitrise.io/" title="http://bitrise.io">bitrise.io</a>.</li>
+  <li>Go to the <strong>Workflows</strong> tab.</li>
+  <li>In the <strong>Workflow Editor</strong>, go to the <strong>Env Vars</strong> or <strong>Secrets</strong> tab.</li>
+  <li>Click <strong>Add new.</strong></li>
+  <li>
+    <p>Add a key and a value.</p>
+
+    <p>The value can contain other Environment Variables.</p>
+  </li>
+  <li>Toggle the <strong>Replace variables in inputs?</strong> option.</li>
+  <li>Click <strong>Save</strong>.</li>
+</ol>
+
+<p>And that’s it - you can run a build and the variables within your new Env Var will be expanded and you can use their values for whatever you need.</p>
+
+<p>Using the $ sign in an Env Var’s value</p>
+
+<p>It’s very important to note that Bitrise treats everything starting with the $ sign as an Environment Variable. This means that if the value of an Environment Variable contains the $ sign, and the <strong>Replace variables in inputs</strong> option on the <strong>Env Vars</strong> or <strong>Secrets</strong> tab is toggled on, Bitrise will attempt to replace the part beginning with a $ with a value - and of course it will not find any value.</p>
+
+<p>There are two solutions to this issue:</p>
+
+<ul>
+  <li>Do not use $ in the value of your Environment Variables.</li>
+  <li>If you do, do NOT replace your variables in inputs. In that case, they will simply be passed on to the Step as text.</li>
+</ul>
+
+<div class="banner">
+  <img src="/assets/images/banner-bg-888x170.png" style="border: none;" />
+  <div class="deploy-text">Now you know everything</div>
+  <a target="_blank" rel="noopener noreferrer" href="https://app.bitrise.io/users/sign_up?utm_source=devcenter&amp;utm_medium=bottom_cta"><button class="button">Go to Bitrise now</button></a>
+</div>
+
+</main>
+</body>
+</html>
