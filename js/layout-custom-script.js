@@ -109,12 +109,12 @@ function initialConfig() {
     /* Adding cookie consent banner scripts */
   
     let scriptOne = document.createElement('script');
-    scriptOne.src = 'https://cdn.cookielaw.org/consent/a8f28a53-d138-4cac-a6dc-bdafd1611beb/OtAutoBlock.js';
+    scriptOne.src = 'https://cdn.cookielaw.org/consent/74dfda25-8e61-4fab-9330-4718635e7050/OtAutoBlock.js';
     document.head.appendChild(scriptOne);
   
     let scriptTwo = document.createElement('script');
     scriptTwo.src = 'https://cdn.cookielaw.org/scripttemplates/otSDKStub.js';
-    scriptTwo.setAttribute('data-domain-script', 'a8f28a53-d138-4cac-a6dc-bdafd1611beb');
+    scriptTwo.setAttribute('data-domain-script', '74dfda25-8e61-4fab-9330-4718635e7050');
     document.head.appendChild(scriptTwo);
   
     /* changing the feedback URL */
