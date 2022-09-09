@@ -1,0 +1,81 @@
+
+
+/*Modern CSS table styles:*/
+.frame-void{
+    border: none;
+}
+
+.frame-box{
+    border: 1px solid #ccc;
+}
+
+.frame-above{
+    border-top: 1px solid #ccc;
+}
+
+.frame-below{
+    border-bottom: 1px solid #ccc;
+}
+
+.frame-hsides{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+
+.frame-vsides{
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.frame-lhs{
+    border-left: 1px solid #ccc;
+}
+
+.frame-rhs{
+    border-right: 1px solid #ccc;
+}
+
+.rules-all td,
+.rules-all th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.rules-cols td,
+.rules-cols th{
+    border-left: 1px solid #ddd;
+    padding: 8px;
+}
+
+.rules-rows td,
+.rules-rows th{
+    border-top: 1px solid #ddd!important;
+    padding: 8px;
+}
+
+.rules-none td,
+.rules-none th{
+    border: none!important;
+    padding: 8px;
+}
+
+.rules-groups thead,
+.rules-groups tbody,
+.rules-groups tfoot{
+    border-bottom: 1px solid #ddd;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td, .table-striped>tbody>tr:nth-child(even)>th {
+    background-color: #fff;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td, .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #eee;
+}
+
+
+/* Countering the class put on the div around an informaltable by the tabstyle class.value mode in html5.xsl > custom.classes.xsl */
+div.informaltable{
+    border: none;
+}
