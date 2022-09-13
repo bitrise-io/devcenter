@@ -126,6 +126,36 @@ function initialConfig() {
     feedbackLink.setAttribute('target', '_blank');
   }
   
+  //Data Layer - for use with GTM
+  function getDataLayerEventsInfo () {
+    let parsedInfo = {};
+    try {
+      const dataLayerCookie = document.cookie.split('; ').find(row => row.startsWith('bDL='));
+      if (dataLayerCookie) {
+        const cookieInfo = decodeURIComponent(dataLayerCookie.split('=')[1]);
+        parsedInfo = JSON.parse(cookieInfo);
+      }
+      return parsedInfo;
+    }
+    catch (e) {
+      return parsedInfo;
+    }
+  }
+
+  function pick(fields, obj) {
+    return fields.reduce(function (picked, field) {
+      picked[field] = obj[field];
+      return picked;
+    }, {});
+  }
+
+  
+  const dlEventsInfo = getDataLayerEventsInfo();
+  const validEvents = Object.keys(dlEventsInfo).filter(function(event) {return Boolean(dlEventsInfo[event])});
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push(pick(validEvents, dlEventsInfo));
+
+
   // GTM
   const gtmContainerId = 'GTM-TZK32GR';
   (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
