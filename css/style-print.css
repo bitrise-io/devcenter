@@ -1,0 +1,89 @@
+@media print {
+	body {
+		background: white;
+		font-size: 10pt;
+	}
+	#page {
+		width: auto;
+		outline: none;
+		box-shadow: none;
+		max-width: 100%;
+		padding: 8% 10%;
+	}
+	#header {
+		display: none;
+	}
+	#subheader {
+		display: none;
+	}
+	#toc-wrapper {
+		display: none !important;
+	}
+	#publication-title {
+		background: none;
+		color: #000;
+		border-top: none;
+		border-bottom: 1pt solid #333;
+		text-shadow: none;
+		padding: 0;
+		margin: auto;
+		text-align: center;
+	}
+	.content-container {
+		width: auto;
+	}
+	a {
+		word-wrap: break-word;
+	}
+	a:link:after, a:visited:after {
+		content: '[' attr(href) ']';
+		text-decoration: none;
+		color: #444;
+		font-size: 90%;
+	}
+	.content-container > a.next, .content-container > a.prev {
+		display: none !important;
+	}
+	
+    /* Help Center */
+    .site-header {
+        display: none;
+    }
+
+    .site-sidebar {
+        display: none !important;
+    }
+
+    .site-content {
+        margin-left: 0px;
+    }
+    
+    .toolbar{
+        display: none;
+    }
+    
+    .breadcrumb-container{
+        display: none;
+    }
+    
+    
+    .bottom-pager{
+        display: none;
+    }
+    
+    .section {
+        padding: 0px 0px;
+    }    
+    
+    .site-content{
+        padding-top: 0px;
+    }    
+    
+    main article{
+        margin-top: 0px;
+    }     
+    
+    @page {
+        margin: 2cm;
+    } 
+}
