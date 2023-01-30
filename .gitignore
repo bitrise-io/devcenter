@@ -2,5 +2,5 @@ publish.sh
 recreate.sh
 replace.sh
 bitrise.yml
-**/.DS_Store
+.DS_Store
 72049-Bitrise_Docs-html5_-Manual_publish.zip
