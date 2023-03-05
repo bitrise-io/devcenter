@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>deploy-to-bitrise-io-stepicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#0DD3C5" offset="0%"></stop>
+            <stop stop-color="#0D83CD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="125.514915%" y1="209.349245%" x2="58.984375%" y2="-17.7026099%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.399060236" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="New-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deploy-to-Bitrise.io">
+            <g id="deploy-to-bitrise-io-stepicon">
+                <rect id="Rectangle-path" fill="url(#linearGradient-1)" fill-rule="nonzero" x="0" y="0" width="256" height="256"></rect>
+                <path d="M136.610575,150.610588 L124.272961,156.432717 L98.7552097,130.914966 L103.938766,119.928962 L77.1767996,138.69157 C81.5214611,115.407364 90.9800385,97.9919364 105.552532,86.4452876 C112.548402,80.9020454 119.974814,76.9596968 127.831767,74.6182419 L137.565689,67.8268188 C159.401824,52.5916009 185.081476,43.8025657 211.673468,42.4629288 L212.780782,42.4071451 L212.724882,43.5167609 C211.385318,70.1073068 202.597164,95.7856424 187.363429,117.621047 L181.697972,125.741677 C179.460729,134.395453 175.319408,142.537149 169.27401,150.166766 C157.727362,164.73926 140.311934,174.197837 117.027728,178.542499 L136.610575,150.610588 Z" id="Path" fill="url(#linearGradient-2)"></path>
+                <path d="M85.0562171,146.34372 C86.5224478,154.679453 88.3736185,159.964322 90.6097291,162.198326 C92.8458397,164.43233 98.4355215,166.581305 107.378775,168.645251 C96.3632198,171.715567 87.2633947,175.72385 80.0792992,180.670101 C72.8952038,185.616352 51.2642761,205.126127 15.1865162,239.199427 C47.3896418,204.984539 66.5014371,183.010166 72.5219023,173.276305 C78.5423674,163.542445 82.7204724,154.564917 85.0562171,146.34372 Z" id="Path" fill="url(#linearGradient-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>
