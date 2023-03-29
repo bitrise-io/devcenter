@@ -1,0 +1,268 @@
+/*
+ * The order of the media queries is important
+ */
+
+@media (min-width: 1200px) {
+	.container {
+		width: auto;
+		max-width: 100%;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: auto;
+		max-width: 100%;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: auto;
+		max-width: 100%;
+	}
+}
+/* tablets, smart phones */
+@media (max-width: 992px) {
+body, html {
+	min-height: 0;
+	height: auto;
+	background-color: white;
+}
+body {
+	font-size: 14px;
+}
+#subheader .toc-title, #main-content .toc-container {
+	border:none;
+}
+#logotype {
+	margin: 10px 0;
+	width: 60px;
+}
+#header {
+	float: left;
+	background-color: #fff;
+}
+#page {
+	background-color: #fff;
+	border: none;
+	outline: none;
+	box-shadow: none;
+	min-height: 1px;
+}
+#pagetools-container {
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
+#main-content > .row {
+	position: relative;
+}
+/*
+ * make the publication title appear at the top of the page
+ */
+#publication-title {
+	font-size: 160%;
+	line-height: 1;
+	border: none;
+	background: #fff;
+	margin-top: 20px;
+	text-align: left;
+	text-shadow: none;
+	margin-left: 100px;
+}
+#main-content {
+	padding-bottom: 50px;
+}
+#main-content .toc-container {
+	border-top: none;
+	margin:0;
+	position: absolute;
+	z-index: 1;
+	padding: 0;
+	width: 100%;
+	display: none;
+}
+body.has-visible-toc, html.has-visible-toc {
+	background-color:#eee;
+}
+.titlepage h1.title {
+    font-size: 2em;
+}
+ul.toc {
+	margin-bottom: 0;
+}
+ul.toc li {
+	padding: 0;
+	margin: 0;
+}
+ul.toc ul {
+	padding: 0;
+}
+ul.toc .topic-link:hover,
+ul.toc .topic-link.active {
+    background-color: #54a1e5;
+    color: #fff;
+    text-shadow:none;
+}
+ul.toc li .topic-link {
+	/*padding-left: 1em;*/
+	text-shadow: 0 1px 0 #fff;
+}
+ul.toc li li .topic-link {
+	padding-left: 2em;
+}
+ul.toc li li li .topic-link {
+	padding-left: 3em;
+}
+ul.toc li li li li .topic-link {
+	padding-left: 4em;
+}
+ul.toc li li li li li .topic-link {
+	padding-left: 5em;
+}
+ul.toc li li li li li li .topic-link {
+	padding-left: 6em;
+}
+ul.toc .topic-link {
+	border-radius: 0;
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+#subheader-sticky-wrapper {
+	clear: left;
+	overflow: visible;
+	min-height: 35px;
+}
+#subheader {
+	clear: left;
+	border-top:1px solid rgb(158,155,157);
+}
+#subheader .toc-title h2 {
+	width: 73%;
+	margin: 4px auto;
+	text-align: center;
+	background-color: rgb(110,110,120);
+	color: #fff;
+	line-height: 1.75;
+	border-radius: 3px;
+	font-size: 100%;
+	position: relative;
+}
+#subheader .toc-title h2 .toc-label {
+	display: none;
+}
+#subheader .toc-title h2 .mobile-nav-toggle {
+	display: inline !important;
+	visibility: visible !important;
+	color: #fff;
+	text-decoration: none;
+}
+#subheader .toc-title h2 .nav-icon {
+	border-radius: 3px;
+	background-color: rgb(110,110,120);
+	font-size: 100%;
+	width: 1.5em;
+	position: absolute;
+	top: 0;
+	font-family: monospace;
+}
+#subheader .toc-title h2 * {
+	color: #fff !important;
+}
+#subheader .toc-title h2 .glyphicon {
+	/* top: -1px; */
+}
+#subheader .toc-title h2 .nav-icon.prev {
+	left: -3em;
+}
+#subheader .toc-title h2 .nav-icon.next {
+	left: auto;
+	right: -3em;
+}
+#subheader .toc-title .glyphicon {
+	vertical-align: text-top;
+}
+#subheader .breadcrumb {
+	display: none;
+}
+.breadcrumb-container,
+.content-container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+#toc-wrapper.is-sticky {
+}
+.content-container {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.content-container .next + h1,
+.content-container .prev + h1 {
+	margin-top: .5em;
+	padding-top: 5px;
+}
+#pagetools-container {
+	position: fixed;
+	width: 100%;
+	margin: 0 -25px;
+	bottom:0;
+	background-color: #54a1e5;
+	padding: 0.5em 0;
+	z-index: 1;
+}
+#page-tools {
+	padding: 0;
+	margin: auto;
+	text-align: center;
+}
+#page-tools li {
+	font-size: 100%;
+	padding: 0 1em;
+	margin: auto 1em;
+}
+#page-tools li a {
+	color: #fff;
+}
+#page-tools .tool-label {
+	display: none;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td,
+.table>tbody>tr>td, .table>tfoot>tr>td {
+    padding: 4px;
+}
+.table-maintenance {
+	font-size: 65%;
+}
+.comicbook li {
+	float: none;
+	width: auto;
+}
+#image-zoom img {
+	max-width: 100%;
+}
+.content-container .image.sign {
+	width: auto;
+	min-width: 0;
+	max-width: 100px;
+	height: auto;
+	min-height: 0;
+	display: block;
+}
+}
+
+/* desktop */
+@media (min-width: 992px) {
+	body {
+	}
+	.toc-container {
+		display: block !important;
+	}
+	#subheader {
+		position: static !important;
+	}
+	#subheader-sticky-wrapper {
+		height: auto !important;
+	}
+	.content-container .image {
+		max-width: 100%;
+		min-width: 420px;
+	}
+}
