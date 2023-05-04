@@ -1,6 +1,8 @@
-publish.sh
-recreate.sh
-replace.sh
+publish.js
+getPublish.js
+package-lock.json
+package.json
+node_modules/
 bitrise.yml
 .DS_Store
 72049-Bitrise_Docs-html5_-Manual_publish.zip
