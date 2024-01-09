@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="35px" height="35px" viewBox="0 0 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.3 (51167) - http://www.bohemiancoding.com/sketch -->
+    <title>bitrise-start-workflow-stepicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="100%" x2="100%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#0DD3C5" offset="0%"></stop>
+            <stop stop-color="#0D83CD" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-24.4959615%" y1="123.982136%" x2="96.7950856%" y2="6.14922306%" id="linearGradient-2">
+            <stop stop-color="#FFFFFF" stop-opacity="0.399060236" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="New-Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Bitrise-Build-Router---Start-Workflows">
+            <g id="bitrise-start-workflow-stepicon">
+                <rect id="Rectangle-path" fill="url(#linearGradient-1)" fill-rule="nonzero" x="0" y="0" width="256" height="256"></rect>
+                <path d="M211.535567,73.5350528 C209.755815,83.2993449 202.538096,91.6574038 192.314444,94.3968232 C186.902155,95.8470417 181.432104,95.5123724 176.529256,93.7536385 L94.6285959,175.654297 C94.8283689,176.161345 95.0139058,176.677684 95.1845906,177.202998 C99.707223,191.122229 92.0897746,206.072313 78.1705433,210.594946 C68.6183256,213.698649 58.5806242,211.084941 51.7607251,204.640739 L71.2026894,198.323662 L72.4579294,184.764774 L63.7862815,175.498305 L43.6896821,182.028086 C44.9559711,172.184031 51.7263714,163.45968 61.7926426,160.18895 C68.0817825,158.145485 74.5813723,158.580432 80.2344768,160.955256 L161.357041,79.832692 C160.751948,78.5068097 160.248459,77.1130754 159.858705,75.6584935 C156.070747,61.5216418 164.460183,46.9907124 178.597034,43.2027544 C188.298596,40.6032287 198.185751,43.7386879 204.65904,50.5309844 L184.91311,55.8218904 L182.949973,69.2965021 L191.124767,79.0041102 L211.535567,73.5350528 Z" id="Combined-Shape" fill="url(#linearGradient-2)"></path>
+                <g id="icon-/-play" transform="translate(78.000000, 64.000000)" stroke="#760FC3" stroke-width="20">
+                    <path d="M10,16.155755 L10,112.691395 L106.552169,64.5866927 L10,16.155755 Z" id="Path-3" style="mix-blend-mode: multiply;"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
