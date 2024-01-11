@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Put your HTML text here<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en" dir="ltr">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -1975,7 +1975,7 @@
                       </div>
                       <p>You can define additional <a class="link linktype-component" href="../builds/environment-variables.html" title="Environment Variables">Environment Variables</a> (Env Vars) for your build. These additional variables will be handled with priority between <code class="code">Secrets</code> and <code class="code">App Env
                       Vars</code>, which means that you can not overwrite Env Vars defined in your build configuration (for example, App Env Vars), only <a class="link linktype-component" href="../builds/secrets.html" title="Secrets">Secrets</a>.</p>
-                      <p>Define additional Env Vars with the <em class="parameter"><code>environments</code></em> parameter. This parameter must be an <span class="bold"><strong>array of objects</strong></span>, and every item of the array must include at least a <code class="code">mapped_to</code> property. This must contain:</p>
+                      <p>Define additional Env Vars with the <em class="parameter"><code>environments</code></em> parameter. This parameter must be an <span class="bold"><strong>array of objects</strong></span>, present inside of the build_params object and every item of the array must include at least a <code class="code">mapped_to</code> property. This must contain:</p>
                       <div class="itemizedlist">
                         <ul class="itemizedlist" style="list-style-type: disc;">
                           <li class="listitem">
