@@ -1,0 +1,105 @@
+/*
+ * Main CSS stylesheet for service and maintenance documentation
+ */
+@media (min-width: 1200px) {
+	.container {
+		width: auto;
+		max-width: 1000px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: auto;
+		max-width: 800px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: auto;
+	}
+}
+@media (max-width: 992px) {
+	body, html {
+		min-height: 0;
+		height: auto;
+		background-color: transparent;
+	}
+}
+html {
+	background-color: rgb(230, 230, 230);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+body#index-page {
+	background: transparent;
+	color: #333;
+	height: auto;
+}
+
+#page {
+	max-width: 100%;
+	outline: none;
+	margin: 0 auto;
+	box-shadow: none;
+	border: none;
+	background-color: transparent;
+}
+#pageheader {
+	padding-top: 20px;
+	background-color: rgba(84, 161, 229, 0.93);
+	padding: 20px 20px;
+	max-width: 680px;
+	margin: 150px auto 0px;
+	border-radius: 3px 3px 0 0;
+	position: relative;
+}
+#pageheader h1 {
+	color: #fff;
+	margin: 0;
+	font-size: 36px;
+}
+#main {
+	padding-top: 40px;
+	padding-bottom: 60px;
+	background-color: rgba(255, 255, 255, 0.95);
+	margin: auto;
+	max-width: 680px;
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 0 0 3px 3px;
+}
+#main ul {
+	list-style-type: none;
+	padding: 0;
+	border: 1px solid #ddd;
+}
+#main ul li {
+	margin: auto;
+	border-top: 1px solid #ddd;
+}
+#main ul li:first-child {
+	border:none;
+}
+#main ul li a {
+	display: block;
+	padding: .75em .25em;
+}
+#main ul li a > .glyphicon {
+	visibility: hidden;
+	margin-right: .5em;
+	margin-left: .5em;
+	color: #555;
+}
+#main ul li a:hover > .glyphicon {
+	visibility: visible;
+}
+#logotype {
+	height: 160px;
+	width: 160px;
+	position: absolute;
+	right: 0px;
+	top: -100px;
+	text-align: right;
+}
