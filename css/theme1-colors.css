@@ -1,0 +1,51 @@
+/* Primary color for links, buttons, sidebar, portal-header etc */
+a,.text-primary,.btn-link,.pagination>li>a,.pagination>li>span,.publication-contents a:hover {
+    color:#1976d2;
+}
+
+.bg-primary,.btn-primary,.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus,.site-sidebar,.portal-single-publication .publication-icon {
+    background-color:#1976d2;
+}
+
+.portal-header::before{
+  background-color: #004ba0;  
+}
+
+
+.btn-primary,.pagination>.active>a,.pagination>.active>span,.pagination>.active>a:hover,.pagination>.active>span:hover,.pagination>.active>a:focus,.pagination>.active>span:focus {
+    border-color:#1976d2;
+}
+
+/* Hover primary color */
+a:hover,a:focus,.btn-link:hover,.btn-link:focus {
+    color: #11508e;
+}
+
+.nav-site-sidebar li a:focus{
+    background-color: transparent;
+}
+
+a.text-primary:hover,a.text-primary:focus,.btn-primary:hover,a.bg-primary:hover,a.bg-primary:focus,.btn-primary:focus,.btn-primary.focus,.btn-primary:active,.btn-primary.active,.open > .dropdown-toggle.btn-primary,.btn-primary:active:hover,.btn-primary.active:hover,.open>.dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open>.dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open>.dropdown-toggle.btn-primary.focus {
+    background-color:#11508e;
+}
+
+.btn-primary:focus,.btn-primary.focus,.btn-primary:hover,.btn-primary:active,.btn-primary.active,.open > .dropdown-toggle.btn-primary,.btn-primary:active:hover,.btn-primary.active:hover,.open>.dropdown-toggle.btn-primary:hover,.btn-primary:active:focus,.btn-primary.active:focus,.open>.dropdown-toggle.btn-primary:focus,.btn-primary:active.focus,.btn-primary.active.focus,.open>.dropdown-toggle.btn-primary.focus {
+    border-color:#11508e;
+}
+
+/* Secondary color - For portal search button, publication count */
+.portal-header .portal-search button,.publication-contents h4 span {
+    background-color:#F57C00;    
+}
+.portal-header .portal-search button:hover{
+     background-color:#dc6f00;
+}
+
+/* Tertiary color - For pager */
+.pager li>a,.pager li>span {
+    color:#63a4ff;   
+}
+
+.pager li>a:hover,.pager li>span:hover {
+    background-color:#63a4ff;
+}    
