@@ -1,0 +1,162 @@
+:root {
+    /* Primary colors */
+    --atomic-primary: #1372ec;
+    --atomic-primary-light: #399ffe;
+    --atomic-primary-dark: #1a50ad;
+    --atomic-on-primary: #ffffff;
+    --atomic-ring-primary: rgba(19, 114, 236, 0.5);
+  
+    /* Neutral colors */
+    --atomic-neutral-dark: #626971;
+    --atomic-neutral: #e5e8e8;
+    --atomic-neutral-light: #f6f7f9;
+  
+    /* Semantic colors */
+    --atomic-background: #ffffff;
+    --atomic-on-background: #282829;
+    --atomic-success: #12a244;
+    --atomic-error: #ce3f00;
+    --atomic-visited: #752e9c;
+    --atomic-disabled: #c5cacf;
+  
+    /* Border radius */
+    --atomic-border-radius: 0.25rem;
+    --atomic-border-radius-md: 0.5rem;
+    --atomic-border-radius-lg: 0.75rem;
+    --atomic-border-radius-xl: 1rem;
+  
+    /* Font */
+    --atomic-font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica,
+      Ubuntu, roboto, noto, arial, sans-serif; /* Following https://systemfontstack.com/ */
+    --atomic-font-normal: 300;
+    --atomic-font-bold: 500;
+  
+    /* Text size */
+    --atomic-text-base: 16px; /* 14px */
+    --atomic-text-sm: 14px; /* 12px */
+    --atomic-text-lg: 16px; /* 16px */
+    --atomic-text-xl: 20px; /* 18px */
+    --atomic-text-2xl: 28px; /* 24px */
+    --atomic-line-height-ratio: 1.4;
+  
+    /* Layout */
+    --atomic-layout-spacing-x: 1.5rem;
+    --atomic-layout-spacing-y: 1rem;
+  }
+
+/* Overrides */
+atomic-search-box,
+atomic-result-list {
+    --atomic-primary: #1976d2;
+    --atomic-primary-light: #66afe9;
+    /* hover of primary colored elements */
+    --atomic-neutral: #66afe9;
+    /* border */
+    --atomic-neutral-light: #e9f3fc;
+    /* hovered search results */
+    --atomic-primary-dark: #990000;
+    --atomic-border-radius: 0;
+    --atomic-on-background: #1976d2;
+    /* link color */
+    --atomic-visited: #1976d2;
+    /* visited link color */
+    --atomic-neutral-dark: #444;
+
+    --atomic-text-base: 16px;
+    /* using em here seems to be applied to nested elements, making some fonts very tiny */
+    --atomic-font-family: Roboto, sans-serif;
+
+    --atomic-border-radius: 0;
+}
+
+atomic-result-list {
+    --atomic-neutral: #e9f3fc;
+    /* override too dark, blue borders between search results */
+}
+
+/* for some reason, instant search results are rendered as buttons with centered text by default */
+atomic-search-box::part(instant-results-item) {
+    text-align: left;
+    border-top: solid 1px var(--atomic-neutral);
+}
+
+atomic-search-box::part(instant-results-item):first-child {
+    border-top: none;
+}
+
+atomic-search-box::part(suggestions-wrapper) {
+    flex-wrap: wrap;
+}
+
+atomic-search-box::part(submit-button),
+atomic-search-box::part(wrapper) {
+    border-radius: 0;
+}
+
+atomic-search-box::part(input) {
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 14px;
+}
+
+atomic-search-box::part(suggestions-left),
+atomic-search-box::part(suggestions-right) {
+    flex-basis: 100%;
+    border-left: none;
+}
+
+/* fix the background of the "see all results" button */
+atomic-search-box::part(instant-results-show-all) {
+    background-color: var(--atomic-background);
+}
+
+atomic-search-box::part(instant-results-show-all):hover {
+    background-color: var(--atomic-neutral-light);
+}
+
+atomic-search-box::part(instant-results-show-all-button) {
+    background-color: transparent;
+}
+
+atomic-search-box {
+    max-width: 500px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+atomic-facet {
+    --atomic-facet-checkbox-size: 12px;
+}
+
+atomic-search-layout {
+    display: flex !important
+}
+
+atomic-layout-section[section='main'] {
+    flex-basis: 70rem;
+}
+atomic-layout-section[section='facets'] {
+    margin-right: 10px;
+}
+
+.inner {
+    z-index: 10;
+}
+
+.portal-body {
+    z-index: 5;
+}
+
+#content-wrapper {
+    z-index: 7;
+}
+
+#search-result-wrapper {
+    margin-top: 0;
+}
+
+#search-result-wrapper h2 {
+    margin-top: 0;
+}
+
