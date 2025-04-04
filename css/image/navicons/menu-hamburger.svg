@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <path id="menu-hamburger-a" d="M1.99999995,5.99999997 L21.9999999,5.99999997 L21.9999999,7.99999997 L1.99999995,7.99999997 L1.99999995,5.99999997 Z M1.99999995,11 L21.9999999,11 L21.9999999,13 L1.99999995,13 L1.99999995,11 Z M1.99999995,16 L21.9999999,16 L21.9999999,18 L1.99999995,18 L1.99999995,16 Z"/>
+  </defs>
+  <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#menu-hamburger-a"/>
+</svg>
