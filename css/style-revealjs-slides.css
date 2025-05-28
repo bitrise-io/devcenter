@@ -1,0 +1,106 @@
+section.slide-left > * {
+	text-align:left;
+	margin-right: 50%;
+}
+
+section.slide-right:not(.stack) > * {
+	text-align: right;
+	margin-left: 50%;
+}
+
+/* TODO: JM: clearly redundant declarations here but i'm not sure that '*' is a good thing yet */
+section.alt-slide, section.alt-slide h1, section.alt-slide h2, section.alt-slide h3, section.alt-slide h4, section.alt-slide h5, section.alt-slide h6 {
+	color: #fff;
+}
+
+.titlepage hr {
+	display: none;
+}
+.titlepage .copyright {
+	font-size: 75%;
+}
+.titlepage .abstract-title {
+	display: none;
+}
+.mediaobject > table {
+	width: auto;
+	margin: auto;
+}
+
+.inlinemediaobject {
+  display: inline-block;
+	height: 1.5em;
+	vertical-align: -0.275em;
+}
+
+.inlinemediaobject img:not([height]):not([width]) {
+	height: 100%;
+	width: auto;
+	margin-bottom: 1em;
+}
+
+.procedure-title {
+    font-weight: bold;
+}
+
+.warning, .note, .important, .caution, .tip {
+    padding:0;
+	background-color: #f5f5f5;
+	margin-bottom: 1em;
+}
+.warning h3,
+.note h3,
+.important h3,
+.caution h3,
+.tip h3{
+    margin-top: 1em;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px 30px 10px 30px;
+}
+
+.note h3:before,
+.tip h3:before,
+.tip h3:before,
+.warning h3:before,
+.caution h3:before,
+.important h3:before{    
+    font-family: FontAwesome;
+    margin-right: 15px;
+}
+
+.note h3:before,
+.important h3:before{
+    content: "\f06a";
+}
+
+.warning h3:before,
+.caution h3:before{
+    content: "\f071";
+}
+
+.tip h3:before{
+    content: "\f0eb";    
+}
+
+.warning > *,
+.note > *,
+.important > *,
+.caution > *,
+.tip > *{    
+    margin-left: 2em;
+    -webkit-margin-before: 0em;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    padding-right: 40px
+}
+
+.reveal .section .logo img{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.reveal .slide-background-content {
+    background-position: top;
+}
