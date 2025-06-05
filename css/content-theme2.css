@@ -1,0 +1,975 @@
+.example {
+    border: 1px solid #ccc;
+    padding: 1em;
+}
+
+/* Make images full size in the popover */
+.popover .mediaobject * {
+    width: 100%!important;
+}
+
+.mediaobject{
+    margin-bottom: 20px;
+}
+
+td .mediaobject {
+    margin-bottom: 5px;
+}
+
+.mediaobject .caption{
+    margin-top: 10px;
+    font-style: italic;
+}
+
+.caption {
+    font-size: 0.9em;
+}
+
+/*RTL:*/
+*[dir='rtl'] .publication-contents h4 span{
+    margin-right: -14px;
+    margin-left: 0px;
+}
+
+*[dir='rtl'] .publication-contents h4 a{
+    margin-right: 20px
+}
+
+*[dir='rtl'] .publication-contents li::before{
+    margin-right: -8px;
+    margin-left: 0px;
+}
+
+*[dir='rtl'] .publication-contents ul{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+*[dir='rtl'] .publication-contents {
+    padding-right: 30px;
+}
+
+
+*[dir='rtl'] .portal-header .portal-search button{
+    border-radius: 4px 0 0 4px;
+}
+
+*[dir='rtl'] .portal-header .portal-search .search-field{
+    border-radius: 0 4px 4px 0;
+}
+
+.portal-search .btn[disabled]{
+    opacity: 1;
+    cursor: auto;
+}
+
+*[dir='rtl'] .nav-site-sidebar ul a{
+    padding: 5px 30px 5px 20px;
+}
+
+/* Always left to right on code samples */
+*[dir='rtl'] pre{
+    direction: ltr;
+    text-align: start;
+}
+
+th{
+    text-align: start;
+}
+
+/* PORTAL */
+
+.theme3 .portal-single-publication .publication-icon{
+  background-color: #4fc3f7;  
+}
+
+.theme2 .portal-footer{
+  color: #fff;  
+}
+
+.theme2 .dropup.languages > a{
+    color: #fff;  
+}
+
+.theme2 .dropup .caret{
+    border-bottom: 4px solid #fff;
+}
+
+.theme2 .portal-header::before{
+    background-color: #222;
+}
+
+
+.theme2 .site-sidebar{
+    background-color: #fafafa;
+}
+
+body.theme2 {
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.theme2.colored-top .nav-site-sidebar{
+    width: 100%;
+}
+
+
+.portal-header::after{
+    z-index: -5;
+    background: url(image/portal2b-bg.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: .4;
+    filter: grayscale(100%);
+}
+
+.portal-search-result{
+    padding: 10px 150px 50px;
+}
+
+@media (max-width: 991px) {
+  .portal-search-result {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+ul.searchresults{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+li.searchresultitem{
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+}
+
+.searchresultitem.selected-searchresultitem {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.searchresultsnippet{
+    font-weight: 300;
+}
+
+.search-result-url, .search-result-breadcrumbs{
+    color: #ccc;
+}
+
+
+
+.show-all-categories{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 0.9em;
+}
+
+.category-more-toc .showmore, .more-toc .showmore{
+    display: inline;
+}
+
+.category-more-toc .showless, .more-toc .showless{
+    display: none;
+}
+
+/* Changed from h2 in HTML template */
+.portal-contents h5{
+    margin: 2em 0 1.2em;
+    border-bottom: 1px solid #f2f2f2;
+    padding-bottom: 15px
+}
+
+/* Features */
+#disqus_thread{
+   margin-top: 40px; 
+}
+
+/* Site content */
+
+.panel-heading :not(div).title:before,
+.panel-heading .sidebar-title:before{
+    color: #bdbdbd;
+    font-family: 'Glyphicons Halflings';
+    vertical-align: middle;
+    line-height: normal;
+    content: "\e258";
+}
+
+ .panel-heading.active :not(div).title:before, .panel-heading.active .sidebar-title:before{
+     content: "\e259";
+ }
+
+.panel-default > .panel-heading{
+    background-color: transparent;
+    padding: 1em 0em;
+}
+
+.panel{
+    border: none;
+    border-bottom: 0.5px solid #bdbdbd;
+}
+
+/* No border for nested accordions */
+.panel.panel-default .panel.panel-default{
+    border: none;
+}
+
+.panel-body{
+    padding: 0em 1em;
+    margin-left: 10px;
+}
+
+.inlinemediaobject {
+	vertical-align: 0.275em;
+}
+
+body{
+    /* Important: cannot be set to left, otherwise rtl languages do not work */
+    text-align: start;  
+}
+
+/*Changed in main themes instead: PAL2-1976*/
+/*main ol{
+    list-style: decimal;
+}
+
+main ol ol{
+    list-style-type: lower-alpha;
+}
+
+
+main ol ol ol{
+    list-style-type: lower-roman;
+}*/
+
+main ul {
+    list-style: disc;
+}
+
+.toc .glyphicon:before{
+    /* Unicode triangle option:
+    content: "\25b8";
+    font-size: 1.6em;*/
+    /* Chevron */
+    content: "\e080";
+    /* menu right */
+    content: "\e258";
+}
+
+.toc .opened > .topic-link > .glyphicon:before{
+    /* Unicode triangle option:
+    content: "\25BE";
+    font-size: 1.6em;*/
+    /* Chevron */
+    content: "\e114";
+    /* menu down */
+    content: "\e259";
+}
+
+.nav-site-sidebar .topic-link{
+    position: relative;
+    padding-right: 38px;
+}
+
+.toc .glyphicon{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    margin: 4px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1;
+    font-size: 10px;
+}
+
+.theme2 .toc .glyphicon{
+    margin-top: 6px;
+}
+
+.theme2 .toc > li{
+    border-bottom: 0.5px solid #e0e0e0;
+}
+
+.theme2 .nav-site-sidebar>li>a{
+    font-weight: normal;
+}
+
+
+.theme2 .toolbar{
+    padding: 20.5px 25px;
+}
+
+.theme1 .site-sidebar .logo{
+    width: 50%;
+    max-width: 160px;
+    padding: 45px 0;
+    padding-top: 20px;
+    display: inline-block
+}
+
+code.email{
+    background-color: transparent;
+}
+
+.procedure-title, .variablelist-title, .orderedlist-title, .itemizedlist-title, .task-title{
+    margin: 1.2em 0 1em;
+    font-weight: 700;
+}
+
+
+.example-title{
+    font-weight: 700;
+}
+
+
+.nav-site-sidebar ul .active > a{
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.informaltable td p,
+.informaltable th p,
+.table td p,
+.table th p{
+    margin: 0px;
+    margin-bottom: 1.5em;
+}
+
+/* Space for multiple p tags in td, but not for the last one */
+.informaltable td p:last-child,
+.informaltable th p:last-child,
+.table td p:last-child,
+.table th p:last-child {
+margin-bottom: 0em;
+}
+
+
+
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th{
+    background-color: #f6f6f6;
+}
+
+pre,
+code{
+    font-size: 0.8em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5{
+    margin: 1.2em 0 1em;
+}
+
+h5, .h5, h6, .h6{
+    font-size: inherit;
+    font-weight: 700;
+}
+
+h5, .h5{
+    text-transform: uppercase;
+}
+
+#topic-content > section > .titlepage .title{
+    margin: 0em 0 1em;
+}
+
+.section-toc ul, .relationship-toc ul{
+    padding-left: 15px;
+    margin: 0 0 0em;
+    list-style: none;
+}
+
+.section-toc > ul,  .relationship-toc  > ul{
+    padding-left: 0px;
+}
+
+div.section-toc-title{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+}
+
+/* If using both section toc and relationships in sequence */
+.section-toc + .relationship-toc {
+    margin-top: 1em;
+}
+
+.section-toc .topic-link, .relationship-toc .topic-link{
+    font-size: 0.9em;
+}
+
+#top-pager{
+    display: none;
+    margin: 0 9%;
+}
+
+#top-pager ul.pager{
+    margin-bottom: 0px;
+}
+
+#top-pager .pager li>a{
+    border-radius: 15px;
+    padding: 5px 14px;
+}
+
+/* Theme specific */
+
+.warning > p,
+.note > p,
+.important > p,
+.caution > p,
+.tip > p{
+    margin-left: 0px;
+    -webkit-margin-before: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 40px
+}
+
+.warning > *,
+.note > *,
+.important > *,
+.caution > *,
+.tip > *{
+    margin-left: 0px;
+    -webkit-margin-before: 0;
+    padding-left: 0;
+    padding-bottom: 0;
+    padding-right: 40px
+}
+
+.warning h3,
+.note h3,
+.important h3,
+.caution h3,
+.tip h3{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px 30px 0px 0px;
+    background-color: transparent;
+    color: inherit;
+
+    font-size: 1.2em;
+}
+
+.warning h3:before,
+.note h3:before,
+.important h3:before,
+.caution h3:before,
+.tip h3:before{
+    content: none;
+}
+
+.warning,
+.note,
+.important,
+.caution,
+.tip{
+    display: block;
+    padding: 12px 18px 12px 65px;
+    -moz-background-clip: padding;
+    border-left-width: 5px;
+
+    border-left-style: solid;
+    border-left-color: #2ab27b;
+    line-height: 1.4em;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    position: relative;
+
+    background-color: #eafaf4;
+    background-color: rgba(42, 178, 123, 0.08);
+
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+.note:before,
+.tip:before,
+.warning:before,
+.caution:before,
+.important:before{
+    content: '\f040';
+    color: #2ab27b;
+    font-size: 20px;
+    font-weight: 300;
+    position: absolute;
+    left: 20px;
+    top: 22px;
+    vertical-align: middle;
+    font-family: FontAwesome;
+}
+
+
+.important:before{
+    content: '\f06a';
+}
+
+.notice:before{
+    content: '\f05a';
+    color: #3aa3e3;
+}
+
+.notice{
+    border-left-color: #3aa3e3;
+    background-color: rgba(58, 163, 227, 0.08);
+}
+
+.tip{
+    border-left-color: #3aa3e3;
+    background-color: rgba(58, 163, 227, 0.08);
+}
+
+.tip:before{
+    content: '\f0d0';
+    color: #3aa3e3;
+}
+
+.warning{
+    border-left-color: #ffb74d;
+    background-color: rgba(255, 183, 77, 0.08);
+}
+
+.warning:before{
+    content: '\f071';
+    color: #ffb74d;
+}
+
+.warning.danger{
+    border-left-color: #ef5350;
+    background-color: rgba(239, 83, 80, 0.05);
+}
+
+.warning.danger:before{
+    content: '\f071';
+    color: #ef5350;
+}
+
+.caution{
+    border-left-color: #ffe81a;
+    background-color: rgba(255, 232, 26, 0.05);
+}
+
+.caution:before{
+    content: '\f071';
+    color: #ffe81a;
+}
+
+div.feedback-panel #email-feedback{
+    display: none;
+}
+
+div.feedback-panel #email-feedback.no-voting, div.feedback-panel #email-feedback.feedback-link-visible{
+    display: block;
+}
+
+div.feedback-panel{
+    border-top: 1px solid #f5f5f5;
+    width: 100%;
+    margin-left: 16.66666667%;
+    padding-left: 0;
+    background-color: #ffffff;
+    border-radius: 6px;
+    max-width: 66.66666667%;
+    float: left;
+    text-align: center;
+    padding: 20px;
+}
+
+div.feedback-panel .btn{
+    position: relative;
+    float: left;
+    border: 1px solid #1976d2;
+    margin: 10px 20px !important;
+    border-radius: 3px !important;
+    padding: 5px 30px;
+    background-color: transparent;
+}
+
+div.feedback-panel .btn.active,
+div.feedback-panel .btn:active{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #1976d2;
+    color: #ffffff;
+}
+
+div.feedback-panel .btn.active.focus, div.feedback-panel .btn.active:focus, 
+div.feedback-panel .btn.focus, div.feedback-panel .btn:active.focus, 
+div.feedback-panel .btn:active:focus, div.feedback-panel .btn:focus {
+    outline: none;
+}
+
+.feedback-panel .voting-feedbackicon{
+    display:none;
+}
+
+.feedbackicon{
+    margin-right: 0.5em;
+    font-size: 1.5em;
+    vertical-align: text-bottom;
+}
+
+.theme2 .site-footer{
+    display: block;
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    float: left;
+}
+
+.copyright{
+    float:left;
+    margin-right: 30px;
+}
+
+/* Countering effect of upgrade to Bootstrap 3.3.7 (min version now) */
+.pull-right>.dropdown-menu {
+    right: initial;
+}
+
+/* For page toc if selected: */
+/* To theme1 */
+.theme1 .section-nav.nav li.active>a {
+    color: #1976d2;
+}
+
+.theme1 .section-nav.nav>li.active>a:before {
+    content: '';
+    border-radius: 50%;
+    left: -3px;
+    top: 12px;
+    background: #1976d2;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+}
+
+@media (min-width: 768px){
+    .theme1.page-toc main article {
+        padding-left: 16.66666667%;
+    }
+}
+
+/* To theme2 */
+.theme2 .section-nav.nav li.active>a {
+    color: #7e57c2;
+}
+
+.theme2 .section-nav.nav>li.active>a:before {
+    content: '';
+    border-radius: 50%;
+    left: -3px;
+    top: 12px;
+    background: #7e57c2;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+}
+
+@media (min-width: 768px){
+    .theme2.page-toc main article {
+        padding-left: 8.33333333%;
+    }
+}
+
+
+/* ==========
+ * Top navigation 
+ * ==========
+ * */
+ 
+/* Don't show on mobile */
+.toolbar-tools .navbar-collapse.collapse {
+    display: none;
+}
+
+@media (min-width : 768px) {
+    .navbar-nav > li > a {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .toolbar-tools .navbar-collapse.collapse {
+        display: inline-block!important;
+        margin-right: 2em;
+    }
+}
+
+.toolbar-tools .navbar-nav a {
+    color: #fff;
+}
+
+.toolbar-tools .nav>li>a:focus, .toolbar-tools .nav>li>a:hover {
+    color: #fff;
+    background-color: transparent;
+}
+
+.theme1 .toolbar-tools .nav>li>a:focus, .theme1 .toolbar-tools .nav>li>a:hover {
+    color: #11508e;
+    background-color: transparent;
+}
+
+.theme1 .toolbar-tools .navbar-nav a,
+.theme1 .toolbar-tools .navbar-nav a:hover,
+.theme1 .toolbar-tools .navbar-nav a:focus{
+    color: #1976d2;
+}
+
+.toolbar{
+    min-height: 64px;
+}
+
+.topic-content .breadcrumb-container {
+    margin-left: 0px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+}
+
+.topic-content .breadcrumb {
+    font-size: 12px;
+    color: #888;
+}
+
+.topic-content .breadcrumb a {
+    color: inherit;
+}
+
+/*Top nav sub menus:*/
+
+/* Theme 3/3b */
+@media (min-width : 992px) {
+    .navbar-nav > li ul.dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        display:none;
+    }
+}
+
+.navbar .navbar-nav>li>.dropdown-menu {
+    margin-top: -10px;
+}
+
+.navbar-nav > li > ul.dropdown-menu {
+    margin-left: 15px;
+}
+
+.navbar-nav li:hover > ul.dropdown-menu {
+    display: block;
+}
+.dropdown-submenu {
+    position:relative;
+}
+.dropdown-submenu>.dropdown-menu {
+    top:0;
+    left:100%;
+    margin-top:-6px;
+}
+
+/* Align the right-most dropdowns to the left */
+.navbar-nav > .dropdown:last-child .dropdown-menu {
+    min-width: 20rem;
+    max-width: 20rem;
+}
+
+.navbar-nav > .dropdown:last-child .dropdown-submenu>.dropdown-menu{
+    top:0;
+    /*left:-115%;*/
+    left:-20rem; /* 20rem is the max and min width of the dropdown-menu */
+    margin-right: 15px;
+    margin-top:-6px;
+}
+
+.navbar-nav > .dropdown:last-child .dropdown-menu a {
+    white-space: inherit;
+}
+
+/*.navbar-nav .dropdown-menu a {
+    white-space: inherit;
+}*/
+
+.theme1 .nav .dropdown-menu a{
+    color: #1976d2;
+}
+
+.theme1 .nav .dropdown-menu a:hover{
+    color: #11508e;
+}
+
+.theme2 .nav .dropdown-menu a{
+    color: #7e57c2;
+}
+
+.theme2 .nav .dropdown-menu a:hover{
+    color: #593696;
+}
+
+.nav>li.top-nav-divider-li{
+    display: none;
+}
+
+@media (min-width : 768px) {
+    .nav>li.top-nav-divider-li {
+        display: block;
+    }
+}
+
+/* Top navigation for portal */
+.portal-header-navbar {
+    background-color: transparent;
+    border-bottom: 0;
+    position: absolute;
+    box-shadow: none;
+    border-left: none;
+}
+
+.portal-header-navbar .navbar-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-right: 15px;
+}
+
+.theme3 .portal-header-navbar .navbar-nav,
+.theme3b .portal-header-navbar .navbar-nav{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-right: 0px;
+}
+
+.portal-header-navbar .navbar-brand {
+    height: auto;
+}
+
+/*.portal-header.top-nav-on {
+    margin-top: 60px;
+}*/
+
+/*.logo-link.top-nav-on {
+    display: none;
+}*/
+
+/* If top navigation is enabled, the portal-header-navbar is there, and there will be special styling for the inner class */
+.portal-header-navbar + .inner .logo-link{
+    display: none;
+}
+
+.portal-header-navbar + .inner{
+    margin-top: 100px;
+}
+
+@media (min-width : 768px) {
+    .portal-header .navbar-toggle {
+        display: none!important;
+    }
+    .portal-header-navbar .logo {
+        height: 35px;
+    }
+
+    .portal-header-navbar .navbar-brand {
+        margin-left: 0px!important;
+    }    
+}
+
+
+/* For mobile */
+.portal-header .navbar-toggle {
+    display: block;
+    float: right;
+    margin: 8px 15px;
+    padding: 18px 10px;
+}
+/* END Top navigation for portal */
+
+/* ==========
+ * End Top navigation 
+ * ==========
+ * */
+ 
+.dropdown.version-dropdown {
+    margin-bottom: -10px;
+    margin-top: -10px;
+}
+ 
+.dropdown.version-dropdown .dropdown-menu {
+    left:-5rem;
+} 
+
+.theme1 .version-dropdown .btn.btn-primary.dropdown-toggle {
+    background-color: #1976d2;
+    border-color: #1976d2;
+    border-radius: 5px;
+}
+
+.theme2 .version-dropdown .btn.btn-primary.dropdown-toggle {
+    background-color: #593696;
+    border-color: #593696;
+    border-radius: 5px;
+}
+
+.version-dropdown .btn .caret {
+    margin-left: 5px;
+}
+
+.dropdown.version-dropdown.open .dropdown-menu {
+    display: block;
+}
+
+ .theme3b .navbar-form input.form-control::placeholder {
+    color: #fff!important;
+}
+
+.theme3b .navbar-form input.form-control::-moz-placeholder {
+    color: #fff!important;
+}
+.theme3b .navbar-form input.form-control:-ms-input-placeholder {
+    color: #fff!important;
+}
+.theme3b .navbar-form input.form-control::-webkit-input-placeholder {
+    color: #fff!important;
+}
+
+.theme3 .toolbar, theme3b .toolbar{
+    display: none;
+}
+
+.algolia-autocomplete .ds-dropdown-menu{
+    min-width: 0!important;
+}
+
+
+ul.searchresults .search-highlight {
+    background-color: transparent;
+    padding: 0px;
+    font-weight: bold;
+    font-style: italic;
+    color: inherit;
+}
+
+.search-page-link a {
+    margin-right: 50px;
+}
+
+/* Avoiding target elements being hidden by banner when using sticky header */
+html {
+  scroll-padding-top: 80px; 
+}
+
+/* Safari 11+ (scroll-padding-top not supported in Safari yet) */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+    .section:target { 
+        padding-top: 80px;
+        margin-top: -80px;
+    }
+}}
