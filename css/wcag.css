@@ -1,0 +1,95 @@
+/* WCAG requirements */
+
+/* skip navigation; this also appears inline unless you disable it
+ * in the layout editor, to try and make sure the skip link is not
+ * shown when not active.
+ * You can override the appearance with custom CSS.
+ */
+
+div.skipnav a {
+	position: fixed;
+	left: -10000px;
+	top: 1.5em;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+}
+div.skipnav a:focus, div.skipnav a:active, div.skipnav a:hover {
+	background: white;
+	color: black;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+	position: fixed;
+	left: 2em;
+	top: 1.5em;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	text-decoration: underline;
+	z-index: 99999; /* has to be higher than the side panel */
+}
+
+/* Higher contrasts */
+
+html body {
+    color: #333;
+    background-color: white;
+}
+
+.nav-site-sidebar li a, .nav-site-sidebar .active > a, .toc li a {
+	color: #000;
+	background-color: white;
+}
+
+.nav-site-sidebar ul a, .toc ul a {
+	color: #000;
+	background-color: white;
+	font-size: 0.93em
+}
+
+.search-field {
+	background-color: rgba(0, 0, 0, 0.15);
+}
+
+.portal-header .search-field {
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.search-field::placeholder {
+	color: rgba(255, 255, 255, 0.8);
+}
+
+ul.breadcrumb, html>body .topic-content .breadcrumb {
+	color: #000;
+}
+
+input[type='text']:focus,
+input[type='search']:focus {
+	outline: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+.pager li > a,
+.pager li > span {
+	color: #1976d2;
+}
+
+/* Styling to compensate WCAG-changes */
+.category-more-toc {
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.warning, .note, .important, .caution, .tip {
+       color: #000;
+}
+
+.warning h3, .note h3, .important h3, .caution h3, .tip h3,
+.warning>p.admonition-label, .note>p.admonition-label, .important>p.admonition-label, .caution>p.admonition-label, .tip>p.admonition-label{
+       /* We have to make the background darker to be able to use
+	, white text, ideally with a contrast of 7 or better:
+	* see e.g. https://webaim.org/resources/contrastchecker/
+	*/
+	background-color: #565656;
+	color:#ffffff;
+}
+
+
